@@ -8,9 +8,17 @@
   </head>
 
   <body>
-    <header></header>
+    <header>
+      <ul id="navbar">
+        <li class="navbarTab"><a href="contactForm.html">👓 Contact me</a></li>
+        <li class="navbarTab"><a href="contactForm.html">🎢 Contact me</a></li>
+        <li class="navbarTab"><a href="contactForm.html">🎨 Contact me</a></li>
+        <li class="navbarTab"><a href="contactForm.html">👑 Contact me</a></li>
+        <li class="navbarTab"><a href="contactForm.html">🥋 Contact me</a></li>
+      </ul>
+    </header>
 
-    <div class="mainPageSection">
+    <div class="mainPageSection" id="presentationSection">
       <a href="https://twitter.com/lacaralale">
         <img
           id="profilePic"
@@ -23,14 +31,13 @@
         <h3>Developer & Computer Engineer</h3>
         <p>Still a rookie, so I'm looking for my best path</p>
       </div>
-      <p><a href="contactForm.html">Contact me</a></p>
     </div>
 
     <hr />
 
     <div class="mainPageSection">
       <h2>Work Experience</h2>
-      <table cellspacing="20">
+      <table cellspacing="20" id="workExpTable">
         <thead>
           <tr>
             <th>Company</th>
@@ -54,14 +61,16 @@
           </tr>
         </tbody>
       </table>
-      <img src="images/work.png" class="bgPic" />
+      <img src="images/work.png" class="bgPic" id="workImg" />
     </div>
 
     <hr />
 
     <div class="mainPageSection">
       <h2>Education</h2>
-      <table cellspacing="20">
+      <img src="images/education.png" class="bgPic" />
+
+      <table cellspacing="20" id="eduTable">
         <thead>
           <tr>
             <th>Degree / Course</th>
@@ -89,52 +98,58 @@
           </tr>
         </tbody>
       </table>
-      <img src="images/education.png" class="bgPic" />
     </div>
 
     <hr />
 
     <div class="mainPageSection">
       <h2>Knowledges</h2>
-      <h3>Technologies</h3>
-      <ul>
-        <li>C & C++</li>
-        <li>Python</li>
-        <li>.NET (C#, WPF)</li>
-        <li>Java</li>
-      </ul>
-      <ul>
-        <li>Embedded systems</li>
-        <li>Git</li>
-        <li>Docker</li>
-      </ul>
-      <img src="images/tech.png" class="bgPic" />
+      <div class="mainPageSubsection">
+        <h3>Technologies</h3>
+        <div id="techLists">
+          <ul>
+            <li>C & C++</li>
+            <li>Python</li>
+            <li>.NET (C#, WPF)</li>
+            <li>Java</li>
+          </ul>
+          <ul>
+            <li>Embedded systems</li>
+            <li>Git</li>
+            <li>Docker</li>
+          </ul>
+        </div>
+        <img src="images/tech.png" class="bgPic" />
+      </div>
 
-      <h3>Languages (actual spoken languages, not the programming ones)</h3>
-      <table cellspacing="20">
-        <thead>
-          <tr>
-            <th>Language</th>
-            <th>Level</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Spanish</td>
-            <td>Native</td>
-          </tr>
-          <tr>
-            <td>English</td>
-            <td>Advanced</td>
-          </tr>
-          <tr>
-            <td>Japanese</td>
-            <td>Intermediate</td>
-          </tr>
-        </tbody>
-      </table>
-      <img src="images/lang.png" class="bgPic" />
+      <div class="mainPageSubsection">
+        <h3>Languages (actual spoken languages, not the programming ones)</h3>
+        <table cellspacing="20" id="langTab">
+          <thead>
+            <tr>
+              <th>Language</th>
+              <th>Level</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Spanish</td>
+              <td>Native</td>
+            </tr>
+            <tr>
+              <td>English</td>
+              <td>Advanced</td>
+            </tr>
+            <tr>
+              <td>Japanese</td>
+              <td>Intermediate</td>
+            </tr>
+          </tbody>
+        </table>
+        <img src="images/lang.png" class="bgPic" />
+      </div>
     </div>
+
     <footer>This is the footer</footer>
   </body>
 </html>
