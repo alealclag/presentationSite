@@ -1,0 +1,88 @@
+:root {
+  --main-color: #52734d;
+  --second-color: #91c788;
+  --third-color: #ddffbc;
+  --bg-color: #feffde;
+}
+
+/* Main Structure Elements */
+
+header {
+  background-color: var(--main-color);
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+.nav-link {
+  color: var(--bg-color);
+  transition: all 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--bg-color);
+  opacity: 60%;
+}
+
+#workExpSection {
+  background-color: var(--second-color);
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#presentationSection {
+  text-align: center;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+}
+
+/******************************/
+
+/* Text */
+
+/******************************/
+
+/* Tables */
+
+/******************************/
+
+/* Images */
+
+.profilePic {
+  border-radius: 100%;
+  margin-top: 80px;
+}
+
+.nav-pic {
+  height: 30%;
+}
+
+.bgPic {
+  width: 50%;
+}
+
+.cardPic {
+  width: 250px;
+  border-radius: 20%;
+}
+
+footer img {
+  width: 50px;
+  margin: 10px;
+  opacity: 50%;
+  transition: all 0.3s;
+}
+
+footer img:hover {
+  opacity: 100%;
+}
+
+/******************************/
+
+/* Form */
+
+/******************************/

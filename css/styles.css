@@ -5,103 +5,12 @@
   --bg-color: #feffde;
 }
 
-.mainPageSection {
-  margin: 20px;
-  position: relative;
-}
-
-body {
-  background-color: var(--bg-color);
-  margin: 0px;
-  font-family: sans-serif;
-}
-
-hr {
-  border-style: dotted none none none;
-  border-width: 10px;
-  border-color: var(--third-color);
-  width: 10%;
-}
-
-h2,
-h3,
-label,
-a {
-  color: var(--second-color);
-}
-
-h1 {
-  color: var(--main-color);
-  margin-bottom: 0px;
-}
-
-h3 {
-  margin-top: 0px;
-}
-
-#profilePic {
-  border-radius: 100%;
-  height: 200px;
-}
+/* Main Structure Elements */
 
 header {
   height: 75px;
   background-color: var(--main-color);
   margin: 0px;
-}
-
-footer {
-  background-color: var(--second-color);
-  padding: 50px 100px 50px 100px;
-}
-
-.bgPic {
-  width: 25%;
-  opacity: 80%;
-}
-#presentation {
-  display: inline-block;
-}
-
-a {
-  text-decoration: none;
-}
-
-.mainPageSubsection {
-  display: table-cell;
-  width: 45%;
-  text-align: center;
-  position: relative;
-}
-
-#langTab {
-  display: block;
-  margin: 0 auto 0 auto;
-  width: fit-content;
-}
-ul {
-  width: fit-content;
-  display: table-cell;
-}
-h3 {
-  width: fit-content;
-}
-#techLists {
-  display: block;
-  margin: 0 auto 0 auto;
-  width: fit-content;
-}
-
-#techLists li {
-  margin: 15px;
-}
-
-.mainPageSubsection .bgPic {
-  width: 50%;
-  margin: 20px;
-}
-
-header {
   display: flex;
   justify-content: center;
 }
@@ -121,16 +30,112 @@ header {
   color: var(--bg-color);
 }
 
+body {
+  background-color: var(--bg-color);
+  margin: 0px;
+  font-family: sans-serif;
+}
+
+.mainPageSection {
+  margin: 20px;
+  position: relative;
+  min-height: 500px;
+}
+
+.mainPageSubsection {
+  display: inline-block;
+  width: 45%;
+  margin: auto 30px;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+#presentationSection {
+  height: fit-content;
+  min-height: 0;
+}
+
 #presentation {
   margin-left: 10px;
   position: absolute;
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  display: inline-block;
 }
 
-#workExpTable {
-  position: absolute;
+hr {
+  border-style: dotted none none none;
+  border-width: 10px;
+  border-color: var(--third-color);
+  width: 10%;
+  margin: 50px auto;
+}
+
+footer {
+  background-color: var(--second-color);
+  padding: 50px 100px;
+}
+
+/******************************/
+
+/* Text */
+
+h1 {
+  color: var(--main-color);
+  margin-bottom: 0px;
+}
+
+h2,
+h3,
+label,
+a {
+  color: var(--second-color);
+}
+
+h3 {
+  margin-top: 0px;
+  width: fit-content;
+}
+
+a {
+  text-decoration: none;
+}
+
+/******************************/
+
+/* Tables */
+
+.card {
+  text-align: center;
+  margin: 10px;
+  background-color: var(--main-color);
+  border-radius: 10%;
+}
+
+#langTab {
+  display: inline-block;
+  position: relative;
+  margin: 10% 0;
+  width: fit-content;
+}
+
+ul {
+  width: fit-content;
+  display: table-cell;
+}
+
+#techLists {
+  text-align: left;
+  display: inline-block;
+}
+
+#techLists li {
+  margin: 15px;
+  background-color: var(--second-color);
+  padding: 5px;
+  border-radius: 8px;
+  list-style-type: none;
 }
 
 #eduTable {
@@ -159,4 +164,69 @@ td {
   background-color: var(--second-color);
   border-radius: 10px;
   padding: 10px;
+  line-height: 1.5;
 }
+
+#workExpTable {
+  display: inline-block;
+  width: 40%;
+  margin: 10px 30px;
+}
+/******************************/
+
+/* Images */
+
+#profilePic {
+  border-radius: 100%;
+  height: 200px;
+}
+
+.bgPic {
+  width: 25%;
+  opacity: 80%;
+}
+
+.mainPageSubsection .bgPic {
+  width: 50%;
+  margin: 20px;
+}
+
+footer img {
+  width: 50px;
+  margin: 10px;
+  opacity: 50%;
+  transition: all 0.3s;
+}
+
+footer img:hover {
+  opacity: 100%;
+}
+
+header img {
+  height: 100%;
+  border-radius: 100%;
+}
+
+#workImg {
+  display: inline-block;
+  width: 30%;
+  position: absolute;
+}
+/******************************/
+
+/* Form */
+
+label {
+}
+
+input,
+textarea {
+  display: block;
+  margin: 10px 15px;
+}
+
+#contactForm {
+  margin: 30px;
+}
+
+/******************************/

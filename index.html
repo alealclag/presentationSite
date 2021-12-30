@@ -4,11 +4,16 @@
     <meta charset="utf-8" />
     <title>Alejandro Alcántara</title>
     <link rel="stylesheet" href="css/styles.css" />
+
     <link rel="icon" href="images/favicon.png" />
   </head>
 
   <body>
     <header>
+      <a href="index.html"
+        ><img
+          src="https://pbs.twimg.com/profile_images/1457699451729031171/RtS4Vk0g_400x400.jpg"
+      /></a>
       <ul id="navbar">
         <li class="navbarTab"><a href="contactForm.html">👓 Contact me</a></li>
         <li class="navbarTab"><a href="contactForm.html">🎢 Contact me</a></li>
@@ -102,54 +107,64 @@
 
     <hr />
 
-    <div class="mainPageSection">
+    <div class="mainPageSection" id="knowledges">
       <h2>Knowledges</h2>
-      <div class="mainPageSubsection">
+      <div class="mainPageSubsection" id="technologies">
         <h3>Technologies</h3>
-        <div id="techLists">
-          <ul>
+        <div class="card">
+          <ul id="techLists">
             <li>C & C++</li>
             <li>Python</li>
             <li>.NET (C#, WPF)</li>
             <li>Java</li>
-          </ul>
-          <ul>
             <li>Embedded systems</li>
             <li>Git</li>
             <li>Docker</li>
           </ul>
+          <img src="images/tech.png" class="bgPic" />
         </div>
-        <img src="images/tech.png" class="bgPic" />
       </div>
 
       <div class="mainPageSubsection">
         <h3>Languages (actual spoken languages, not the programming ones)</h3>
-        <table cellspacing="20" id="langTab">
-          <thead>
-            <tr>
-              <th>Language</th>
-              <th>Level</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Spanish</td>
-              <td>Native</td>
-            </tr>
-            <tr>
-              <td>English</td>
-              <td>Advanced</td>
-            </tr>
-            <tr>
-              <td>Japanese</td>
-              <td>Intermediate</td>
-            </tr>
-          </tbody>
-        </table>
-        <img src="images/lang.png" class="bgPic" />
+        <div class="card">
+          <table cellspacing="20" id="langTab">
+            <thead>
+              <tr>
+                <th>Language</th>
+                <th>Level</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Spanish</td>
+                <td>Native</td>
+              </tr>
+              <tr>
+                <td>English</td>
+                <td>Advanced</td>
+              </tr>
+              <tr>
+                <td>Japanese</td>
+                <td>Intermediate</td>
+              </tr>
+            </tbody>
+          </table>
+          <img src="images/lang.png" class="bgPic" />
+        </div>
       </div>
     </div>
 
-    <footer>This is the footer</footer>
+    <footer>
+      <a href="https://www.linkedin.com/in/alejandro-alcantara-laguna"
+        ><img src="images/linkedin.png" alt="LinkedIn Profile"
+      /></a>
+      <a href="https://github.com/alealclag"
+        ><img src="images/github.png" alt="GitHub Repo"
+      /></a>
+      <a href="https://twitter.com/lacaralale"
+        ><img src="images/twitter.png" alt="Twitter Profile"
+      /></a>
+    </footer>
   </body>
 </html>
