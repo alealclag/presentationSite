@@ -4,22 +4,28 @@
     <meta charset="utf-8" />
     <title>Alejandro Alcántara</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+
+    <!-- My CSS -->
     <link rel="stylesheet" href="css/styles-bt.css" />
 
+    <!-- Bootstrap JS -->
     <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
-      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Fonts Awesome -->
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
-      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      src="https://kit.fontawesome.com/f0e6aca62c.js"
       crossorigin="anonymous"
     ></script>
 
@@ -44,10 +50,14 @@
         <div class="collapse navbar-collapse" id="navbarToggle">
           <ul class="navbar-nav m-lg-auto">
             <li class="nav-item">
-              <a href="#workExpSection" class="nav-link">💼 Work Experience</a>
+              <a href="#workExpSection" class="nav-link"
+                ><i class="fas fa-briefcase"></i> Work Experience</a
+              >
             </li>
             <li class="nav-item">
-              <a href="#EduSection" class="nav-link">🎓 Education</a>
+              <a href="#EduSection" class="nav-link"
+                ><i class="fas fa-graduation-cap"></i> Education</a
+              >
             </li>
 
             <!-- <li class="nav-item">
@@ -59,10 +69,14 @@
             </li> -->
 
             <li class="nav-item">
-              <a href="#KnowledgeSection" class="nav-link">🔮 Knowledges</a>
+              <a href="#KnowledgeSection" class="nav-link"
+                ><i class="fas fa-brain"></i> Knowledges</a
+              >
             </li>
             <li class="nav-item">
-              <a href="contactForm.html" class="nav-link">📞 Contact me</a>
+              <a href="contactForm.html" class="nav-link"
+                ><i class="fas fa-phone"></i> Contact me</a
+              >
             </li>
           </ul>
         </div>
@@ -86,8 +100,7 @@
       </div>
     </section>
 
-    <hr />
-
+    <div class="gradientUp"></div>
     <section class="" id="workExpSection">
       <div class="container">
         <h2>Work Experience</h2>
@@ -135,8 +148,7 @@
         <img src="images/work.png" class="bgPic" />
       </div>
     </section>
-
-    <hr />
+    <div class="gradientDown"></div>
 
     <section class="" id="EduSection">
       <div class="container">
@@ -192,32 +204,57 @@
       </div>
     </section>
 
-    <hr />
-
+    <div class="gradientUp"></div>
     <section class="" id="KnowledgeSection">
       <div class="container">
         <h2>Knowledges</h2>
-        <div class="" id="">
-          <h3>Technologies</h3>
+        <div class="row justify-content-center">
+          <div class="col-lg-5" id="">
+            <h3>Technologies</h3>
 
-          <p>C & C++</p>
-          <p>Python</p>
-          <p>.NET (C#, WPF)</p>
-          <p>Java</p>
-          <p>Embedded systems</p>
-          <p>Git</p>
-          <p>Docker</p>
+            <p>C & C++</p>
+            <p>Python</p>
+            <p>.NET (C#, WPF)</p>
+            <p>Java</p>
+            <p>Embedded systems</p>
+            <p>Git</p>
+            <p>Docker</p>
 
-          <img src="images/tech.png" class="bgPic" />
+            <img src="images/tech.png" class="bgPic" />
+          </div>
+
+          <div class="col-lg-5">
+            <h3>
+              Languages (actual spoken languages, not the programming ones)
+            </h3>
+            <p>Spanish (Native)</p>
+            <p>English (Advanced)</p>
+            <p>Japanese (Intermediate)</p>
+            <img src="images/lang.png" class="bgPic" />
+          </div>
         </div>
+      </div>
+    </section>
+    <div class="gradientDown"></div>
 
-        <div class="">
-          <h3>Languages (actual spoken languages, not the programming ones)</h3>
-          <p>Spanish (Native)</p>
-          <p>English (Advanced)</p>
-          <p>Japanese (Intermediate)</p>
-          <img src="images/lang.png" class="bgPic" />
-        </div>
+    <section class="" id="contactSection">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <form action="" method="post" id="contactForm">
+          <label for="contactName">Name:</label>
+          <input type="text" name="name" id="contactName" />
+          <label for="contactMail">Email:</label>
+          <input type="text" name="email" id="contactMail" />
+          <label for="contactMessage">Mensaje:</label>
+          <textarea
+            name="Message"
+            id="contactMessage"
+            cols="30"
+            rows="10"
+          ></textarea>
+
+          <input type="submit" value="Enviar" class="btn btn-success btn-lg" />
+        </form>
       </div>
     </section>
 
