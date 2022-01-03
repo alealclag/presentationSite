@@ -97,7 +97,7 @@ section {
 
 .cardPic {
   width: 250px;
-  border-radius: 20%;
+  border-radius: 20px;
 }
 
 footer img {
@@ -122,3 +122,22 @@ textarea {
 }
 
 /******************************/
+
+.elementBlock {
+  background-color: var(--main-color);
+  margin: 20px;
+  border-radius: 20px;
+}
+
+.elementBlock img {
+  margin: 10px;
+}
+
+.cardInfo p {
+  background-color: var(--third-color);
+  padding: 10px 15px;
+  margin: 0px 10px;
+  border-radius: 10px;
+  width: fit-content;
+  text-align: justify;
+}
