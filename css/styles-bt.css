@@ -9,6 +9,12 @@
 
 header {
   background-color: var(--main-color);
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  border-bottom: 5px;
+  border-color: gray;
+  border-bottom-style: solid;
 }
 
 body {
@@ -35,11 +41,6 @@ body {
 
 #KnowledgeSection {
   background-color: var(--second-color);
-}
-
-header {
-  position: fixed;
-  width: 100%;
 }
 
 footer {
@@ -92,7 +93,23 @@ section {
 }
 
 .bgPic {
-  width: 50%;
+  width: 30%;
+  position: absolute;
+  z-index: 0;
+  opacity: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-top: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+}
+
+#workExpSection .bgPic {
+  transform: rotate(35deg);
 }
 
 .cardPic {
@@ -111,6 +128,10 @@ footer img:hover {
   opacity: 100%;
 }
 
+.container {
+  position: relative;
+}
+
 /******************************/
 
 /* Form */
@@ -125,19 +146,116 @@ textarea {
 
 .elementBlock {
   background-color: var(--main-color);
-  margin: 20px;
+  margin: 50px;
   border-radius: 20px;
+  z-index: 1;
+  transition: all 200ms ease-in-out;
 }
 
+.elementBlock:hover {
+  /* width: 50%;
+  padding-left: 100px; */
+  box-shadow: 0 0 3rem var(--bg-color) !important;
+  transition: all 200ms ease-in-out;
+}
+
+#EduSection .elementBlock:hover {
+  box-shadow: 0 0 3rem black !important;
+}
+
+/* .elementBlock:hover p {
+  font-size: 1.3em;
+  transition: all 200ms ease-in-out;
+}
+.elementBlock:hover .cardRole p {
+  font-size: 1.4em;
+  transition: all 200ms ease-in-out;
+}
+.elementBlock:hover .cardDates p {
+  font-size: 1em;
+  transition: all 200ms ease-in-out;
+} */
+
 .elementBlock img {
+  margin: 10px;
+}
+
+.elementBlock:hover img {
   margin: 10px;
 }
 
 .cardInfo p {
   background-color: var(--third-color);
   padding: 10px 15px;
-  margin: 0px 10px;
+  margin: 10px 10px 0px;
+  border-radius: 10px;
+  text-align: justify;
+  transition: all 200ms ease-in-out;
+}
+
+.cardName p {
+  background-color: var(--third-color);
+  padding: 10px 15px;
+  margin: 0px auto 10px;
   border-radius: 10px;
   width: fit-content;
   text-align: justify;
+  font-weight: bold;
+  font-size: 1.2em;
+  transition: all 200ms ease-in-out;
+}
+
+.cardRole p {
+  font-size: 1.4em;
+  text-align: left;
+  transition: all 200ms ease-in-out;
+}
+
+.cardDates p {
+  font-size: 0.8em;
+  transition: all 200ms ease-in-out;
+}
+
+.knowledgeBlock {
+  margin: 50px;
+  z-index: 1;
+  transition: all 200ms ease-in-out;
+}
+
+.knowledgeSubBlock .bgPic {
+  position: relative;
+}
+
+.knowledgeSubBlock {
+  border-radius: 20px;
+  border: 10px;
+  border-style: solid;
+  border-color: var(--main-color);
+  padding: 20px;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+}
+
+.knowledgeBlock h3 {
+  text-align: center;
+  background-color: var(--main-color);
+  border-radius: 20px;
+  padding: 10px;
+  color: var(--third-color);
+}
+
+#techKnow {
+  background-image: url("../images/tech.png");
+}
+
+#langKnow {
+  background-image: url("../images/lang.png");
+}
+
+.knowledgeSubBlock p {
+  background-color: var(--main-color);
+  margin: 5px;
+  border-radius: 10px;
 }
