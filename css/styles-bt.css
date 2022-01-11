@@ -254,8 +254,31 @@ textarea {
   background-image: url("../images/lang.png");
 }
 
-.knowledgeSubBlock p {
+.techBlock {
   background-color: var(--main-color);
-  margin: 5px;
+  padding: 5px;
   border-radius: 10px;
+  transition: all 200ms ease-in-out;
+  margin: 20px 15px;
+}
+
+.techBlock p {
+  background-color: var(--third-color);
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}
+
+.techBlock img {
+  width: 100px;
+  margin: 5px 5px 0px;
+  border-radius: 10px;
+}
+
+.techBlock:hover {
+  box-shadow: 0 0 1rem var(--bg-color) !important;
+  transition: all 200ms ease-in-out;
 }
