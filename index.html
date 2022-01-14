@@ -50,12 +50,12 @@
         <div class="collapse navbar-collapse" id="navbarToggle">
           <ul class="navbar-nav m-lg-auto">
             <li class="nav-item">
-              <a href="#workExpSection" class="nav-link"
+              <a href="#WorkGradient" class="nav-link"
                 ><i class="fas fa-briefcase"></i> Work Experience</a
               >
             </li>
             <li class="nav-item">
-              <a href="#EduSection" class="nav-link"
+              <a href="#EduGradient" class="nav-link"
                 ><i class="fas fa-graduation-cap"></i> Education</a
               >
             </li>
@@ -69,12 +69,12 @@
             </li> -->
 
             <li class="nav-item">
-              <a href="#KnowledgeSection" class="nav-link"
+              <a href="#KnowGradient" class="nav-link"
                 ><i class="fas fa-brain"></i> Knowledges</a
               >
             </li>
             <li class="nav-item">
-              <a href="contactForm.html" class="nav-link"
+              <a href="#ContactGradient" class="nav-link"
                 ><i class="fas fa-phone"></i> Contact me</a
               >
             </li>
@@ -100,7 +100,7 @@
       </div>
     </section>
 
-    <div class="gradientUp"></div>
+    <div class="gradientUp" id="WorkGradient"></div>
     <section class="" id="workExpSection">
       <div class="container">
         <h2>Work Experience</h2>
@@ -168,7 +168,7 @@
         <img src="images/work.png" class="bgPic" />
       </div>
     </section>
-    <div class="gradientDown"></div>
+    <div class="gradientDown" id="EduGradient"></div>
 
     <section class="" id="EduSection">
       <div class="container">
@@ -244,7 +244,7 @@
       </div>
     </section>
 
-    <div class="gradientUp"></div>
+    <div class="gradientUp" id="KnowGradient"></div>
     <section class="" id="KnowledgeSection">
       <div class="container">
         <h2>Knowledges</h2>
@@ -400,7 +400,7 @@
                     </tr>
                     <tr>
                       <td>
-                        <p>Embedded Systems</p>
+                        <p id="embSys-card">Embedded Systems</p>
                       </td>
                     </tr>
                   </table>
@@ -412,15 +412,56 @@
           <div class="col-lg-5 col-md-10 knowledgeBlock">
             <h3>Languages (spoken, not for coding)</h3>
             <div class="knowledgeSubBlock shadow-lg" id="langKnow">
-              <p>Spanish (Native)</p>
-              <p>English (Advanced)</p>
-              <p>Japanese (Intermediate)</p>
+              <div class="container">
+                <h4>Native</h4>
+                <div class="row">
+                  <table class="col-lg-3 shadow-lg langBlock" id="spanishBlock">
+                    <tr>
+                      <td>
+                        <img src="images/spain.png" alt="Spanish Flag" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><p>Spanish</p></td>
+                    </tr>
+                  </table>
+                </div>
+
+                <h4 class="leftLangBlock">Advanced</h4>
+                <div class="row justify-content-end">
+                  <table class="col-lg-3 shadow-lg langBlock" id="englishBlock">
+                    <tr>
+                      <td><img src="images/uk.jpg" alt="England Flag" /></td>
+                    </tr>
+                    <tr>
+                      <td><p>English</p></td>
+                    </tr>
+                  </table>
+                </div>
+
+                <h4>Intermediate</h4>
+                <div class="row">
+                  <table
+                    class="col-lg-3 shadow-lg langBlock"
+                    id="japaneseBlock"
+                  >
+                    <tr>
+                      <td>
+                        <img src="images/japan.jpg" alt="Japanese Flag" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><p>Japanese</p></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <div class="gradientDown"></div>
+    <div class="gradientDown" id="ContactGradient"></div>
 
     <section class="" id="contactSection">
       <div class="container">

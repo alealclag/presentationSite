@@ -5,7 +5,9 @@
   --bg-color: #feffde;
 }
 
-/* Main Structure Elements */
+body {
+  background-color: var(--bg-color);
+}
 
 header {
   background-color: var(--main-color);
@@ -15,10 +17,6 @@ header {
   border-bottom: 5px;
   border-color: gray;
   border-bottom-style: solid;
-}
-
-body {
-  background-color: var(--bg-color);
 }
 
 .nav-link {
@@ -31,12 +29,17 @@ body {
   opacity: 60%;
 }
 
-#workExpSection {
-  background-color: var(--second-color);
+section {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 #presentationSection {
   text-align: center;
+}
+
+#workExpSection {
+  background-color: var(--second-color);
 }
 
 #KnowledgeSection {
@@ -48,40 +51,14 @@ footer {
   padding: 50px 100px;
 }
 
-section {
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
-.gradientUp {
-  background: linear-gradient(
-    to bottom,
-    var(--bg-color) 0%,
-    var(--second-color) 100%
-  );
-  height: 50px;
-}
-
 .gradientDown {
   background: linear-gradient(
     to bottom,
     var(--second-color) 0%,
     var(--bg-color) 100%
   );
-  height: 50px;
+  height: 100px;
 }
-
-/******************************/
-
-/* Text */
-
-/******************************/
-
-/* Tables */
-
-/******************************/
-
-/* Images */
 
 .profilePic {
   border-radius: 100%;
@@ -132,17 +109,11 @@ footer img:hover {
   position: relative;
 }
 
-/******************************/
-
-/* Form */
-
 input,
 textarea {
   display: block;
   margin: 10px 15px;
 }
-
-/******************************/
 
 .elementBlock {
   background-color: var(--main-color);
@@ -153,8 +124,6 @@ textarea {
 }
 
 .elementBlock:hover {
-  /* width: 50%;
-  padding-left: 100px; */
   box-shadow: 0 0 3rem var(--bg-color) !important;
   transition: all 200ms ease-in-out;
 }
@@ -162,19 +131,6 @@ textarea {
 #EduSection .elementBlock:hover {
   box-shadow: 0 0 3rem black !important;
 }
-
-/* .elementBlock:hover p {
-  font-size: 1.3em;
-  transition: all 200ms ease-in-out;
-}
-.elementBlock:hover .cardRole p {
-  font-size: 1.4em;
-  transition: all 200ms ease-in-out;
-}
-.elementBlock:hover .cardDates p {
-  font-size: 1em;
-  transition: all 200ms ease-in-out;
-} */
 
 .elementBlock img {
   margin: 10px;
@@ -235,7 +191,6 @@ textarea {
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100%;
 }
 
 .knowledgeBlock h3 {
@@ -281,4 +236,70 @@ textarea {
 .techBlock:hover {
   box-shadow: 0 0 1rem var(--bg-color) !important;
   transition: all 200ms ease-in-out;
+}
+
+#embSys-card {
+  font-size: 0.7em;
+  padding: 2px;
+}
+
+.nav-link {
+  margin: auto 20px;
+}
+
+.langBlock {
+  background-color: #52734d;
+  border-radius: 20px;
+  transition: all 200ms ease-in-out;
+}
+
+.langBlock img {
+  width: 150px;
+  margin: 10px;
+  border-radius: 100%;
+  border: 5px solid var(--second-color);
+}
+
+.langBlock p {
+  background-color: #91c788;
+  margin: 0px 10px 10px;
+  padding: 5px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}
+
+.leftLangBlock {
+  text-align: right;
+}
+
+.langBlock:hover {
+  box-shadow: 0 0 1rem var(--bg-color) !important;
+  transition: all 200ms ease-in-out;
+}
+
+#spanishBlock {
+  background-color: #cb0d12;
+}
+#englishBlock {
+  background-color: #002069;
+}
+#japaneseBlock {
+  background-color: white;
+}
+
+#spanishBlock p {
+  background-color: #ffbe00;
+}
+#englishBlock p {
+  background-color: #c80c22;
+}
+#japaneseBlock p {
+  background-color: #bb002b;
+  color: white;
+}
+
+.container h4 {
+  margin-bottom: 12px;
 }
