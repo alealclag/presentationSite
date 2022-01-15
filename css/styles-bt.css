@@ -9,6 +9,8 @@ body {
   background-color: var(--bg-color);
 }
 
+/*********** NavBar **************/
+
 header {
   background-color: var(--main-color);
   position: fixed;
@@ -21,6 +23,8 @@ header {
 
 .nav-link {
   color: var(--bg-color);
+  margin: auto 20px;
+
   transition: all 0.3s;
 }
 
@@ -29,44 +33,25 @@ header {
   opacity: 60%;
 }
 
+/*************************/
+
+/*********** Section General **************/
+
 section {
   padding-top: 40px;
   padding-bottom: 40px;
 }
 
-#presentationSection {
-  text-align: center;
+.container {
+  position: relative;
 }
 
-#workExpSection {
-  background-color: var(--second-color);
-}
-
-#KnowledgeSection {
-  background-color: var(--second-color);
-}
-
-footer {
-  background-color: var(--second-color);
-  padding: 50px 100px;
-}
-
-.gradientDown {
-  background: linear-gradient(
-    to bottom,
-    var(--second-color) 0%,
-    var(--bg-color) 100%
-  );
-  height: 100px;
-}
-
-.profilePic {
-  border-radius: 100%;
-  margin-top: 80px;
-}
-
-.nav-pic {
-  height: 30%;
+.elementBlock {
+  background-color: var(--main-color);
+  margin: 50px;
+  border-radius: 20px;
+  z-index: 1;
+  transition: all 200ms ease-in-out;
 }
 
 .bgPic {
@@ -85,8 +70,9 @@ footer {
   text-align: center;
 }
 
-#workExpSection .bgPic {
-  transform: rotate(35deg);
+.elementBlock:hover {
+  box-shadow: 0 0 3rem var(--bg-color) !important;
+  transition: all 200ms ease-in-out;
 }
 
 .cardPic {
@@ -94,49 +80,7 @@ footer {
   border-radius: 20px;
 }
 
-footer img {
-  width: 50px;
-  margin: 10px;
-  opacity: 50%;
-  transition: all 0.3s;
-}
-
-footer img:hover {
-  opacity: 100%;
-}
-
-.container {
-  position: relative;
-}
-
-input,
-textarea {
-  display: block;
-  margin: 10px 15px;
-}
-
-.elementBlock {
-  background-color: var(--main-color);
-  margin: 50px;
-  border-radius: 20px;
-  z-index: 1;
-  transition: all 200ms ease-in-out;
-}
-
-.elementBlock:hover {
-  box-shadow: 0 0 3rem var(--bg-color) !important;
-  transition: all 200ms ease-in-out;
-}
-
-#EduSection .elementBlock:hover {
-  box-shadow: 0 0 3rem black !important;
-}
-
 .elementBlock img {
-  margin: 10px;
-}
-
-.elementBlock:hover img {
   margin: 10px;
 }
 
@@ -172,6 +116,65 @@ textarea {
   transition: all 200ms ease-in-out;
 }
 
+.gradientDown {
+  background: linear-gradient(
+    to bottom,
+    var(--second-color) 0%,
+    var(--bg-color) 100%
+  );
+  height: 100px;
+}
+
+.gradientUp {
+  background: linear-gradient(
+    to top,
+    var(--second-color) 0%,
+    var(--bg-color) 100%
+  );
+  height: 100px;
+}
+
+/*************************/
+
+/*********** Presentation **************/
+
+#presentationSection {
+  text-align: center;
+}
+
+.profilePic {
+  border-radius: 100%;
+  margin-top: 80px;
+}
+
+/*************************/
+
+/*********** WorkExp **************/
+
+#workExpSection {
+  background-color: var(--second-color);
+}
+
+#workExpSection .bgPic {
+  transform: rotate(35deg);
+}
+
+/*************************/
+
+/*********** Education **************/
+
+#EduSection .elementBlock:hover {
+  box-shadow: 0 0 3rem black !important;
+}
+
+/*************************/
+
+/*********** Knowledge **************/
+
+#KnowledgeSection {
+  background-color: var(--second-color);
+}
+
 .knowledgeBlock {
   margin: 50px;
   z-index: 1;
@@ -201,12 +204,12 @@ textarea {
   color: var(--third-color);
 }
 
+/*************************/
+
+/*********** Tech **************/
+
 #techKnow {
   background-image: url("../images/tech.png");
-}
-
-#langKnow {
-  background-image: url("../images/lang.png");
 }
 
 .techBlock {
@@ -215,6 +218,11 @@ textarea {
   border-radius: 10px;
   transition: all 200ms ease-in-out;
   margin: 20px 15px;
+}
+
+.techBlock:hover {
+  box-shadow: 0 0 1rem var(--bg-color) !important;
+  transition: all 200ms ease-in-out;
 }
 
 .techBlock p {
@@ -233,18 +241,17 @@ textarea {
   border-radius: 10px;
 }
 
-.techBlock:hover {
-  box-shadow: 0 0 1rem var(--bg-color) !important;
-  transition: all 200ms ease-in-out;
-}
-
 #embSys-card {
   font-size: 0.7em;
   padding: 2px;
 }
 
-.nav-link {
-  margin: auto 20px;
+/*************************/
+
+/*********** Language **************/
+
+#langKnow {
+  background-image: url("../images/lang.png");
 }
 
 .langBlock {
@@ -268,6 +275,10 @@ textarea {
   text-align: center;
   font-size: large;
   font-weight: bold;
+}
+
+.container h4 {
+  margin-bottom: 12px;
 }
 
 .leftLangBlock {
@@ -300,6 +311,72 @@ textarea {
   color: white;
 }
 
-.container h4 {
-  margin-bottom: 12px;
+/*************************/
+
+/*********** Contact **************/
+
+#contactSection {
+  text-align: center;
 }
+
+#contactSection form {
+  background-color: var(--main-color);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px;
+}
+
+input,
+textarea {
+  width: 100%;
+  margin: 10px auto;
+}
+
+input:not(.btn),
+textarea {
+  background-color: var(--third-color);
+  border: 0;
+  border-radius: 10px;
+  padding: 7px;
+  resize: none;
+}
+
+.btn {
+  background-color: var(--second-color);
+  color: black;
+  transition: all 200ms ease-in-out;
+}
+
+.btn:hover {
+  background-color: black;
+  color: var(--second-color);
+  /* width: 150%; */
+  transition: all 200ms ease-in-out;
+}
+
+.mailPic {
+  margin-left: 0px;
+  z-index: -1;
+}
+
+/*************************/
+
+/*********** Footer **************/
+
+footer {
+  background-color: var(--second-color);
+  padding: 50px 100px;
+}
+
+footer img {
+  width: 50px;
+  margin: 10px;
+  opacity: 50%;
+  transition: all 0.3s;
+}
+
+footer img:hover {
+  opacity: 100%;
+}
+
+/*************************/
