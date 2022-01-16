@@ -341,16 +341,15 @@ textarea {
   resize: none;
 }
 
-.btn {
+#contactSection .btn {
   background-color: var(--second-color);
   color: black;
   transition: all 200ms ease-in-out;
 }
 
-.btn:hover {
+#contactSection .btn:hover {
   background-color: black;
   color: var(--second-color);
-  /* width: 150%; */
   transition: all 200ms ease-in-out;
 }
 
@@ -369,14 +368,31 @@ footer {
 }
 
 footer img {
-  width: 50px;
+  width: 30%;
   margin: 10px;
   opacity: 50%;
-  transition: all 0.3s;
+  transition: all 200ms ease-in-out;
 }
 
 footer img:hover {
   opacity: 100%;
+}
+
+.footerNote {
+  text-align: center;
+}
+
+footer .btn {
+  background-color: black;
+  color: var(--second-color);
+  width: 75%;
+  transition: all 300ms ease-in-out;
+}
+
+footer .btn:hover {
+  color: var(--second-color);
+  width: 100%;
+  transition: all 300ms ease-in-out;
 }
 
 /*************************/
