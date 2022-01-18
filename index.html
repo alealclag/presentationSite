@@ -29,7 +29,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <link rel="icon" href="images/favicon.png" />
+    <link rel="icon" href="images/favicon.svg" />
   </head>
 
   <body>
@@ -44,7 +44,7 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <img src="images/hamburger.png" class="navbar-toggler-icon" />
+          <img src="images/icons/hamburger.png" class="navbar-toggler-icon" />
         </button>
 
         <div class="collapse navbar-collapse" id="navbarToggle">
@@ -85,13 +85,11 @@
 
     <section class="" id="presentationSection">
       <div class="container">
-        <a href="https://twitter.com/lacaralale">
-          <img
-            class="profilePic"
-            src="https://pbs.twimg.com/profile_images/1457699451729031171/RtS4Vk0g_400x400.jpg"
-            alt="Mi Tuite"
-          />
-        </a>
+        <img
+          class="profilePic"
+          src="images/prestentationPic.jpg"
+          alt="Mi Tuite"
+        />
         <div id="">
           <h1>Alejandro Alcántara Laguna</h1>
           <h3>Developer & Computer Engineer</h3>
@@ -103,25 +101,33 @@
     <div class="gradientUp" id="WorkGradient"></div>
     <section class="" id="workExpSection">
       <div class="container">
+        <img src="images/bgPics/work.png" class="bgPic" />
+
         <h2>Work Experience</h2>
-        <div class="row justify-content-center">
-          <table class="col-lg-5 col-md-10 elementBlock shadow-lg">
+        <div class="row justify-content-center sectionRow">
+          <table
+            class="col-12 col-xxl-5 col-xl-5 col-lg-10 elementBlock shadow-lg"
+          >
             <tr>
               <td rowspan="3">
-                <img src="images/coberlogo.png" alt="Cober" class="cardPic" />
+                <img
+                  src="images/cardPics/coberlogo.png"
+                  alt="Cober"
+                  class="cardPic"
+                />
               </td>
-              <td class="cardInfo cardRole">
-                <p>.NET Developer</p>
+              <td>
+                <p class="cardRole cardInfo">.NET Developer</p>
               </td>
             </tr>
             <tr>
-              <td class="cardInfo cardDates">
-                <p>aug. 2021 - oct. 2021</p>
+              <td>
+                <p class="cardInfo cardDates">aug. 2021 - oct. 2021</p>
               </td>
             </tr>
             <tr>
-              <td class="cardInfo" rowspan="2">
-                <p>
+              <td rowspan="2">
+                <p class="cardInfo">
                   The work done consisted in upgrading the client's application
                   using .NET (with MVVM and asynchrony), as well as solving bugs
                   and analyzing the client's necessities
@@ -135,23 +141,31 @@
             </tr>
           </table>
 
-          <table class="col-lg-5 col-md-10 elementBlock shadow-lg">
+          <table
+            class="col-12 col-xxl-5 col-xl-5 col-lg-10 elementBlock shadow-lg"
+          >
             <tr>
               <td rowspan="3">
-                <img src="images/nttdatalogo.png" alt="Cober" class="cardPic" />
+                <img
+                  src="images/cardPics/nttdatalogo.png"
+                  alt="Cober"
+                  class="cardPic"
+                />
               </td>
-              <td class="cardInfo cardRole">
-                <p>Intern .NET Developer</p>
+              <td>
+                <p class="cardInfo cardRole" id="nttDataRole">
+                  Intern .NET Developer
+                </p>
               </td>
             </tr>
             <tr>
-              <td class="cardInfo cardDates">
-                <p>oct. 2020 - mar. 2021</p>
+              <td>
+                <p class="cardInfo cardDates">oct. 2020 - mar. 2021</p>
               </td>
             </tr>
             <tr>
-              <td class="cardInfo" rowspan="2">
-                <p>
+              <td rowspan="2">
+                <p class="cardInfo">
                   The tasks developed during my internship on the company were
                   fixing bugs, migrating functionalities and performing
                   functional tests. The main technology used was .NET
@@ -165,36 +179,41 @@
             </tr>
           </table>
         </div>
-        <img src="images/work.png" class="bgPic" />
       </div>
     </section>
     <div class="gradientDown" id="EduGradient"></div>
 
     <section class="" id="EduSection">
       <div class="container">
+        <img src="images/bgPics/education.png" class="bgPic" />
+
         <h2>Education</h2>
-        <div class="row justify-content-center">
-          <table class="col-lg-5 elementBlock shadow-lg">
+        <div class="row justify-content-center sectionRow">
+          <table
+            class="col-12 col-xxl-5 col-xl-5 col-lg-10 elementBlock shadow-lg"
+          >
             <tr>
               <td rowspan="3">
                 <img
-                  src="images/webdevlogo.png"
+                  src="images/cardPics/webdevlogo.png"
                   alt="WebDev Logo"
                   class="cardPic"
                 />
               </td>
-              <td class="cardInfo cardRole">
-                <p>Full-Stack Web Development Course</p>
+              <td>
+                <p class="cardInfo cardRole">
+                  Full-Stack Web Development Course
+                </p>
               </td>
             </tr>
             <tr>
-              <td class="cardInfo cardDates">
-                <p>dec. 2021 - feb. 2022</p>
+              <td>
+                <p class="cardInfo cardDates">dec. 2021 - feb. 2022</p>
               </td>
             </tr>
             <tr>
-              <td class="cardInfo" rowspan="2">
-                <p>
+              <td rowspan="2">
+                <p class="cardInfo">
                   55h full-stack web development course, including technologies
                   like Javascript, Node, Bootstrap, React, Express & MongoDB
                 </p>
@@ -207,27 +226,29 @@
             </tr>
           </table>
 
-          <table class="col-lg-5 elementBlock shadow-lg">
+          <table
+            class="col-12 col-xxl-5 col-xl-5 col-lg-10 elementBlock shadow-lg"
+          >
             <tr>
               <td rowspan="3">
                 <img
-                  src="images/uslogo.png"
+                  src="images/cardPics/uslogo.png"
                   alt="University of Seville"
                   class="cardPic"
                 />
               </td>
-              <td class="cardInfo cardRole">
-                <p>Computer Science Degree</p>
+              <td>
+                <p class="cardInfo cardRole">Computer Science Degree</p>
               </td>
             </tr>
             <tr>
-              <td class="cardInfo cardDates">
-                <p>2017 - 2021</p>
+              <td>
+                <p class="cardInfo cardDates">2017 - 2021</p>
               </td>
             </tr>
             <tr>
-              <td class="cardInfo" rowspan="2">
-                <p>
+              <td rowspan="2">
+                <p class="cardInfo">
                   Worked on various fields, including web development, analysis
                   and design of algorithms, embedded systems, AI and more
                 </p>
@@ -240,7 +261,6 @@
             </tr>
           </table>
         </div>
-        <img src="images/education.png" class="bgPic" />
       </div>
     </section>
 
@@ -249,152 +269,206 @@
       <div class="container">
         <h2>Knowledges</h2>
         <div class="row justify-content-center">
-          <div class="col-lg-5 col-md-10 knowledgeBlock">
-            <h3>Technologies</h3>
+          <div
+            class="col-xxl-5 col-xl-6 col-lg-8 col-md-10 col-sm-11 knowledgeBlock"
+          >
+            <h3 class="knowSubBlockTitle">Technologies</h3>
             <div class="knowledgeSubBlock shadow-lg" id="techKnow">
               <div class="container">
+                <img src="images/bgPics/tech.png" class="bgPic knowBgPic" />
+
                 <div class="row justify-content-center">
-                  <table class="col-lg-2 col-md-2 col-sm-2 techBlock shadow-lg">
+                  <table class="col-2 techBlock shadow-lg">
                     <tr>
                       <td>
-                        <img src="images/techLogos/node.jpg" alt="C++" />
+                        <img
+                          src="images/cardPics/techLogos/node.jpg"
+                          alt="Node.js logo"
+                          class="techPic"
+                        />
                       </td>
                     </tr>
                     <tr>
                       <td>
-                        <p>Node.JS</p>
-                      </td>
-                    </tr>
-                  </table>
-                  <table class="col-lg-2 col-md-2 col-sm-2 techBlock shadow-lg">
-                    <tr>
-                      <td>
-                        <img src="images/techLogos/react.jpg" alt="C++" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p>React</p>
+                        <p class="techName">Node.JS</p>
                       </td>
                     </tr>
                   </table>
-                  <table class="col-lg-2 col-md-2 col-sm-2 techBlock shadow-lg">
+                  <table class="col-2 techBlock shadow-lg">
                     <tr>
                       <td>
-                        <img src="images/techLogos/bootstrap.jpg" alt="C++" />
+                        <img
+                          src="images/cardPics/techLogos/react.jpg"
+                          alt="React logo"
+                          class="techPic"
+                        />
                       </td>
                     </tr>
                     <tr>
                       <td>
-                        <p>Bootstrap</p>
-                      </td>
-                    </tr>
-                  </table>
-                  <table class="col-lg-2 col-md-2 col-sm-2 techBlock shadow-lg">
-                    <tr>
-                      <td>
-                        <img src="images/techLogos/MongoDB.jpg" alt="C++" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p>MongoDB</p>
+                        <p class="techName">React</p>
                       </td>
                     </tr>
                   </table>
-                  <table class="col-lg-2 col-md-2 col-sm-2 techBlock shadow-lg">
+                  <table class="col-2 techBlock shadow-lg">
                     <tr>
                       <td>
-                        <img src="images/techLogos/git.jpg" alt="C++" />
+                        <img
+                          src="images/cardPics/techLogos/bootstrap.jpg"
+                          alt="Bootstrap logo"
+                          class="techPic"
+                        />
                       </td>
                     </tr>
                     <tr>
                       <td>
-                        <p>Git</p>
-                      </td>
-                    </tr>
-                  </table>
-                  <table class="col-lg-2 col-md-2 col-sm-2 techBlock shadow-lg">
-                    <tr>
-                      <td>
-                        <img src="images/techLogos/docker.jpg" alt="C++" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p>Docker</p>
+                        <p class="techName">Bootstrap</p>
                       </td>
                     </tr>
                   </table>
-                  <table class="col-lg-2 col-md-2 col-sm-2 techBlock shadow-lg">
+                  <table class="col-2 techBlock shadow-lg">
                     <tr>
                       <td>
-                        <img src="images/techLogos/js.jpg" alt="C++" />
+                        <img
+                          src="images/cardPics/techLogos/MongoDB.jpg"
+                          alt="MongoDB logo"
+                          class="techPic"
+                        />
                       </td>
                     </tr>
                     <tr>
                       <td>
-                        <p>Javascript</p>
-                      </td>
-                    </tr>
-                  </table>
-                  <table class="col-lg- col-md-2 col-sm-2 techBlock shadow-lg">
-                    <tr>
-                      <td>
-                        <img src="images/techLogos/net.jpg" alt="C++" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p>.NET (C#)</p>
+                        <p class="techName">MongoDB</p>
                       </td>
                     </tr>
                   </table>
-                  <table class="col-lg- col-md-2 col-sm-2 techBlock shadow-lg">
+                  <table class="col-2 techBlock shadow-lg">
                     <tr>
                       <td>
-                        <img src="images/techLogos/python.jpg" alt="C++" />
+                        <img
+                          src="images/cardPics/techLogos/git.jpg"
+                          alt="Git logo"
+                          class="techPic"
+                        />
                       </td>
                     </tr>
                     <tr>
                       <td>
-                        <p>Python</p>
-                      </td>
-                    </tr>
-                  </table>
-                  <table class="col-lg-2 col-md-2 col-sm-2 techBlock shadow-lg">
-                    <tr>
-                      <td>
-                        <img src="images/techLogos/java.jpg" alt="C++" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p>Java</p>
+                        <p class="techName">Git</p>
                       </td>
                     </tr>
                   </table>
-                  <table class="col-lg- col-md-2 col-sm-2 techBlock shadow-lg">
+                  <table class="col-2 techBlock shadow-lg">
                     <tr>
                       <td>
-                        <img src="images/techLogos/c++.jpg" alt="C++" />
+                        <img
+                          src="images/cardPics/techLogos/docker.jpg"
+                          alt="Docker logo"
+                          class="techPic"
+                        />
                       </td>
                     </tr>
                     <tr>
                       <td>
-                        <p>C / C++</p>
+                        <p class="techName">Docker</p>
                       </td>
                     </tr>
                   </table>
-                  <table class="col-lg-2 col-md-2 col-sm-2 techBlock shadow-lg">
+                  <table class="col-2 techBlock shadow-lg">
                     <tr>
                       <td>
-                        <img src="images/techLogos/embedded.jpg" alt="C++" />
+                        <img
+                          src="images/cardPics/techLogos/js.jpg"
+                          alt="Javascript logo"
+                          class="techPic"
+                        />
                       </td>
                     </tr>
                     <tr>
                       <td>
-                        <p id="embSys-card">Embedded Systems</p>
+                        <p class="techName">Javascript</p>
+                      </td>
+                    </tr>
+                  </table>
+                  <table class="col-2 techBlock shadow-lg">
+                    <tr>
+                      <td>
+                        <img
+                          src="images/cardPics/techLogos/net.jpg"
+                          alt=".Net logo"
+                          class="techPic"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p class="techName">.NET (C#)</p>
+                      </td>
+                    </tr>
+                  </table>
+                  <table class="col-2 techBlock shadow-lg">
+                    <tr>
+                      <td>
+                        <img
+                          src="images/cardPics/techLogos/python.jpg"
+                          alt="C++"
+                          class="techPic"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p class="techName">Python</p>
+                      </td>
+                    </tr>
+                  </table>
+                  <table class="col-2 techBlock shadow-lg">
+                    <tr>
+                      <td>
+                        <img
+                          src="images/cardPics/techLogos/java.jpg"
+                          alt="Java logo"
+                          class="techPic"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p class="techName">Java</p>
+                      </td>
+                    </tr>
+                  </table>
+                  <table class="col-2 techBlock shadow-lg">
+                    <tr>
+                      <td>
+                        <img
+                          src="images/cardPics/techLogos/c++.jpg"
+                          alt="C++"
+                          class="techPic"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p class="techName">C / C++</p>
+                      </td>
+                    </tr>
+                  </table>
+                  <table class="col-2 techBlock shadow-lg">
+                    <tr>
+                      <td>
+                        <img
+                          src="images/cardPics/techLogos/embedded.jpg"
+                          alt="Embedded system"
+                          class="techPic"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <p class="techName" id="embSys-card">
+                          Embedded Systems
+                        </p>
                       </td>
                     </tr>
                   </table>
@@ -403,49 +477,65 @@
             </div>
           </div>
 
-          <div class="col-lg-5 col-md-10 knowledgeBlock">
-            <h3>Languages (spoken, not for coding)</h3>
+          <div
+            class="col-xxl-5 col-xl-6 col-lg-8 col-md-10 col-sm-11 knowledgeBlock"
+          >
+            <h3 class="knowSubBlockTitle">
+              Languages (spoken, not for coding)
+            </h3>
             <div class="knowledgeSubBlock shadow-lg" id="langKnow">
               <div class="container">
-                <h4>Native</h4>
+                <img src="images/bgPics/lang.png" class="bgPic knowBgPic" />
+                <h4 class="levelTitle levelTitle">Native</h4>
                 <div class="row">
-                  <table class="col-lg-3 shadow-lg langBlock" id="spanishBlock">
+                  <table class="col-3 shadow-lg langBlock" id="spanishBlock">
                     <tr>
                       <td>
-                        <img src="images/spain.png" alt="Spanish Flag" />
+                        <img
+                          src="images/cardPics/spain.png"
+                          alt="Spanish Flag"
+                          class="flagPic"
+                        />
                       </td>
                     </tr>
                     <tr>
-                      <td><p>Spanish</p></td>
+                      <td><p class="langName">Spanish</p></td>
                     </tr>
                   </table>
                 </div>
 
                 <h4 class="leftLangBlock">Advanced</h4>
                 <div class="row justify-content-end">
-                  <table class="col-lg-3 shadow-lg langBlock" id="englishBlock">
+                  <table class="col-3 shadow-lg langBlock" id="englishBlock">
                     <tr>
-                      <td><img src="images/uk.jpg" alt="England Flag" /></td>
+                      <td>
+                        <img
+                          src="images/cardPics/uk.jpg"
+                          alt="England Flag"
+                          class="flagPic"
+                        />
+                      </td>
                     </tr>
                     <tr>
-                      <td><p>English</p></td>
+                      <td><p class="langName">English</p></td>
                     </tr>
                   </table>
                 </div>
 
-                <h4>Intermediate</h4>
+                <h4 class="levelTitle">Intermediate</h4>
                 <div class="row">
-                  <table
-                    class="col-lg-3 shadow-lg langBlock"
-                    id="japaneseBlock"
-                  >
+                  <table class="col-3 shadow-lg langBlock" id="japaneseBlock">
                     <tr>
                       <td>
-                        <img src="images/japan.jpg" alt="Japanese Flag" />
+                        <img
+                          src="images/cardPics/japan.jpg"
+                          alt="Japanese Flag"
+                          class="flagPic"
+                        />
                       </td>
                     </tr>
                     <tr>
-                      <td><p>Japanese</p></td>
+                      <td><p class="langName">Japanese</p></td>
                     </tr>
                   </table>
                 </div>
@@ -461,6 +551,8 @@
       <h2>Contact Me</h2>
       <!-- Grid to center contact form -->
       <div class="container">
+        <img src="images/bgPics/mail.png" class="bgPic mailPic" />
+
         <div class="row justify-content-center">
           <form
             action=""
@@ -506,31 +598,40 @@
               <!-- Button -->
               <div class="row justify-content-center">
                 <div class="col-lg-6">
-                  <input type="submit" value="Send" class="btn btn-lg" />
+                  <input
+                    type="submit"
+                    value="Send"
+                    class="btn btn-lg sendMessageBtn"
+                  />
                 </div>
               </div>
             </div>
           </form>
         </div>
-        <img src="images/mail.png" class="bgPic mailPic" />
       </div>
     </section>
 
     <footer>
       <div class="container">
         <div class="row justify-content-between align-items-center">
-          <div class="col-lg-2">
+          <div class="col-6 col-xl-2 col-xxl-2 col-lg-3 col-md-4">
             <a href="https://www.linkedin.com/in/alejandro-alcantara-laguna"
-              ><img src="images/linkedin.png" alt="LinkedIn Profile"
+              ><img
+                src="images/icons/linkedin.png"
+                alt="LinkedIn Profile"
+                class="footerIcon"
             /></a>
             <a href="https://github.com/alealclag"
-              ><img src="images/github.png" alt="GitHub Repo"
+              ><img
+                src="images/icons/github.png"
+                alt="GitHub Repo"
+                class="footerIcon"
             /></a>
           </div>
-          <div class="col-lg-2 footerNote">
+          <div class="col-6 col-xxl-3 col-xl-3 col-lg-3 col-md-4">
             <p>Want to know how does this website work?</p>
             <a href="https://github.com/alealclag/presentationSite">
-              <button type="button" class="btn shadow-lg">
+              <button type="button" class="btn shadow-lg footerBtn">
                 Here's the Repo
               </button>
             </a>

@@ -54,11 +54,15 @@ section {
   transition: all 200ms ease-in-out;
 }
 
+.elementBlock:hover {
+  box-shadow: 0 0 3rem var(--bg-color) !important;
+  transition: all 200ms ease-in-out;
+}
+
 .bgPic {
   width: 30%;
   position: absolute;
-  z-index: 0;
-  opacity: 90%;
+  opacity: 80%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: auto;
@@ -70,27 +74,26 @@ section {
   text-align: center;
 }
 
-.elementBlock:hover {
-  box-shadow: 0 0 3rem var(--bg-color) !important;
-  transition: all 200ms ease-in-out;
+.sectionRow {
+  padding: 20px;
 }
 
 .cardPic {
   width: 250px;
   border-radius: 20px;
-}
-
-.elementBlock img {
   margin: 10px;
 }
 
-.cardInfo p {
+.cardInfo {
   background-color: var(--third-color);
   padding: 10px 15px;
-  margin: 10px 10px 0px;
+  margin: 10px;
   border-radius: 10px;
   text-align: justify;
-  transition: all 200ms ease-in-out;
+}
+
+.cardName {
+  padding: 10px;
 }
 
 .cardName p {
@@ -99,21 +102,23 @@ section {
   margin: 0px auto 10px;
   border-radius: 10px;
   width: fit-content;
-  text-align: justify;
+  text-align: center;
   font-weight: bold;
   font-size: 1.2em;
-  transition: all 200ms ease-in-out;
 }
 
-.cardRole p {
+.cardRole {
   font-size: 1.4em;
   text-align: left;
-  transition: all 200ms ease-in-out;
+  margin: 10px 10px 0;
 }
 
-.cardDates p {
+#nttDataRole {
+  font-size: 1.3em;
+}
+
+.cardDates {
   font-size: 0.8em;
-  transition: all 200ms ease-in-out;
 }
 
 .gradientDown {
@@ -144,7 +149,8 @@ section {
 
 .profilePic {
   border-radius: 100%;
-  margin-top: 80px;
+  margin: 80px auto 10px;
+  width: 30%;
 }
 
 /*************************/
@@ -181,10 +187,6 @@ section {
   transition: all 200ms ease-in-out;
 }
 
-.knowledgeSubBlock .bgPic {
-  position: relative;
-}
-
 .knowledgeSubBlock {
   border-radius: 20px;
   border: 10px;
@@ -196,7 +198,7 @@ section {
   background-position: center;
 }
 
-.knowledgeBlock h3 {
+.knowSubBlockTitle {
   text-align: center;
   background-color: var(--main-color);
   border-radius: 20px;
@@ -208,8 +210,9 @@ section {
 
 /*********** Tech **************/
 
-#techKnow {
-  background-image: url("../images/tech.png");
+.knowBgPic {
+  width: 100%;
+  z-index: -1;
 }
 
 .techBlock {
@@ -225,7 +228,7 @@ section {
   transition: all 200ms ease-in-out;
 }
 
-.techBlock p {
+.techName {
   background-color: var(--third-color);
   padding: 5px;
   margin: 5px;
@@ -235,7 +238,7 @@ section {
   font-weight: bold;
 }
 
-.techBlock img {
+.techPic {
   width: 100px;
   margin: 5px 5px 0px;
   border-radius: 10px;
@@ -250,24 +253,21 @@ section {
 
 /*********** Language **************/
 
-#langKnow {
-  background-image: url("../images/lang.png");
-}
-
 .langBlock {
   background-color: #52734d;
   border-radius: 20px;
+  margin: auto 20px;
   transition: all 200ms ease-in-out;
 }
 
-.langBlock img {
+.flagPic {
   width: 150px;
   margin: 10px;
   border-radius: 100%;
   border: 5px solid var(--second-color);
 }
 
-.langBlock p {
+.langName {
   background-color: #91c788;
   margin: 0px 10px 10px;
   padding: 5px;
@@ -277,7 +277,7 @@ section {
   font-weight: bold;
 }
 
-.container h4 {
+.levelTitle {
   margin-bottom: 12px;
 }
 
@@ -300,13 +300,13 @@ section {
   background-color: white;
 }
 
-#spanishBlock p {
+#spanishBlock .langName {
   background-color: #ffbe00;
 }
-#englishBlock p {
+#englishBlock .langName {
   background-color: #c80c22;
 }
-#japaneseBlock p {
+#japaneseBlock .langName {
   background-color: #bb002b;
   color: white;
 }
@@ -319,15 +319,14 @@ section {
   text-align: center;
 }
 
-#contactSection form {
+#contactForm {
   background-color: var(--main-color);
   border-radius: 10px;
   padding: 10px;
   margin: 20px;
 }
 
-input,
-textarea {
+#contactForm :is(input, textarea) {
   width: 100%;
   margin: 10px auto;
 }
@@ -341,13 +340,13 @@ textarea {
   resize: none;
 }
 
-#contactSection .btn {
+.sendMessageBtn {
   background-color: var(--second-color);
   color: black;
   transition: all 200ms ease-in-out;
 }
 
-#contactSection .btn:hover {
+.sendMessageBtn:hover {
   background-color: black;
   color: var(--second-color);
   transition: all 200ms ease-in-out;
@@ -364,35 +363,180 @@ textarea {
 
 footer {
   background-color: var(--second-color);
-  padding: 50px 100px;
+  padding: 50px 50px;
+  text-align: center;
 }
 
-footer img {
+.footerIcon {
   width: 30%;
   margin: 10px;
   opacity: 50%;
   transition: all 200ms ease-in-out;
 }
 
-footer img:hover {
+.footerIcon:hover {
   opacity: 100%;
 }
 
-.footerNote {
-  text-align: center;
-}
-
-footer .btn {
+.footerBtn {
   background-color: black;
   color: var(--second-color);
   width: 75%;
   transition: all 300ms ease-in-out;
 }
 
-footer .btn:hover {
+.footerBtn:hover {
   color: var(--second-color);
   width: 100%;
+  padding-right: 20%;
+  padding-left: 20%;
   transition: all 300ms ease-in-out;
+}
+
+/*************************/
+
+/*********** Media Breakpoints **************/
+
+/* XS screen */
+@media screen and (max-width: 600px) {
+  .profilePic {
+    width: 60%;
+  }
+
+  .cardPic {
+    width: 150px;
+    margin-right: 0;
+  }
+  .bgPic {
+    width: 50%;
+  }
+
+  .elementBlock {
+    margin-top: 20px;
+  }
+
+  .knowBgPic {
+    width: 100%;
+  }
+
+  .techBlock {
+    margin: 20px 10px;
+  }
+
+  .knowledgeSubBlock .container {
+    padding: 0;
+  }
+
+  .mailPic {
+    display: none;
+  }
+
+  #contactSection .row {
+    padding: 10px;
+  }
+
+  form .container {
+    padding: 0;
+  }
+
+  footer {
+    padding: 25px 10px;
+  }
+}
+
+/* Small screen */
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  .profilePic {
+    width: 50%;
+  }
+
+  .elementBlock {
+    margin-top: 20px;
+  }
+
+  .cardPic {
+    width: 200px;
+    margin-right: 0;
+  }
+
+  .bgPic {
+    width: 50%;
+  }
+
+  .knowBgPic {
+    width: 100%;
+  }
+
+  .techBlock {
+    margin: 20px 10px;
+  }
+
+  .knowledgeSubBlock .container {
+    padding: 0;
+  }
+}
+
+/* Medium Screen */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .profilePic {
+    width: 50%;
+  }
+
+  .bgPic {
+    width: 50%;
+  }
+  .knowBgPic {
+    width: 100%;
+  }
+
+  footer {
+    padding: inherit 50px;
+  }
+
+  footer .container {
+    max-width: none;
+  }
+}
+
+/* Large Screen */
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .bgPic {
+    width: 50%;
+  }
+
+  .knowBgPic {
+    width: 100%;
+  }
+
+  .knowledgeBlock {
+    margin: 0;
+  }
+
+  .mailPic {
+    margin-left: -70px;
+    z-index: -1;
+    width: 40%;
+  }
+
+  footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+/* XL Screen */
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .elementBlock {
+    margin: 50px 20px;
+  }
+
+  .cardPic {
+    width: 150px;
+  }
+
+  .knowledgeBlock {
+    margin: 50px 0;
+  }
 }
 
 /*************************/
