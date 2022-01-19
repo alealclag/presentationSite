@@ -46,19 +46,6 @@ section {
   position: relative;
 }
 
-.elementBlock {
-  background-color: var(--main-color);
-  margin: 50px;
-  border-radius: 20px;
-  z-index: 1;
-  transition: all 200ms ease-in-out;
-}
-
-.elementBlock:hover {
-  box-shadow: 0 0 3rem var(--bg-color) !important;
-  transition: all 200ms ease-in-out;
-}
-
 .bgPic {
   width: 30%;
   position: absolute;
@@ -78,39 +65,40 @@ section {
   padding: 20px;
 }
 
-.cardPic {
-  width: 250px;
+.elementBlock {
+  background-color: var(--main-color);
+  padding: 0 10px 10px 0;
+  margin-bottom: 50px;
   border-radius: 20px;
-  margin: 10px;
+  z-index: 1;
+  transition: all 200ms ease-in-out;
+}
+
+.elementBlock:hover {
+  box-shadow: 0 0 3rem var(--bg-color) !important;
+  transition: all 200ms ease-in-out;
+}
+
+.cardPic {
+  border-radius: 20px;
+  padding: 10px;
 }
 
 .cardInfo {
   background-color: var(--third-color);
   padding: 10px 15px;
-  margin: 10px;
+  margin: 10px auto 0;
   border-radius: 10px;
-  text-align: justify;
 }
 
 .cardName {
-  padding: 10px;
-}
-
-.cardName p {
   background-color: var(--third-color);
-  padding: 10px 15px;
-  margin: 0px auto 10px;
-  border-radius: 10px;
-  width: fit-content;
-  text-align: center;
   font-weight: bold;
   font-size: 1.2em;
 }
 
 .cardRole {
   font-size: 1.4em;
-  text-align: left;
-  margin: 10px 10px 0;
 }
 
 #nttDataRole {
@@ -118,7 +106,10 @@ section {
 }
 
 .cardDates {
-  font-size: 0.8em;
+}
+
+.cardDesc {
+  text-align: justify;
 }
 
 .gradientDown {
@@ -218,9 +209,9 @@ section {
 .techBlock {
   background-color: var(--main-color);
   padding: 5px;
+
   border-radius: 10px;
   transition: all 200ms ease-in-out;
-  margin: 20px 15px;
 }
 
 .techBlock:hover {
@@ -239,8 +230,7 @@ section {
 }
 
 .techPic {
-  width: 100px;
-  margin: 5px 5px 0px;
+  margin-bottom: 5px;
   border-radius: 10px;
 }
 
@@ -256,12 +246,10 @@ section {
 .langBlock {
   background-color: #52734d;
   border-radius: 20px;
-  margin: auto 20px;
   transition: all 200ms ease-in-out;
 }
 
 .flagPic {
-  width: 150px;
   margin: 10px;
   border-radius: 100%;
   border: 5px solid var(--second-color);
@@ -398,15 +386,11 @@ footer {
 /*********** Media Breakpoints **************/
 
 /* XS screen */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 576px) {
   .profilePic {
     width: 60%;
   }
 
-  .cardPic {
-    width: 150px;
-    margin-right: 0;
-  }
   .bgPic {
     width: 50%;
   }
@@ -415,6 +399,23 @@ footer {
     margin-top: 20px;
   }
 
+  .cardPic {
+    margin-right: 0;
+  }
+
+  .cardName {
+    font-size: 1em;
+    padding: 4px 7px;
+    margin-left: 10px;
+  }
+
+  .cardRole {
+    font-size: 0.9em;
+  }
+
+  .cardDates {
+    font-size: 0.8em;
+  }
   .knowBgPic {
     width: 100%;
   }
@@ -445,18 +446,13 @@ footer {
 }
 
 /* Small screen */
-@media screen and (min-width: 600px) and (max-width: 768px) {
+@media screen and (min-width: 576px) and (max-width: 768px) {
   .profilePic {
     width: 50%;
   }
 
   .elementBlock {
     margin-top: 20px;
-  }
-
-  .cardPic {
-    width: 200px;
-    margin-right: 0;
   }
 
   .bgPic {
@@ -485,6 +481,7 @@ footer {
   .bgPic {
     width: 50%;
   }
+
   .knowBgPic {
     width: 100%;
   }
@@ -502,6 +499,18 @@ footer {
 @media screen and (min-width: 992px) and (max-width: 1200px) {
   .bgPic {
     width: 50%;
+  }
+
+  .cardName {
+    font-size: 1.1em;
+  }
+
+  .cardRole {
+    font-size: 1em;
+  }
+
+  .cardDates {
+    font-size: 0.8em;
   }
 
   .knowBgPic {
@@ -527,11 +536,7 @@ footer {
 /* XL Screen */
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .elementBlock {
-    margin: 50px 20px;
-  }
-
-  .cardPic {
-    width: 150px;
+    margin: 20px;
   }
 
   .knowledgeBlock {

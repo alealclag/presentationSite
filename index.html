@@ -59,15 +59,6 @@
                 ><i class="fas fa-graduation-cap"></i> Education</a
               >
             </li>
-
-            <!-- <li class="nav-item">
-              <a href="#presentationSection"
-                ><img
-                  class="profilePic nav-pic"
-                  src="https://pbs.twimg.com/profile_images/1457699451729031171/RtS4Vk0g_400x400.jpg"
-              /></a>
-            </li> -->
-
             <li class="nav-item">
               <a href="#KnowGradient" class="nav-link"
                 ><i class="fas fa-brain"></i> Knowledges</a
@@ -104,80 +95,109 @@
         <img src="images/bgPics/work.png" class="bgPic" />
 
         <h2>Work Experience</h2>
-        <div class="row justify-content-center sectionRow">
-          <table
-            class="col-12 col-xxl-5 col-xl-5 col-lg-10 elementBlock shadow-lg"
+        <!-- Cards row -->
+        <div class="row justify-content-around sectionRow">
+          <!-- Cober-->
+          <div
+            class="col-12 col-xxl-5 col-xl-5 col-lg-5 col-md-10 row elementBlock shadow-lg"
           >
-            <tr>
-              <td rowspan="3">
-                <img
-                  src="images/cardPics/coberlogo.png"
-                  alt="Cober"
-                  class="cardPic"
-                />
-              </td>
-              <td>
-                <p class="cardRole cardInfo">.NET Developer</p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p class="cardInfo cardDates">aug. 2021 - oct. 2021</p>
-              </td>
-            </tr>
-            <tr>
-              <td rowspan="2">
-                <p class="cardInfo">
-                  The work done consisted in upgrading the client's application
-                  using .NET (with MVVM and asynchrony), as well as solving bugs
-                  and analyzing the client's necessities
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td class="cardName">
-                <p>Cober</p>
-              </td>
-            </tr>
-          </table>
+            <!-- Upper row -->
+            <div class="row ms-0 px-0 upperRow">
+              <!-- Left column -->
+              <img
+                src="images/cardPics/coberlogo.png"
+                alt="Cober"
+                class="col-6 col-lg-6 col-md-4 cardPic"
+              />
 
-          <table
-            class="col-12 col-xxl-5 col-xl-5 col-lg-10 elementBlock shadow-lg"
+              <!-- Right column -->
+              <div class="col">
+                <!-- Name -->
+                <div class="row">
+                  <div
+                    class="col-auto ms-0 cardInfo cardName align-self-center"
+                  >
+                    Cober
+                  </div>
+                </div>
+
+                <!-- Role -->
+                <div class="row">
+                  <div class="col-12 ms-0 cardInfo cardRole">
+                    .NET Developer
+                  </div>
+                </div>
+
+                <!-- Date -->
+                <div class="row">
+                  <div class="col-auto ms-0 cardInfo cardDates">
+                    aug. 2021 - oct. 2021
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Lower row -->
+            <div class="row mt-1 ms-0 pe-0 lowerRow">
+              <!-- Description -->
+              <div class="col cardInfo cardDesc">
+                The work done consisted in upgrading the client's application
+                using .NET (with MVVM and asynchrony), as well as solving bugs
+                and analyzing the client's necessities
+              </div>
+            </div>
+          </div>
+
+          <!-- NTT Data -->
+          <div
+            class="col-12 col-xxl-5 col-xl-5 col-lg-5 col-md-10 row elementBlock shadow-lg"
           >
-            <tr>
-              <td rowspan="3">
-                <img
-                  src="images/cardPics/nttdatalogo.png"
-                  alt="Cober"
-                  class="cardPic"
-                />
-              </td>
-              <td>
-                <p class="cardInfo cardRole" id="nttDataRole">
-                  Intern .NET Developer
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p class="cardInfo cardDates">oct. 2020 - mar. 2021</p>
-              </td>
-            </tr>
-            <tr>
-              <td rowspan="2">
-                <p class="cardInfo">
-                  The tasks developed during my internship on the company were
-                  fixing bugs, migrating functionalities and performing
-                  functional tests. The main technology used was .NET
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td class="cardName">
-                <p>NTT DATA</p>
-              </td>
-            </tr>
-          </table>
+            <!-- Upper row -->
+            <div class="row ms-0 px-0 upperRow">
+              <!-- Left column -->
+              <img
+                src="images/cardPics/nttdatalogo.png"
+                alt="Cober Logo"
+                class="col-6 col-lg-6 col-md-4 cardPic"
+              />
+
+              <!-- Right column -->
+              <div class="col">
+                <!-- Name -->
+                <div class="row">
+                  <div
+                    class="col-auto ms-0 cardInfo cardName align-self-center"
+                  >
+                    NTT DATA
+                  </div>
+                </div>
+
+                <!-- Role -->
+                <div class="row">
+                  <div class="col-12 ms-0 cardInfo cardRole">
+                    Intern .NET Developer
+                  </div>
+                </div>
+
+                <!-- Date -->
+                <div class="row">
+                  <div class="col-auto ms-0 cardInfo cardDates">
+                    aug. 2021 - oct. 2021
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Lower row -->
+            <div class="row mt-1 ms-0 pe-0 lowerRow">
+              <!-- Description -->
+              <div class="col cardInfo cardDesc">
+                The tasks developed during my internship on the company were
+                fixing bugs, migrating functionalities and performing functional
+                tests. The main technology used was .NET
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -188,78 +208,105 @@
         <img src="images/bgPics/education.png" class="bgPic" />
 
         <h2>Education</h2>
-        <div class="row justify-content-center sectionRow">
-          <table
-            class="col-12 col-xxl-5 col-xl-5 col-lg-10 elementBlock shadow-lg"
+        <div class="row justify-content-around sectionRow">
+          <!-- WebDev Course -->
+          <div
+            class="col-12 col-xxl-5 col-xl-5 col-lg-5 col-md-10 row elementBlock shadow-lg"
           >
-            <tr>
-              <td rowspan="3">
-                <img
-                  src="images/cardPics/webdevlogo.png"
-                  alt="WebDev Logo"
-                  class="cardPic"
-                />
-              </td>
-              <td>
-                <p class="cardInfo cardRole">
-                  Full-Stack Web Development Course
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p class="cardInfo cardDates">dec. 2021 - feb. 2022</p>
-              </td>
-            </tr>
-            <tr>
-              <td rowspan="2">
-                <p class="cardInfo">
-                  55h full-stack web development course, including technologies
-                  like Javascript, Node, Bootstrap, React, Express & MongoDB
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td class="cardName">
-                <p>Udemy</p>
-              </td>
-            </tr>
-          </table>
+            <!-- Upper row -->
+            <div class="row ms-0 px-0 upperRow">
+              <!-- Left column -->
+              <img
+                src="images/cardPics/webdevlogo.png"
+                alt="JS, CSS and HTML"
+                class="col-6 col-lg-6 col-md-4 cardPic"
+              />
 
-          <table
-            class="col-12 col-xxl-5 col-xl-5 col-lg-10 elementBlock shadow-lg"
+              <!-- Right column -->
+              <div class="col">
+                <!-- Name -->
+                <div class="row">
+                  <div
+                    class="col-auto ms-0 cardInfo cardName align-self-center"
+                  >
+                    Udemy
+                  </div>
+                </div>
+
+                <!-- Role -->
+                <div class="row">
+                  <div class="col-12 ms-0 cardInfo cardRole">
+                    Full-Stack Web Development Course
+                  </div>
+                </div>
+
+                <!-- Date -->
+                <div class="row">
+                  <div class="col-auto ms-0 cardInfo cardDates">
+                    dec. 2021 - feb. 2022
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Lower row -->
+            <div class="row mt-1 ms-0 pe-0 lowerRow">
+              <!-- Description -->
+              <div class="col cardInfo cardDesc">
+                55h full-stack web development course, including technologies
+                like Javascript, Node, Bootstrap, React, Express & MongoDB
+              </div>
+            </div>
+          </div>
+          <!-- Segree -->
+          <div
+            class="col-12 col-xxl-5 col-xl-5 col-lg-5 col-md-10 row elementBlock shadow-lg"
           >
-            <tr>
-              <td rowspan="3">
-                <img
-                  src="images/cardPics/uslogo.png"
-                  alt="University of Seville"
-                  class="cardPic"
-                />
-              </td>
-              <td>
-                <p class="cardInfo cardRole">Computer Science Degree</p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p class="cardInfo cardDates">2017 - 2021</p>
-              </td>
-            </tr>
-            <tr>
-              <td rowspan="2">
-                <p class="cardInfo">
-                  Worked on various fields, including web development, analysis
-                  and design of algorithms, embedded systems, AI and more
-                </p>
-              </td>
-            </tr>
-            <tr>
-              <td class="cardName">
-                <p>University of Seville</p>
-              </td>
-            </tr>
-          </table>
+            <!-- Upper row -->
+            <div class="row ms-0 px-0 upperRow">
+              <!-- Left column -->
+              <img
+                src="images/cardPics/uslogo.png"
+                alt="US logo"
+                class="col-6 col-lg-6 col-md-4 cardPic"
+              />
+
+              <!-- Right column -->
+              <div class="col">
+                <!-- Name -->
+                <div class="row">
+                  <div
+                    class="col-auto ms-0 cardInfo cardName align-self-center"
+                  >
+                    University of Seville
+                  </div>
+                </div>
+
+                <!-- Role -->
+                <div class="row">
+                  <div class="col-12 ms-0 cardInfo cardRole">
+                    Computer Science Degree
+                  </div>
+                </div>
+
+                <!-- Date -->
+                <div class="row">
+                  <div class="col-auto ms-0 cardInfo cardDates">
+                    2017 - 2021
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Lower row -->
+            <div class="row mt-1 ms-0 pe-0 lowerRow">
+              <!-- Description -->
+              <div class="col cardInfo cardDesc">
+                Worked on various fields, including web development, analysis
+                and design of algorithms, embedded systems, AI and more
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -277,201 +324,177 @@
               <div class="container">
                 <img src="images/bgPics/tech.png" class="bgPic knowBgPic" />
 
-                <div class="row justify-content-center">
-                  <table class="col-2 techBlock shadow-lg">
-                    <tr>
-                      <td>
-                        <img
-                          src="images/cardPics/techLogos/node.jpg"
-                          alt="Node.js logo"
-                          class="techPic"
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p class="techName">Node.JS</p>
-                      </td>
-                    </tr>
-                  </table>
-                  <table class="col-2 techBlock shadow-lg">
-                    <tr>
-                      <td>
-                        <img
-                          src="images/cardPics/techLogos/react.jpg"
-                          alt="React logo"
-                          class="techPic"
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p class="techName">React</p>
-                      </td>
-                    </tr>
-                  </table>
-                  <table class="col-2 techBlock shadow-lg">
-                    <tr>
-                      <td>
-                        <img
-                          src="images/cardPics/techLogos/bootstrap.jpg"
-                          alt="Bootstrap logo"
-                          class="techPic"
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p class="techName">Bootstrap</p>
-                      </td>
-                    </tr>
-                  </table>
-                  <table class="col-2 techBlock shadow-lg">
-                    <tr>
-                      <td>
-                        <img
-                          src="images/cardPics/techLogos/MongoDB.jpg"
-                          alt="MongoDB logo"
-                          class="techPic"
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p class="techName">MongoDB</p>
-                      </td>
-                    </tr>
-                  </table>
-                  <table class="col-2 techBlock shadow-lg">
-                    <tr>
-                      <td>
-                        <img
-                          src="images/cardPics/techLogos/git.jpg"
-                          alt="Git logo"
-                          class="techPic"
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p class="techName">Git</p>
-                      </td>
-                    </tr>
-                  </table>
-                  <table class="col-2 techBlock shadow-lg">
-                    <tr>
-                      <td>
-                        <img
-                          src="images/cardPics/techLogos/docker.jpg"
-                          alt="Docker logo"
-                          class="techPic"
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p class="techName">Docker</p>
-                      </td>
-                    </tr>
-                  </table>
-                  <table class="col-2 techBlock shadow-lg">
-                    <tr>
-                      <td>
-                        <img
-                          src="images/cardPics/techLogos/js.jpg"
-                          alt="Javascript logo"
-                          class="techPic"
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p class="techName">Javascript</p>
-                      </td>
-                    </tr>
-                  </table>
-                  <table class="col-2 techBlock shadow-lg">
-                    <tr>
-                      <td>
-                        <img
-                          src="images/cardPics/techLogos/net.jpg"
-                          alt=".Net logo"
-                          class="techPic"
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p class="techName">.NET (C#)</p>
-                      </td>
-                    </tr>
-                  </table>
-                  <table class="col-2 techBlock shadow-lg">
-                    <tr>
-                      <td>
-                        <img
-                          src="images/cardPics/techLogos/python.jpg"
-                          alt="C++"
-                          class="techPic"
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p class="techName">Python</p>
-                      </td>
-                    </tr>
-                  </table>
-                  <table class="col-2 techBlock shadow-lg">
-                    <tr>
-                      <td>
-                        <img
-                          src="images/cardPics/techLogos/java.jpg"
-                          alt="Java logo"
-                          class="techPic"
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p class="techName">Java</p>
-                      </td>
-                    </tr>
-                  </table>
-                  <table class="col-2 techBlock shadow-lg">
-                    <tr>
-                      <td>
-                        <img
-                          src="images/cardPics/techLogos/c++.jpg"
-                          alt="C++"
-                          class="techPic"
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p class="techName">C / C++</p>
-                      </td>
-                    </tr>
-                  </table>
-                  <table class="col-2 techBlock shadow-lg">
-                    <tr>
-                      <td>
-                        <img
-                          src="images/cardPics/techLogos/embedded.jpg"
-                          alt="Embedded system"
-                          class="techPic"
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p class="techName" id="embSys-card">
-                          Embedded Systems
-                        </p>
-                      </td>
-                    </tr>
-                  </table>
+                <div class="row gy-4 justify-content-around">
+                  <div
+                    class="col-4 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 mx-1 techBlock shadow-lg"
+                  >
+                    <div class="row mx-0">
+                      <img
+                        src="images/cardPics/techLogos/node.jpg"
+                        alt="Node.js logo"
+                        class="col px-0 techPic"
+                      />
+                    </div>
+                    <div class="row m-0">
+                      <div class="col m-0 techName">Node.JS</div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-4 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 mx-1 techBlock shadow-lg"
+                  >
+                    <div class="row mx-0">
+                      <img
+                        src="images/cardPics/techLogos/react.jpg"
+                        alt="React logo"
+                        class="col px-0 techPic"
+                      />
+                    </div>
+                    <div class="row m-0">
+                      <div class="col m-0 techName">React</div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-4 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 mx-1 techBlock shadow-lg"
+                  >
+                    <div class="row mx-0">
+                      <img
+                        src="images/cardPics/techLogos/bootstrap.jpg"
+                        alt="Bootstrap logo"
+                        class="col px-0 techPic"
+                      />
+                    </div>
+                    <div class="row m-0">
+                      <div class="col m-0 techName">Bootstrap</div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-4 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 mx-1 techBlock shadow-lg"
+                  >
+                    <div class="row mx-0">
+                      <img
+                        src="images/cardPics/techLogos/MongoDB.jpg"
+                        alt="MongoDB logo"
+                        class="col px-0 techPic"
+                      />
+                    </div>
+                    <div class="row m-0">
+                      <div class="col m-0 techName">MongoDB</div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-4 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 mx-1 techBlock shadow-lg"
+                  >
+                    <div class="row mx-0">
+                      <img
+                        src="images/cardPics/techLogos/git.jpg"
+                        alt="Git logo"
+                        class="col px-0 techPic"
+                      />
+                    </div>
+                    <div class="row m-0">
+                      <div class="col m-0 techName">Git</div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-4 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 mx-1 techBlock shadow-lg"
+                  >
+                    <div class="row mx-0">
+                      <img
+                        src="images/cardPics/techLogos/docker.jpg"
+                        alt="Docker logo"
+                        class="col px-0 techPic"
+                      />
+                    </div>
+                    <div class="row m-0">
+                      <div class="col m-0 techName">Docker</div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-4 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 mx-1 techBlock shadow-lg"
+                  >
+                    <div class="row mx-0">
+                      <img
+                        src="images/cardPics/techLogos/js.jpg"
+                        alt="Javascript logo"
+                        class="col px-0 techPic"
+                      />
+                    </div>
+                    <div class="row m-0">
+                      <div class="col m-0 techName">Javascript</div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-4 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 mx-1 techBlock shadow-lg"
+                  >
+                    <div class="row mx-0">
+                      <img
+                        src="images/cardPics/techLogos/net.jpg"
+                        alt=".Net logo"
+                        class="col px-0 techPic"
+                      />
+                    </div>
+                    <div class="row m-0">
+                      <div class="col m-0 techName">.Net (C#)</div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-4 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 mx-1 techBlock shadow-lg"
+                  >
+                    <div class="row mx-0">
+                      <img
+                        src="images/cardPics/techLogos/python.jpg"
+                        alt="Python logo"
+                        class="col px-0 techPic"
+                      />
+                    </div>
+                    <div class="row m-0">
+                      <div class="col m-0 techName">Python</div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-4 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 mx-1 techBlock shadow-lg"
+                  >
+                    <div class="row mx-0">
+                      <img
+                        src="images/cardPics/techLogos/java.jpg"
+                        alt="Java logo"
+                        class="col px-0 techPic"
+                      />
+                    </div>
+                    <div class="row m-0">
+                      <div class="col m-0 techName">Java</div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-4 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 mx-1 techBlock shadow-lg"
+                  >
+                    <div class="row mx-0">
+                      <img
+                        src="images/cardPics/techLogos/c++.jpg"
+                        alt="C++ logo"
+                        class="col px-0 techPic"
+                      />
+                    </div>
+                    <div class="row m-0">
+                      <div class="col m-0 techName">C / C++</div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-4 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 mx-1 techBlock shadow-lg"
+                  >
+                    <div class="row mx-0">
+                      <img
+                        src="images/cardPics/techLogos/embedded.jpg"
+                        alt="Embedded system pic"
+                        class="col px-0 techPic"
+                      />
+                    </div>
+                    <div class="row m-0">
+                      <div class="col m-0 techName" id="embSys-card">
+                        Embedded Systems
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -488,56 +511,53 @@
                 <img src="images/bgPics/lang.png" class="bgPic knowBgPic" />
                 <h4 class="levelTitle levelTitle">Native</h4>
                 <div class="row">
-                  <table class="col-3 shadow-lg langBlock" id="spanishBlock">
-                    <tr>
-                      <td>
-                        <img
-                          src="images/cardPics/spain.png"
-                          alt="Spanish Flag"
-                          class="flagPic"
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><p class="langName">Spanish</p></td>
-                    </tr>
-                  </table>
+                  <div class="col-4 mx-1 shadow-lg langBlock" id="spanishBlock">
+                    <div class="row mx-0">
+                      <img
+                        src="images/cardPics/spain.png"
+                        alt="Spanish Flag"
+                        class="col px-0 mx-0 flagPic"
+                      />
+                    </div>
+                    <div class="row">
+                      <div class="col langName">Spanish</div>
+                    </div>
+                  </div>
                 </div>
 
                 <h4 class="leftLangBlock">Advanced</h4>
                 <div class="row justify-content-end">
-                  <table class="col-3 shadow-lg langBlock" id="englishBlock">
-                    <tr>
-                      <td>
-                        <img
-                          src="images/cardPics/uk.jpg"
-                          alt="England Flag"
-                          class="flagPic"
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><p class="langName">English</p></td>
-                    </tr>
-                  </table>
+                  <div class="col-4 mx-1 shadow-lg langBlock" id="englishBlock">
+                    <div class="row mx-0">
+                      <img
+                        src="images/cardPics/uk.jpg"
+                        alt="England Flag"
+                        class="col px-0 mx-0 flagPic"
+                      />
+                    </div>
+                    <div class="row">
+                      <div class="col langName">English</div>
+                    </div>
+                  </div>
                 </div>
 
                 <h4 class="levelTitle">Intermediate</h4>
                 <div class="row">
-                  <table class="col-3 shadow-lg langBlock" id="japaneseBlock">
-                    <tr>
-                      <td>
-                        <img
-                          src="images/cardPics/japan.jpg"
-                          alt="Japanese Flag"
-                          class="flagPic"
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><p class="langName">Japanese</p></td>
-                    </tr>
-                  </table>
+                  <div
+                    class="col-4 mx-1 shadow-lg langBlock"
+                    id="japaneseBlock"
+                  >
+                    <div class="row mx-0">
+                      <img
+                        src="images/cardPics/japan.jpg"
+                        alt="Japanese Flag"
+                        class="col px-0 mx-0 flagPic"
+                      />
+                    </div>
+                    <div class="row">
+                      <div class="col langName">Japanese</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -560,50 +580,47 @@
             id="contactForm"
             class="col-lg-6 shadow-lg"
           >
-            <!-- Grid to organize fields -->
-            <div class="container">
-              <!-- Name + Email -->
-              <div class="row justify-content-center">
-                <div class="col-lg-6">
-                  <input
-                    type="text"
-                    name="name"
-                    id="contactName"
-                    placeholder="Name"
-                  />
-                </div>
-                <div class="col-lg-6">
-                  <input
-                    type="text"
-                    name="email"
-                    id="contactMail"
-                    placeholder="Email"
-                  />
-                </div>
+            <!-- Name + Email -->
+            <div class="row justify-content-center">
+              <div class="col-lg-6">
+                <input
+                  type="text"
+                  name="name"
+                  id="contactName"
+                  placeholder="Name"
+                />
               </div>
-
-              <!-- Message Textarea -->
-              <div class="row justify-content-center">
-                <div class="col-lg-12">
-                  <textarea
-                    name="Message"
-                    id="contactMessage"
-                    cols="30"
-                    rows="10"
-                    placeholder="Message..."
-                  ></textarea>
-                </div>
+              <div class="col-lg-6">
+                <input
+                  type="text"
+                  name="email"
+                  id="contactMail"
+                  placeholder="Email"
+                />
               </div>
+            </div>
 
-              <!-- Button -->
-              <div class="row justify-content-center">
-                <div class="col-lg-6">
-                  <input
-                    type="submit"
-                    value="Send"
-                    class="btn btn-lg sendMessageBtn"
-                  />
-                </div>
+            <!-- Message Textarea -->
+            <div class="row justify-content-center">
+              <div class="col-lg-12">
+                <textarea
+                  name="Message"
+                  id="contactMessage"
+                  cols="30"
+                  rows="10"
+                  placeholder="Message..."
+                ></textarea>
+              </div>
+            </div>
+
+            <!-- Button -->
+            <div class="row justify-content-center">
+              <div class="col-lg-6">
+                <input
+                  type="submit"
+                  value="Send"
+                  class="btn btn-lg sendMessageBtn"
+                />
               </div>
             </div>
           </form>
