@@ -1,8 +1,22 @@
 :root {
-  --main-color: #52734d;
+  --main-color: #084a83;
+  --second-color: #539ddb;
+  --third-color: #c6e5f3;
+  --bg-color: #ffffe7;
+
+  /* Original Green */
+
+  /* --main-color: #52734d;
   --second-color: #91c788;
   --third-color: #ddffbc;
-  --bg-color: #feffde;
+  --bg-color: #feffde; */
+
+  /* Alt Blue (Strong Torquoise) */
+
+  /* --main-color: #aaaaaa;
+  --second-color: #a4ebf3;
+  --third-color: #ccf2f4;
+  --bg-color: #f4f9f9;  */
 }
 
 body {
@@ -118,7 +132,7 @@ section {
     var(--second-color) 0%,
     var(--bg-color) 100%
   );
-  height: 100px;
+  height: 200px;
 }
 
 .gradientUp {
@@ -127,7 +141,7 @@ section {
     var(--second-color) 0%,
     var(--bg-color) 100%
   );
-  height: 100px;
+  height: 200px;
 }
 
 /*************************/
@@ -184,9 +198,10 @@ section {
   border-style: solid;
   border-color: var(--main-color);
   padding: 20px;
-  background-size: 80%;
   background-repeat: no-repeat;
   background-position: center;
+  height: 93%;
+  /* margin-bottom: -50px; */
 }
 
 .knowSubBlockTitle {
@@ -202,7 +217,7 @@ section {
 /*********** Tech **************/
 
 .knowBgPic {
-  width: 100%;
+  width: 50%;
   z-index: -1;
 }
 
@@ -246,6 +261,7 @@ section {
 .langBlock {
   background-color: #52734d;
   border-radius: 20px;
+
   transition: all 200ms ease-in-out;
 }
 
@@ -416,16 +432,13 @@ footer {
   .cardDates {
     font-size: 0.8em;
   }
-  .knowBgPic {
-    width: 100%;
-  }
 
   .techBlock {
     margin: 20px 10px;
   }
 
   .knowledgeSubBlock .container {
-    padding: 0;
+    padding: 0 0 20px;
   }
 
   .mailPic {
@@ -459,10 +472,6 @@ footer {
     width: 50%;
   }
 
-  .knowBgPic {
-    width: 100%;
-  }
-
   .techBlock {
     margin: 20px 10px;
   }
@@ -480,10 +489,6 @@ footer {
 
   .bgPic {
     width: 50%;
-  }
-
-  .knowBgPic {
-    width: 100%;
   }
 
   footer {
@@ -511,14 +516,6 @@ footer {
 
   .cardDates {
     font-size: 0.8em;
-  }
-
-  .knowBgPic {
-    width: 100%;
-  }
-
-  .knowledgeBlock {
-    margin: 0;
   }
 
   .mailPic {
