@@ -23,7 +23,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- Fonts Awesome -->
+    <!-- Fonts Awesome JS -->
     <script
       src="https://kit.fontawesome.com/f0e6aca62c.js"
       crossorigin="anonymous"
@@ -50,22 +50,22 @@
         <div class="collapse navbar-collapse" id="navbarToggle">
           <ul class="navbar-nav m-lg-auto m-md-auto">
             <li class="nav-item">
-              <a href="#WorkGradient" class="nav-link"
+              <a href="#workGradient" class="nav-link"
                 ><i class="fas fa-briefcase"></i> Work Experience</a
               >
             </li>
             <li class="nav-item">
-              <a href="#EduGradient" class="nav-link"
+              <a href="#eduGradient" class="nav-link"
                 ><i class="fas fa-graduation-cap"></i> Education</a
               >
             </li>
             <li class="nav-item">
-              <a href="#KnowGradient" class="nav-link"
+              <a href="#knowGradient" class="nav-link"
                 ><i class="fas fa-brain"></i> Knowledges</a
               >
             </li>
             <li class="nav-item">
-              <a href="#ContactGradient" class="nav-link"
+              <a href="#contactGradient" class="nav-link"
                 ><i class="fas fa-envelope"></i> Contact me</a
               >
             </li>
@@ -89,7 +89,7 @@
       </div>
     </section>
 
-    <div class="gradientUp" id="">
+    <div class="gradientUp" id="workGradient">
       <h2 class="mx-auto">Work Experience</h2>
     </div>
     <section class="" id="workExpSection">
@@ -202,7 +202,7 @@
         </div>
       </div>
     </section>
-    <div class="gradientDown" id="EduGradient"></div>
+    <div class="gradientDown" id="eduGradient"></div>
 
     <section class="" id="EduSection">
       <div class="container">
@@ -312,7 +312,7 @@
       </div>
     </section>
 
-    <div class="gradientUp" id="KnowGradient"></div>
+    <div class="gradientUp" id="knowGradient"></div>
     <section class="" id="KnowledgeSection">
       <div class="container">
         <h2 class="mx-auto">Knowledges</h2>
@@ -373,6 +373,20 @@
                   >
                     <div class="row mx-0">
                       <img
+                        src="images/cardPics/techLogos/jQuery.jpg"
+                        alt="Javascript logo"
+                        class="col px-0 techPic"
+                      />
+                    </div>
+                    <div class="row m-0">
+                      <div class="col m-0 techName">jQuery</div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-4 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 mx-1 techBlock shadow-lg"
+                  >
+                    <div class="row mx-0">
+                      <img
                         src="images/cardPics/techLogos/MongoDB.jpg"
                         alt="MongoDB logo"
                         class="col px-0 techPic"
@@ -410,20 +424,7 @@
                       <div class="col m-0 techName">Docker</div>
                     </div>
                   </div>
-                  <div
-                    class="col-4 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 mx-1 techBlock shadow-lg"
-                  >
-                    <div class="row mx-0">
-                      <img
-                        src="images/cardPics/techLogos/js.jpg"
-                        alt="Javascript logo"
-                        class="col px-0 techPic"
-                      />
-                    </div>
-                    <div class="row m-0">
-                      <div class="col m-0 techName">Javascript</div>
-                    </div>
-                  </div>
+
                   <div
                     class="col-4 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 mx-1 techBlock shadow-lg"
                   >
@@ -566,7 +567,7 @@
         </div>
       </div>
     </section>
-    <div class="gradientDown" id="ContactGradient"></div>
+    <div class="gradientDown" id="contactGradient"></div>
 
     <section class="" id="contactSection">
       <h2 class="mx-auto">Contact Me</h2>
@@ -607,6 +608,7 @@
                 <textarea
                   name="Message"
                   id="contactMessage"
+                  class="fullWidthFormField"
                   cols="30"
                   rows="10"
                   placeholder="Message..."
@@ -620,12 +622,15 @@
                 <!-- <input
                   type="submit"
                   value="Send"
-                  class="btn btn-lg sendMessageBtn"
+                  class="btn btn-lg sendMessageBtn fullWidthFormField sentSuccess"
                 /> -->
+                <button class="btn btn-lg sendMessageBtn fullWidthFormField">
+                  <i class="fas fa-check invisibility"></i>
+                  <span class="sendFormText">Send</span>
+                </button>
               </div>
             </div>
           </form>
-          <button class="btn btn-lg sendMessageBtn">Send</button>
         </div>
       </div>
     </section>

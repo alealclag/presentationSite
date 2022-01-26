@@ -350,7 +350,7 @@ h2 {
   margin: 20px;
 }
 
-#contactForm :is(input, textarea) {
+.fullWidthFormField {
   width: 100%;
   margin: 10px auto;
 }
@@ -362,11 +362,15 @@ textarea {
   border-radius: 10px;
   padding: 7px;
   resize: none;
+  width: 100%;
 }
 
 .sendMessageBtn {
   background-color: var(--second-color);
   color: black;
+  font-size: 1.5em;
+  height: 60px;
+  margin: 0 auto;
   transition: all 200ms ease-in-out;
 }
 
@@ -375,6 +379,22 @@ textarea {
   color: var(--second-color);
 
   transition: all 200ms ease-in-out;
+}
+
+.sentSuccess {
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+}
+
+.sentSuccess:disabled {
+  background-color: var(--second-color);
+  opacity: 100%;
+}
+
+.invisibility {
+  display: none !important;
 }
 
 .mailPic {
@@ -486,6 +506,11 @@ footer {
     padding: 0;
   }
 
+  input:not(.btn),
+  textarea {
+    margin: 5px auto;
+  }
+
   footer {
     padding: 25px 10px;
   }
@@ -512,6 +537,11 @@ footer {
   .knowledgeSubBlock .container {
     padding: 0;
   }
+
+  input:not(.btn),
+  textarea {
+    margin: 5px auto;
+  }
 }
 
 /* Medium Screen */
@@ -522,6 +552,11 @@ footer {
 
   .bgPic {
     width: 50%;
+  }
+
+  input:not(.btn),
+  textarea {
+    margin: 5px auto;
   }
 
   footer {
