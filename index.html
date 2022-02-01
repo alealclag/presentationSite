@@ -77,10 +77,20 @@
     <section class="" id="presentationSection">
       <div class="container">
         <img
-          class="profilePic"
+          class="profilePic shadow-lg"
           src="images/prestentationPic.jpg"
           alt="Mi Tuite"
         />
+        <div class="profilePicInstruction" id="playTip">
+          Click here for a comfy experience!
+          <img src="images/arrow.png" class="tipArrow" id="rightArrow" />
+        </div>
+        <div class="profilePicInstruction" id="pauseTip">
+          <img src="images/arrow.png" class="tipArrow" id="leftArrow" />
+
+          And again if you prefer silence
+        </div>
+
         <div id="">
           <h1>Alejandro Alcántara Laguna</h1>
           <h3>Developer & Computer Engineer</h3>
@@ -663,7 +673,7 @@
         </div>
       </div>
     </footer>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
   </body>
 </html>
