@@ -1,31 +1,13 @@
-//Spin profile picture
-
 var profilePic = $(".profilePic");
 var spinProfilePic = false; //Flag for when mouse over profile pic
-var keepSpinProfilePic = false; //Flag for when clicked profile pic
 var profilePicMusic = new Audio("audio/profilePic_music.mp3");
 profilePicMusic.loop = true;
 var firstTip = true;
+var smallDevice = window.matchMedia("(max-width: 768px)");
 
-profilePic.click(function () {
-  spinProfilePic = !spinProfilePic;
-  if (spinProfilePic) {
-    $("#playTip").fadeOut(); //Hide hover Tip
-
-    if (firstTip) {
-      firstTip = false;
-      $("#pauseTip").fadeIn(); //Hide button text
-    }
-  } else {
-    spinProfilePic = false;
-    $("#pauseTip").fadeOut(); //Hide button text
-  }
-});
-
-rotate(0);
 function rotate(degree) {
   //If mouse is over or was clicked, play.
-  if (spinProfilePic || keepSpinProfilePic) {
+  if (spinProfilePic) {
     // For webkit browsers: e.g. Chrome
     profilePic.css({ WebkitTransform: "rotate(" + degree + "deg)" });
     // For Mozilla browser: e.g. Firefox
@@ -41,6 +23,22 @@ function rotate(degree) {
     rotate(degree);
   }, 30);
 }
+
+//If the profile pic is clicked, the displayed tip and the music will change
+profilePic.click(function () {
+  spinProfilePic = !spinProfilePic;
+  if (spinProfilePic) {
+    $("#playTip").fadeOut(); //Hide hover Tip
+
+    if (firstTip) {
+      firstTip = false;
+      $("#pauseTip").fadeIn(); //Hide button text
+    }
+  } else {
+    spinProfilePic = false;
+    $("#pauseTip").fadeOut(); //Hide button text
+  }
+});
 
 // Form Button Animation
 $(".sendMessageBtn").click(function () {
@@ -61,3 +59,15 @@ $(".sendMessageBtn").click(function () {
   $(".sendFormText").css("display", "none"); //Hide button text
   $(".sendMessageBtn i").removeClass("invisibility"); //Show check on button
 });
+
+//Check if device is touchable (or small, which usually means it's touchable)
+if (
+  smallDevice.matches ||
+  "ontouchstart" in window ||
+  navigator.maxTouchPoints > 0 ||
+  navigator.msMaxTouchPoints > 0
+) {
+  $("#playTipText").text("Tap on me for a comfy experience!");
+}
+
+rotate(0);
