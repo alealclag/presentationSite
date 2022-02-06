@@ -1,0 +1,16 @@
+{
+  "name": "personal-site-server",
+  "version": "1.0.0",
+  "description": "Back-end for my personal site",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Alejandro Alcántara",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}

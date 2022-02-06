@@ -58,6 +58,8 @@ $(".sendMessageBtn").click(function () {
 
   $(".sendFormText").css("display", "none"); //Hide button text
   $(".sendMessageBtn i").removeClass("invisibility"); //Show check on button
+
+  $("#contactForm").trigger("reset"); //Clear form's fields
 });
 
 //Check if device is touchable (or small, which usually means it's touchable)
