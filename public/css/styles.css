@@ -1,0 +1,745 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&family=Ubuntu:wght@300;400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
+
+:root {
+  --main-color: #084a83;
+  --second-color: #539ddb;
+  --third-color: #c6e5f3;
+  --bg-color: #ffffe7;
+
+  /* Original Green */
+
+  /* --main-color: #52734d;
+  --second-color: #91c788;
+  --third-color: #ddffbc;
+  --bg-color: #feffde; */
+
+  /* Alt Blue (Strong Torquoise) */
+
+  /* --main-color: #aaaaaa;
+  --second-color: #a4ebf3;
+  --third-color: #ccf2f4;
+  --bg-color: #f4f9f9;  */
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: "Ubuntu", sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "Roboto", sans-serif;
+}
+
+/*********** NavBar **************/
+
+header {
+  background-color: var(--main-color);
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  border-bottom: 5px;
+  border-color: gray;
+  border-bottom-style: solid;
+}
+
+.nav-link {
+  color: var(--bg-color);
+  margin: auto 20px;
+
+  transition: all 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--bg-color);
+  opacity: 60%;
+}
+
+/*************************/
+
+/*********** Section General **************/
+
+section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.container {
+  position: relative;
+}
+
+.bgPic {
+  width: 30%;
+  position: absolute;
+  opacity: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-top: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+}
+
+h2 {
+  background-color: var(--main-color);
+  color: var(--third-color);
+  width: fit-content;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  align-self: flex-end;
+}
+
+.sectionRow {
+  padding: 20px;
+}
+
+.elementBlock {
+  background-color: var(--main-color);
+  padding: 0 10px 10px 0;
+  margin-bottom: 50px;
+  border-radius: 20px;
+  z-index: 1;
+  transition: all 200ms ease-in-out;
+}
+
+.elementBlock:hover {
+  box-shadow: 0 0 3rem var(--bg-color) !important;
+  transition: all 200ms ease-in-out;
+}
+
+.cardPic {
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.cardInfo {
+  background-color: var(--third-color);
+  padding: 10px 15px;
+  margin: 10px auto 0;
+  border-radius: 10px;
+}
+
+.cardName {
+  background-color: var(--third-color);
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.cardRole {
+  font-size: 1.4em;
+}
+
+#nttDataRole {
+  font-size: 1.3em;
+}
+
+.cardDesc {
+  text-align: justify;
+}
+
+.gradientDown {
+  background: linear-gradient(
+    to bottom,
+    var(--second-color) 0%,
+    var(--bg-color) 100%
+  );
+  height: 200px;
+}
+
+.gradientUp {
+  background: linear-gradient(
+    to top,
+    var(--second-color) 0%,
+    var(--bg-color) 100%
+  );
+  height: 200px;
+  display: flex;
+}
+
+/*************************/
+
+/*********** Presentation **************/
+
+#presentationSection {
+  text-align: center;
+}
+
+.profilePic {
+  border-radius: 100%;
+  margin: 80px auto 10px;
+  width: 30%;
+}
+
+.profilePicInstruction {
+  font-family: "Fredericka the Great", cursive;
+  font-size: 1.7em;
+  position: absolute;
+}
+
+#playTip {
+  top: 120px;
+  right: 80px;
+  width: 30%;
+}
+
+#pauseTip {
+  display: none;
+  width: 20%;
+  bottom: 150px;
+  left: 150px;
+}
+
+.tipArrow {
+  display: block;
+}
+
+#rightArrow {
+  transform: rotate(90deg);
+  margin-left: 30px;
+  width: 20%;
+}
+
+#leftArrow {
+  transform: rotate(270deg);
+  position: absolute;
+  right: -20px;
+  top: -80px;
+  width: 30%;
+}
+
+/*************************/
+
+/*********** WorkExp **************/
+
+#workExpSection {
+  background-color: var(--second-color);
+}
+
+#workExpSection .bgPic {
+  transform: rotate(35deg);
+}
+
+/*************************/
+
+/*********** Education **************/
+
+.elementBlockEdu:hover {
+  box-shadow: 0 0 3rem black !important;
+}
+
+.eduBgPic {
+  z-index: -1;
+}
+
+/*************************/
+
+/*********** Knowledge **************/
+
+#KnowledgeSection {
+  background-color: var(--second-color);
+}
+
+.knowledgeBlock {
+  margin: 50px;
+  z-index: 1;
+  transition: all 200ms ease-in-out;
+}
+
+.knowledgeSubBlock {
+  border-radius: 20px;
+  border: 10px;
+  border-style: solid;
+  border-color: var(--main-color);
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 93%;
+}
+
+.knowSubBlockTitle {
+  text-align: center;
+  background-color: var(--main-color);
+  border-radius: 20px;
+  padding: 10px;
+  color: var(--third-color);
+}
+
+/*************************/
+
+/*********** Tech **************/
+
+.knowBgPic {
+  width: 50%;
+  z-index: -1;
+}
+
+.techBlock {
+  background-color: var(--main-color);
+  padding: 5px;
+
+  border-radius: 10px;
+  transition: all 200ms ease-in-out;
+}
+
+.techBlock:hover {
+  box-shadow: 0 0 1rem var(--bg-color) !important;
+  transition: all 200ms ease-in-out;
+}
+
+.techName {
+  background-color: var(--third-color);
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}
+
+.techPic {
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+#embSys-card {
+  font-size: 0.7em;
+  padding: 2px;
+}
+
+/*************************/
+
+/*********** Language **************/
+
+.langBlock {
+  background-color: #52734d;
+  border-radius: 20px;
+
+  transition: all 200ms ease-in-out;
+}
+
+.flagPic {
+  margin: 10px;
+  border-radius: 100%;
+  border: 5px solid var(--second-color);
+}
+
+.langName {
+  background-color: #91c788;
+  margin: 0px 10px 10px;
+  padding: 5px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}
+
+.levelTitle {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.leftLangBlock {
+  text-align: right;
+}
+
+.langBlock:hover {
+  box-shadow: 0 0 1rem var(--bg-color) !important;
+  transition: all 200ms ease-in-out;
+}
+
+#spanishBlock {
+  background-color: #cb0d12;
+}
+#englishBlock {
+  background-color: #002069;
+}
+#japaneseBlock {
+  background-color: white;
+}
+
+#spanishBlock .langName {
+  background-color: #ffbe00;
+}
+#englishBlock .langName {
+  background-color: #c80c22;
+}
+#japaneseBlock .langName {
+  background-color: #bb002b;
+  color: white;
+}
+
+/*************************/
+
+/*********** Contact **************/
+
+#contactSection {
+  text-align: center;
+}
+
+#contactForm {
+  background-color: var(--main-color);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px;
+}
+
+.fullWidthFormField {
+  width: 100%;
+  margin: 10px auto;
+}
+
+input:not(.btn),
+textarea {
+  background-color: var(--third-color);
+  border: 0;
+  border-radius: 10px;
+  padding: 7px;
+  resize: none;
+  width: 100%;
+}
+
+.sendMessageBtn {
+  background-color: var(--second-color);
+  color: black;
+  font-size: 1.5em;
+  height: 60px;
+  margin: 0 auto;
+  transition: all 200ms ease-in-out;
+}
+
+.sendMessageBtn:hover {
+  background-color: black;
+  color: var(--second-color);
+
+  transition: all 200ms ease-in-out;
+}
+
+.sentSuccess {
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+}
+
+.sentSuccess:disabled {
+  background-color: var(--second-color);
+  opacity: 100%;
+}
+
+.invisibility {
+  display: none !important;
+}
+
+.mailPic {
+  margin-left: 0px;
+  z-index: -1;
+}
+
+/*************************/
+
+/*********** Footer **************/
+
+footer {
+  background-color: var(--second-color);
+  padding: 50px 50px;
+  text-align: center;
+}
+
+.footerIcon {
+  width: 30%;
+  margin: 10px;
+  opacity: 50%;
+  transition: all 200ms ease-in-out;
+}
+
+.footerIcon:hover {
+  opacity: 100%;
+}
+
+.footerBtn {
+  background-color: black;
+  color: var(--second-color);
+  width: 75%;
+  transition: all 300ms ease-in-out;
+}
+
+.footerBtn:hover {
+  color: var(--second-color);
+  width: 100%;
+  padding-right: 20%;
+  padding-left: 20%;
+  transition: all 300ms ease-in-out;
+}
+
+/*************************/
+
+/*********** Media Breakpoints **************/
+
+/* XS screen */
+@media screen and (max-width: 576px) {
+  .profilePic {
+    width: 60%;
+  }
+
+  .profilePicInstruction {
+    font-size: 0.9em;
+  }
+
+  #playTip {
+    top: 40px;
+    right: 10px;
+    width: 35%;
+  }
+
+  #pauseTip {
+    top: 40px;
+    left: 10px;
+    width: 35%;
+  }
+
+  #rightArrow {
+    margin-left: 30px;
+    width: 20%;
+  }
+
+  #leftArrow {
+    width: 20%;
+
+    top: 50px;
+    right: 50px;
+    transform: scaleY(-1) rotate(270deg);
+  }
+
+  .bgPic {
+    width: 50%;
+  }
+
+  .elementBlock {
+    margin-top: 20px;
+  }
+
+  .cardPic {
+    margin-right: 0;
+  }
+
+  .cardName {
+    font-size: 1em;
+    padding: 4px 7px;
+    margin-left: 10px;
+  }
+
+  .cardRole {
+    font-size: 0.9em;
+  }
+
+  .cardDates {
+    font-size: 0.8em;
+  }
+
+  .webDevCourse {
+    font-size: 0.8em;
+  }
+
+  .uniName {
+    font-size: 0.9em;
+  }
+
+  .techBlock {
+    margin: 20px 10px;
+  }
+
+  .knowledgeSubBlock .container {
+    padding: 0 0 20px;
+  }
+
+  #japaneseBlock .langName {
+    font-size: 1em;
+  }
+
+  .mailPic {
+    display: none;
+  }
+
+  #contactSection .row {
+    padding: 10px;
+  }
+
+  form .container {
+    padding: 0;
+  }
+
+  input:not(.btn),
+  textarea {
+    margin: 5px auto;
+  }
+
+  footer {
+    padding: 25px 10px;
+  }
+}
+
+/* Small screen */
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .profilePic {
+    width: 50%;
+  }
+
+  #playTip {
+    top: 50px;
+    right: 0px;
+    width: 30%;
+    font-size: 1.2em;
+  }
+
+  #pauseTip {
+    width: 30%;
+    bottom: 150px;
+    left: -30px;
+    font-size: 1.2em;
+  }
+
+  #leftArrow {
+    right: 10px;
+    top: -50px;
+  }
+
+  .elementBlock {
+    margin-top: 20px;
+  }
+
+  .bgPic {
+    width: 50%;
+  }
+
+  .techBlock {
+    margin: 20px 10px;
+  }
+
+  .knowledgeSubBlock .container {
+    padding: 0;
+  }
+
+  input:not(.btn),
+  textarea {
+    margin: 5px auto;
+  }
+}
+
+/* Medium Screen */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .profilePic {
+    width: 50%;
+  }
+
+  #playTip {
+    top: 50px;
+    right: 0px;
+    font-size: 1.4em;
+  }
+
+  #pauseTip {
+    width: 30%;
+    bottom: 150px;
+    left: -30px;
+    font-size: 1.4em;
+  }
+
+  #rightArrow {
+    margin-left: 50px;
+  }
+
+  #leftArrow {
+    right: 20px;
+    top: -50px;
+    width: 20%;
+  }
+
+  .bgPic {
+    width: 50%;
+  }
+
+  input:not(.btn),
+  textarea {
+    margin: 5px auto;
+  }
+
+  footer {
+    padding: inherit 50px;
+  }
+
+  footer .container {
+    max-width: none;
+  }
+}
+
+/* Large Screen */
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  #playTip {
+    top: 80px;
+    right: 50px;
+    font-size: 1.5em;
+  }
+
+  #pauseTip {
+    width: 30%;
+    bottom: 150px;
+    left: 30px;
+    font-size: 1.5em;
+  }
+
+  #leftArrow {
+    right: 0px;
+    top: -50px;
+    width: 20%;
+  }
+
+  .bgPic {
+    width: 50%;
+  }
+
+  .cardName {
+    font-size: 1.1em;
+  }
+
+  .cardRole {
+    font-size: 1em;
+  }
+
+  .cardDates {
+    font-size: 0.8em;
+  }
+
+  .mailPic {
+    margin-left: -70px;
+    z-index: -1;
+    width: 40%;
+  }
+
+  footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+/* XL Screen */
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  #leftArrow {
+    right: 0px;
+  }
+
+  .elementBlock {
+    margin: 20px;
+  }
+
+  .knowledgeBlock {
+    margin: 50px 0;
+  }
+}
+
+/*************************/

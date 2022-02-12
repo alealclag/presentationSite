@@ -4,6 +4,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import bodyParser from "body-parser";
 import https from "https";
+import { hasUncaughtExceptionCaptureCallback } from "process";
 
 /* jshint ignore:start */
 const __filename = fileURLToPath(import.meta.url);
@@ -15,13 +16,10 @@ const port = 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/", (req, res) => {
-  //console.log(req);
-  res.sendFile(__dirname + "/index.html");
-});
+app.use(express.static("public"));
 
-app.get("/css/styles.css", (req, res) => {
-  res.sendFile(__dirname + "/css/styles.css");
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/index.html");
 });
 
 app.post("/", function (req, res) {
@@ -34,3 +32,5 @@ app.post("/", function (req, res) {
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}!`));
+
+prueba
