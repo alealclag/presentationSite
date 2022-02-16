@@ -44,7 +44,7 @@ profilePic.click(function () {
 $(".sendMessageBtn").click(function () {
   var sendCharm = new Audio("audio/formSent.mp3");
   sendCharm.play();
-  $(".sendMessageBtn").attr("disabled", "true"); //Disable button
+  $(".sendMessageBtn").css("pointer-events", "none"); //Disable button
   $(".sendMessageBtn").animate(
     {
       borderRadius: "100%",

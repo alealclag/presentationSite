@@ -4,7 +4,6 @@ import path from "path";
 import { fileURLToPath } from "url";
 import bodyParser from "body-parser";
 import https from "https";
-import { hasUncaughtExceptionCaptureCallback } from "process";
 
 /* jshint ignore:start */
 const __filename = fileURLToPath(import.meta.url);
@@ -14,9 +13,8 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const port = 8080;
 
-app.use(bodyParser.urlencoded({ extended: true }));
-
 app.use(express.static(__dirname + "/public"));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
