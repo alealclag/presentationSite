@@ -41,7 +41,7 @@ profilePic.click(function () {
 });
 
 // Form Button Animation
-$(".sendMessageBtn").click(function () {
+$("#contactForm").submit(function (e) {
   var sendCharm = new Audio("audio/formSent.mp3");
   sendCharm.play();
   $(".sendMessageBtn").css("pointer-events", "none"); //Disable button

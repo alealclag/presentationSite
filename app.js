@@ -1,4 +1,4 @@
-//jshint esversion:6
+//jshint esversion:8
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
@@ -38,18 +38,18 @@ var data = {
     cards.cplusplus,
     cards.embSys,
   ],
+  langCards: [cards.spa, cards.eng, cards.jap],
 };
 
 app.get("/", (req, res) => {
-  // res.sendFile(__dirname + "/index.html");
   res.render("index", data);
 });
 
-app.post("/", function (req, res) {
+app.post("/", async function (req, res) {
   let name = req.body.name;
   let email = req.body.email;
   let message = req.body.message;
-
+  await new Promise((r) => setTimeout(r, 700));
   res.redirect("/");
 
   console.log(req.body);

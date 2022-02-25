@@ -267,55 +267,64 @@
             <div class="knowledgeSubBlock shadow-lg" id="langKnow">
               <div class="container">
                 <img src="images/bgPics/lang.png" class="bgPic knowBgPic" />
-                <h4 class="levelTitle levelTitle">Native</h4>
+                <h4 class="levelTitle">Native</h4>
                 <div class="row">
-                  <div class="col-4 mx-1 shadow-lg langBlock" id="spanishBlock">
-                    <div class="row mx-0">
-                      <img
-                        src="images/cardPics/spain.png"
-                        alt="Spanish Flag"
-                        class="col px-0 mx-0 flagPic"
-                      />
+                  <% langCards.forEach(card => { %>
+                   <% if (card.level == "Native") { %>
+                    <div class="col-4 mx-1 shadow-lg langBlock" id="<%= card.id %>Block">
+                      <div class="row mx-0">
+                        <img
+                          src="<%= card.img %> "
+                          alt="<%= card.name %>  Flag"
+                          class="col px-0 mx-0 flagPic"
+                        />
+                      </div>
+                      <div class="row">
+                        <div class="col langName"><%= card.name %> </div>
+                      </div>
                     </div>
-                    <div class="row">
-                      <div class="col langName">Spanish</div>
-                    </div>
-                  </div>
+                   <% } %>
+                  <% }) %>
                 </div>
 
                 <h4 class="levelTitle leftLangBlock">Advanced</h4>
                 <div class="row justify-content-end">
-                  <div class="col-4 mx-1 shadow-lg langBlock" id="englishBlock">
-                    <div class="row mx-0">
-                      <img
-                        src="images/cardPics/uk.jpg"
-                        alt="England Flag"
-                        class="col px-0 mx-0 flagPic"
-                      />
+                  <% langCards.forEach(card => { %>
+                   <% if (card.level == "Advanced") { %>
+                    <div class="col-4 mx-1 shadow-lg langBlock" id="<%= card.id %>Block">
+                      <div class="row mx-0">
+                        <img
+                          src="<%= card.img %> "
+                          alt="<%= card.name %>  Flag"
+                          class="col px-0 mx-0 flagPic"
+                        />
+                      </div>
+                      <div class="row">
+                        <div class="col langName"><%= card.name %> </div>
+                      </div>
                     </div>
-                    <div class="row">
-                      <div class="col langName">English</div>
-                    </div>
-                  </div>
+                   <% } %>
+                  <% }) %>
                 </div>
 
                 <h4 class="levelTitle">Intermediate</h4>
                 <div class="row">
-                  <div
-                    class="col-4 mx-1 shadow-lg langBlock"
-                    id="japaneseBlock"
-                  >
-                    <div class="row mx-0">
-                      <img
-                        src="images/cardPics/japan.jpg"
-                        alt="Japanese Flag"
-                        class="col px-0 mx-0 flagPic"
-                      />
+                  <% langCards.forEach(card => { %>
+                   <% if (card.level == "Intermediate") { %>
+                    <div class="col-4 mx-1 shadow-lg langBlock" id="<%= card.id %>Block">
+                      <div class="row mx-0">
+                        <img
+                          src="<%= card.img %> "
+                          alt="<%= card.name %>  Flag"
+                          class="col px-0 mx-0 flagPic"
+                        />
+                      </div>
+                      <div class="row">
+                        <div class="col langName"><%= card.name %> </div>
+                      </div>
                     </div>
-                    <div class="row">
-                      <div class="col langName">Japanese</div>
-                    </div>
-                  </div>
+                   <% } %>
+                  <% }) %>
                 </div>
               </div>
             </div>
@@ -333,7 +342,6 @@
 
         <div class="row justify-content-center">
           <form
-            action="/"
             method="POST"
             id="contactForm"
             class="col-lg-6 shadow-lg"

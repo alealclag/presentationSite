@@ -9,6 +9,15 @@ class card {
   }
 }
 
+class langCard {
+  constructor(id, name, level, img) {
+    this.id = id;
+    this.name = name;
+    this.level = level;
+    this.img = img;
+  }
+}
+
 export const cober = new card(
   "Cober",
   ".NET Developer",
@@ -124,4 +133,24 @@ export const embSys = new card(
   "",
   "",
   "images/cardPics/techLogos/embedded.jpg"
+);
+
+export const spa = new langCard(
+  "spanish",
+  "Spanish",
+  "Native",
+  "images/cardPics/spain.png"
+);
+
+export const eng = new langCard(
+  "english",
+  "English",
+  "Advanced",
+  "images/cardPics/uk.jpg"
+);
+export const jap = new langCard(
+  "japanese",
+  "Japanese",
+  "Intermediate",
+  "images/cardPics/japan.jpg"
 );
