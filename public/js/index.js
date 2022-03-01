@@ -1,9 +1,10 @@
-var profilePic = $(".profilePic");
-var spinProfilePic = false; //Flag for when mouse over profile pic
-var profilePicMusic = new Audio("audio/profilePic_music.mp3");
+//jshint esversion:8
+let profilePic = $(".profilePic");
+let spinProfilePic = false; //Flag for when mouse over profile pic
+let profilePicMusic = new Audio("audio/profilePic_music.mp3");
 profilePicMusic.loop = true;
-var firstTip = true;
-var smallDevice = window.matchMedia("(max-width: 768px)");
+let firstTip = true;
+let smallDevice = window.matchMedia("(max-width: 768px)");
 
 function rotate(degree) {
   //If mouse is over or was clicked, play.
@@ -42,7 +43,7 @@ profilePic.click(function () {
 
 // Form Button Animation
 $("#contactForm").submit(function (e) {
-  var sendCharm = new Audio("audio/formSent.mp3");
+  let sendCharm = new Audio("audio/formSent.mp3");
   sendCharm.play();
   $(".sendMessageBtn").css("pointer-events", "none"); //Disable button
   $(".sendMessageBtn").animate(
@@ -58,8 +59,6 @@ $("#contactForm").submit(function (e) {
 
   $(".sendFormText").css("display", "none"); //Hide button text
   $(".sendMessageBtn i").removeClass("invisibility"); //Show check on button
-
-  $("#contactForm").trigger("reset"); //Clear form's fields
 });
 
 //Check if device is touchable (or small, which usually means it's touchable)

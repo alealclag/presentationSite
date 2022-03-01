@@ -18,11 +18,11 @@ app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 
-var data = {
+let data = {
   profileName: "Alejandro Alcántara Laguna",
   profileTitle: "Developer & Computer Engineer",
   profileDescription: "Still a rookie, so I'm looking for my best path",
-  workCards: [cards.cober, cards.nttdata],
+  workCards: [cards.minsait, cards.cober, cards.nttdata],
   eduCards: [cards.webdev, cards.us],
   techCards: [
     cards.node,
@@ -49,10 +49,11 @@ app.post("/", async function (req, res) {
   let name = req.body.name;
   let email = req.body.email;
   let message = req.body.message;
-  await new Promise((r) => setTimeout(r, 700));
-  res.redirect("/");
-
   console.log(req.body);
+
+  await new Promise((r) => setTimeout(r, 700));
+
+  res.redirect("/");
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}!`));

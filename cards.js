@@ -18,6 +18,14 @@ class langCard {
   }
 }
 
+export const minsait = new card(
+  "Minsait",
+  "SAP PP Analyst",
+  "oct. 2021 - Present",
+  "In Minsait I started and grew as a SAP Analyst, specifically in the Production Planning Module. ",
+  "images/cardPics/minsaitlogo.png"
+);
+
 export const cober = new card(
   "Cober",
   ".NET Developer",

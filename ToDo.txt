@@ -1,0 +1,3 @@
+- show music notes when playing music
+- Putting profile Pic on navbar when scrolled down
+- Add "Read more" for card texts if it is too long
