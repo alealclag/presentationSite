@@ -92,9 +92,9 @@
         </div>
 
         <div id="">
-          <h1><%= profileName %></h1>
-          <h3><%= profileTitle %></h3>
-          <p><%= profileDescription %></p>
+          <h1><%= profile[0].name %></h1>
+          <h3><%= profile[0].role %></h3>
+          <p><%= profile[0].bio %></p>
         </div>
       </div>
     </section>
@@ -144,7 +144,13 @@
                 <!-- Date -->
                 <div class="row">
                   <div class="col-auto ms-0 cardInfo cardDates">
-                    <%= card.date %>
+                    <%= card.dateFrom.toLocaleDateString("es-ES",{month: 'short', year: 'numeric'}) %> - 
+                    <% if (card.dateTo == null) { %>
+                     Present
+                    <% }else{ %>
+                      <%= card.dateTo.toLocaleDateString("es-ES",{month: 'short', year: 'numeric'}) %>
+                    <% } %>
+                    
                   </div>
                 </div>
               </div>
@@ -153,7 +159,11 @@
             <!-- Lower row -->
             <div class="row mt-1 ms-0 pe-0 lowerRow">
               <!-- Description -->
-              <div class="col cardInfo cardDesc"><%= card.description %></div>
+              <div class="col cardInfo cardDesc"><%= card.desc.substring(0, 210) %>
+              <% if (card.desc.length > 210) { %>
+               <span>. . .</span>
+              <% } %>
+              </div>
             </div>
           </div>
           <% }) %>
@@ -195,14 +205,19 @@
                 <!-- Role -->
                 <div class="row">
                   <div class="col-12 ms-0 cardInfo cardRole webDevCourse">
-                    <%= card.role %>
+                    <%= card.study %>
                   </div>
                 </div>
 
                 <!-- Date -->
                 <div class="row">
                   <div class="col-auto ms-0 cardInfo cardDates">
-                    <%= card.date %>
+                    <%= card.dateFrom.toLocaleDateString("es-ES",{month: 'short', year: 'numeric'}) %> - 
+                    <% if (card.dateTo == null) { %>
+                     Present
+                    <% }else{ %>
+                      <%= card.dateTo.toLocaleDateString("es-ES",{month: 'short', year: 'numeric'}) %>
+                    <% } %>
                   </div>
                 </div>
               </div>
@@ -211,7 +226,10 @@
             <!-- Lower row -->
             <div class="row mt-1 ms-0 pe-0 lowerRow">
               <!-- Description -->
-              <div class="col cardInfo cardDesc"><%= card.description %></div>
+              <div class="col cardInfo cardDesc"><%= card.desc.substring(0, 210) %>
+              <% if (card.desc.length > 210) { %>
+               <span>. . .</span>
+              <% } %></div>
             </div>
           </div>
           <% }) %>
@@ -271,7 +289,7 @@
                 <div class="row">
                   <% langCards.forEach(card => { %>
                    <% if (card.level == "Native") { %>
-                    <div class="col-4 mx-1 shadow-lg langBlock" id="<%= card.id %>Block">
+                    <div class="col-4 mx-1 shadow-lg langBlock" id="<%= card.name %>Block">
                       <div class="row mx-0">
                         <img
                           src="<%= card.img %> "
@@ -291,7 +309,7 @@
                 <div class="row justify-content-end">
                   <% langCards.forEach(card => { %>
                    <% if (card.level == "Advanced") { %>
-                    <div class="col-4 mx-1 shadow-lg langBlock" id="<%= card.id %>Block">
+                    <div class="col-4 mx-1 shadow-lg langBlock" id="<%= card.name %>Block">
                       <div class="row mx-0">
                         <img
                           src="<%= card.img %> "
@@ -311,7 +329,7 @@
                 <div class="row">
                   <% langCards.forEach(card => { %>
                    <% if (card.level == "Intermediate") { %>
-                    <div class="col-4 mx-1 shadow-lg langBlock" id="<%= card.id %>Block">
+                    <div class="col-4 mx-1 shadow-lg langBlock" id="<%= card.name %>Block">
                       <div class="row mx-0">
                         <img
                           src="<%= card.img %> "
