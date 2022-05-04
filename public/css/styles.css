@@ -317,7 +317,6 @@ h2 {
 /*********** Language **************/
 
 .langBlock {
-  background-color: #52734d;
   border-radius: 20px;
 
   transition: all 200ms ease-in-out;
@@ -330,7 +329,6 @@ h2 {
 }
 
 .langName {
-  background-color: #91c788;
   margin: 0px 10px 10px;
   padding: 5px;
   border-radius: 10px;

@@ -3,3 +3,4 @@
 - Add "Read more" for card texts if it is too long
 - Keep card description's field with same size 
 - Check form fields
+- Close connection for DB

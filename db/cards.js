@@ -1,6 +1,6 @@
 //jshint esversion:6
 import mongoose from "mongoose";
-mongoose.connect("mongodb://localhost:27017/testDB");
+mongoose.connect("mongodb://localhost:27017/presentationDB");
 
 const profileInfoModel = mongoose.model(
   "profileInfo",
