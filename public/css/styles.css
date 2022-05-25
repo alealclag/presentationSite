@@ -351,23 +351,23 @@ h2 {
   transition: all 200ms ease-in-out;
 }
 
-#SpanishBlock {
+#spanishBlock {
   background-color: #cb0d12;
 }
-#EnglishBlock {
+#englishBlock {
   background-color: #002069;
 }
-#JapaneseBlock {
+#japaneseBlock {
   background-color: white;
 }
 
-#SpanishBlock .langName {
+#spanishBlock .langName {
   background-color: #ffbe00;
 }
-#EnglishBlock .langName {
+#englishBlock .langName {
   background-color: #c80c22;
 }
-#JapaneseBlock .langName {
+#japaneseBlock .langName {
   background-color: #bb002b;
   color: white;
 }
