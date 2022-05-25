@@ -1,0 +1,28 @@
+{
+  "name": "personal-site-server",
+  "version": "1.0.0",
+  "description": "Back-end for my personal site",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Alejandro Alcántara",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2",
+    "moment": "^2.29.1",
+    "mongodb": "^4.4.1",
+    "mongoose": "^6.2.4",
+    "nodemailer": "^6.7.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.14.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-react": "^7.29.4"
+  }
+}
