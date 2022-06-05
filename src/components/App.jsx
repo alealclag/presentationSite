@@ -1,6 +1,8 @@
 import React from "react";
 import Card from "./card";
-var name = "Ale";
+import TechCard from "./techCard";
+import LangCard from "./langCard";
+import ContactForm from "./contactForm";
 
 export default function App() {
   return (
@@ -166,153 +168,54 @@ export default function App() {
                     />
 
                     <div className="row gy-4 justify-content-around">
-                      <div className="col-4 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 mx-1 techBlock shadow-lg">
-                        <div className="row mx-0">
-                          <img
-                            src="./images/cardPics/techLogos/node.jpg"
-                            alt="Node.js logo"
-                            className="col px-0 techPic"
-                          />
-                        </div>
-                        <div className="row m-0">
-                          <div className="col m-0 techName">Node.JS</div>
-                        </div>
-                      </div>
-                      <div className="col-4 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 mx-1 techBlock shadow-lg">
-                        <div className="row mx-0">
-                          <img
-                            src="./images/cardPics/techLogos/react.jpg"
-                            alt="React logo"
-                            className="col px-0 techPic"
-                          />
-                        </div>
-                        <div className="row m-0">
-                          <div className="col m-0 techName">React</div>
-                        </div>
-                      </div>
-                      <div className="col-4 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 mx-1 techBlock shadow-lg">
-                        <div className="row mx-0">
-                          <img
-                            src="./images/cardPics/techLogos/bootstrap.jpg"
-                            alt="Bootstrap logo"
-                            className="col px-0 techPic"
-                          />
-                        </div>
-                        <div className="row m-0">
-                          <div className="col m-0 techName">Bootstrap</div>
-                        </div>
-                      </div>
-                      <div className="col-4 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 mx-1 techBlock shadow-lg">
-                        <div className="row mx-0">
-                          <img
-                            src="./images/cardPics/techLogos/jQuery.jpg"
-                            alt="Javascript logo"
-                            className="col px-0 techPic"
-                          />
-                        </div>
-                        <div className="row m-0">
-                          <div className="col m-0 techName">jQuery</div>
-                        </div>
-                      </div>
-                      <div className="col-4 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 mx-1 techBlock shadow-lg">
-                        <div className="row mx-0">
-                          <img
-                            src="./images/cardPics/techLogos/MongoDB.jpg"
-                            alt="MongoDB logo"
-                            className="col px-0 techPic"
-                          />
-                        </div>
-                        <div className="row m-0">
-                          <div className="col m-0 techName">MongoDB</div>
-                        </div>
-                      </div>
-                      <div className="col-4 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 mx-1 techBlock shadow-lg">
-                        <div className="row mx-0">
-                          <img
-                            src="./images/cardPics/techLogos/git.jpg"
-                            alt="Git logo"
-                            className="col px-0 techPic"
-                          />
-                        </div>
-                        <div className="row m-0">
-                          <div className="col m-0 techName">Git</div>
-                        </div>
-                      </div>
-                      <div className="col-4 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 mx-1 techBlock shadow-lg">
-                        <div className="row mx-0">
-                          <img
-                            src="./images/cardPics/techLogos/docker.jpg"
-                            alt="Docker logo"
-                            className="col px-0 techPic"
-                          />
-                        </div>
-                        <div className="row m-0">
-                          <div className="col m-0 techName">Docker</div>
-                        </div>
-                      </div>
-
-                      <div className="col-4 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 mx-1 techBlock shadow-lg">
-                        <div className="row mx-0">
-                          <img
-                            src="./images/cardPics/techLogos/net.jpg"
-                            alt=".Net logo"
-                            className="col px-0 techPic"
-                          />
-                        </div>
-                        <div className="row m-0">
-                          <div className="col m-0 techName">.Net (C#)</div>
-                        </div>
-                      </div>
-                      <div className="col-4 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 mx-1 techBlock shadow-lg">
-                        <div className="row mx-0">
-                          <img
-                            src="./images/cardPics/techLogos/python.jpg"
-                            alt="Python logo"
-                            className="col px-0 techPic"
-                          />
-                        </div>
-                        <div className="row m-0">
-                          <div className="col m-0 techName">Python</div>
-                        </div>
-                      </div>
-                      <div className="col-4 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 mx-1 techBlock shadow-lg">
-                        <div className="row mx-0">
-                          <img
-                            src="./images/cardPics/techLogos/java.jpg"
-                            alt="Java logo"
-                            className="col px-0 techPic"
-                          />
-                        </div>
-                        <div className="row m-0">
-                          <div className="col m-0 techName">Java</div>
-                        </div>
-                      </div>
-                      <div className="col-4 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 mx-1 techBlock shadow-lg">
-                        <div className="row mx-0">
-                          <img
-                            src="./images/cardPics/techLogos/c++.jpg"
-                            alt="C++ logo"
-                            className="col px-0 techPic"
-                          />
-                        </div>
-                        <div className="row m-0">
-                          <div className="col m-0 techName">C / C++</div>
-                        </div>
-                      </div>
-                      <div className="col-4 col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 mx-1 techBlock shadow-lg">
-                        <div className="row mx-0">
-                          <img
-                            src="./images/cardPics/techLogos/embedded.jpg"
-                            alt="Embedded system pic"
-                            className="col px-0 techPic"
-                          />
-                        </div>
-                        <div className="row m-0">
-                          <div className="col m-0 techName" id="embSys-card">
-                            Embedded Systems
-                          </div>
-                        </div>
-                      </div>
+                      <TechCard
+                        name="React"
+                        pic="./images/cardPics/techLogos/react.jpg"
+                      />
+                      <TechCard
+                        name="Node.js"
+                        pic="./images/cardPics/techLogos/node.jpg"
+                      />
+                      <TechCard
+                        name="Bootstrap"
+                        pic="./images/cardPics/techLogos/bootstrap.jpg"
+                      />
+                      <TechCard
+                        name="jQuery"
+                        pic="./images/cardPics/techLogos/jQuery.jpg"
+                      />
+                      <TechCard
+                        name="MongoDB"
+                        pic="./images/cardPics/techLogos/MongoDB.jpg"
+                      />
+                      <TechCard
+                        name="Git"
+                        pic="./images/cardPics/techLogos/git.jpg"
+                      />
+                      <TechCard
+                        name="Docker"
+                        pic="./images/cardPics/techLogos/docker.jpg"
+                      />
+                      <TechCard
+                        name=".Net (C#)"
+                        pic="./images/cardPics/techLogos/net.jpg"
+                      />
+                      <TechCard
+                        name="Python"
+                        pic="./images/cardPics/techLogos/python.jpg"
+                      />
+                      <TechCard
+                        name="Java"
+                        pic="./images/cardPics/techLogos/java.jpg"
+                      />
+                      <TechCard
+                        name="C / C++"
+                        pic="./images/cardPics/techLogos/c++.jpg"
+                      />
+                      <TechCard
+                        name="Embedded Systems"
+                        pic="./images/cardPics/techLogos/embedded.jpg"
+                      />
                     </div>
                   </div>
                 </div>
@@ -330,59 +233,23 @@ export default function App() {
                     />
                     <h4 className="levelTitle levelTitle">Native</h4>
                     <div className="row">
-                      <div
-                        className="col-4 mx-1 shadow-lg langBlock"
-                        id="spanishBlock"
-                      >
-                        <div className="row mx-0">
-                          <img
-                            src="./images/cardPics/spain.png"
-                            alt="Spanish Flag"
-                            className="col px-0 mx-0 flagPic"
-                          />
-                        </div>
-                        <div className="row">
-                          <div className="col langName">Spanish</div>
-                        </div>
-                      </div>
+                      <LangCard
+                        name="Spanish"
+                        pic="./images/cardPics/spain.png"
+                      />
                     </div>
 
                     <h4 className="levelTitle leftLangBlock">Advanced</h4>
                     <div className="row justify-content-end">
-                      <div
-                        className="col-4 mx-1 shadow-lg langBlock"
-                        id="englishBlock"
-                      >
-                        <div className="row mx-0">
-                          <img
-                            src="./images/cardPics/uk.jpg"
-                            alt="England Flag"
-                            className="col px-0 mx-0 flagPic"
-                          />
-                        </div>
-                        <div className="row">
-                          <div className="col langName">English</div>
-                        </div>
-                      </div>
+                      <LangCard name="English" pic="./images/cardPics/uk.jpg" />
                     </div>
 
                     <h4 className="levelTitle">Intermediate</h4>
                     <div className="row">
-                      <div
-                        className="col-4 mx-1 shadow-lg langBlock"
-                        id="japaneseBlock"
-                      >
-                        <div className="row mx-0">
-                          <img
-                            src="./images/cardPics/japan.jpg"
-                            alt="Japanese Flag"
-                            className="col px-0 mx-0 flagPic"
-                          />
-                        </div>
-                        <div className="row">
-                          <div className="col langName">Japanese</div>
-                        </div>
-                      </div>
+                      <LangCard
+                        name="Japanese"
+                        pic="./images/cardPics/japan.jpg"
+                      />
                     </div>
                   </div>
                 </div>
@@ -399,53 +266,7 @@ export default function App() {
             <img src="./images/bgPics/mail.png" className="bgPic mailPic" />
 
             <div className="row justify-content-center">
-              <form
-                action="/"
-                method="POST"
-                id="contactForm"
-                className="col-lg-6 shadow-lg"
-              >
-                <div className="row justify-content-center">
-                  <div className="col-lg-6">
-                    <input
-                      type="text"
-                      name="name"
-                      id="contactName"
-                      placeholder="Name"
-                    />
-                  </div>
-                  <div className="col-lg-6">
-                    <input
-                      type="text"
-                      name="email"
-                      id="contactMail"
-                      placeholder="Email"
-                    />
-                  </div>
-                </div>
-
-                <div className="row justify-content-center">
-                  <div className="col-lg-12">
-                    <textarea
-                      name="message"
-                      id="contactMessage"
-                      className="fullWidthFormField"
-                      cols="30"
-                      rows="10"
-                      placeholder="Message..."
-                    ></textarea>
-                  </div>
-                </div>
-
-                <div className="row justify-content-center">
-                  <div className="col-lg-6">
-                    <button className="btn btn-lg sendMessageBtn fullWidthFormField">
-                      <i className="fas fa-check invisibility"></i>
-                      <span className="sendFormText">Send</span>
-                    </button>
-                  </div>
-                </div>
-              </form>
+              <ContactForm />
             </div>
           </div>
         </section>
