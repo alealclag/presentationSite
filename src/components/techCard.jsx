@@ -13,7 +13,7 @@ export default function techCard(properties) {
       <div className="row m-0">
         <div
           className="col m-0 techName"
-          id={properties.name == "Embedded Systems" && "embSys-card"}
+          id={properties.name == "Embedded Systems" ? "embSys-card" : undefined}
         >
           {properties.name}
         </div>
