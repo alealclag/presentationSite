@@ -1,6 +1,12 @@
-- show music notes when playing music
-- Putting profile Pic on navbar when scrolled down
-- Add "Read more" for card texts if it is too long
-- Keep card description's field with same size 
-- Check form fields
-- Close connection for DB
+Back:
+    - Implement Back for React
+    - Reorganize DB
+    - Close connection for DB    
+
+Front:
+    - Implement JS animations (requires hooks)
+    - Keep card description's field with same size 
+    - Add "Read more" for card texts if it is too long
+    - Check form fields
+    - Putting profile Pic on navbar when scrolled down    
+    - Show music notes when playing music

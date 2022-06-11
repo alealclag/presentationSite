@@ -6,6 +6,33 @@ import ContactForm from "./contactForm";
 import PresentationSection from "./presentationSection";
 import Header from "./header";
 import Footer from "./footer";
+import * as cards from "../cards";
+
+function createCard(card) {
+  return (
+    <Card
+      key={card.key}
+      pic={card.pic}
+      name={card.name}
+      role={card.role}
+      dates={card.dates}
+      description={card.description}
+      isEduCard={card.isEduCard}
+    />
+  );
+}
+
+function createTechCard(techCard) {
+  return (
+    <TechCard key={techCard.key} name={techCard.name} pic={techCard.pic} />
+  );
+}
+
+function createLangCard(langCard) {
+  return (
+    <LangCard key={langCard.key} name={langCard.name} pic={langCard.pic} />
+  );
+}
 
 export default function App() {
   return (
@@ -31,25 +58,9 @@ export default function App() {
             <img src="./images/bgPics/work.png" className="bgPic" />
 
             <div className="row justify-content-around sectionRow">
-              <Card
-                key="Cober"
-                pic="./images/cardPics/coberlogo.png"
-                name="Cober"
-                role=".NET Developer"
-                dates="aug. 2021 - oct. 2021"
-                description="The work done consisted in upgrading the client's application using .NET (with MVVM and asynchrony), as well as solving bugs and analyzing the client's necessities"
-              />
-
-              <Card
-                key="NTT Data"
-                pic="./images/cardPics/nttdatalogo.png"
-                name="NTT Data"
-                role="Intern .NET Developer"
-                dates="oct. 2020 - mar. 2021"
-                description="The tasks developed during my internship on the company were
-                    fixing bugs, migrating functionalities and performing
-                    functional tests. The main technology used was .NET"
-              />
+              {cards.workEdu.map((card) =>
+                card.isEduCard ? null : createCard(card)
+              )}
             </div>
           </div>
         </section>
@@ -64,27 +75,9 @@ export default function App() {
             />
 
             <div className="row justify-content-around sectionRow">
-              <Card
-                key="Udemy"
-                pic="./images/cardPics/webdevlogo.png"
-                name="Udemy"
-                role="Full-Stack Web Development Course"
-                dates="dec. 2021 - jun. 2022"
-                description="55h full-stack web development course, including
-                    technologies like React, Node, Bootstrap, MongoDB & Express.js"
-                isEduCard={true}
-              />
-              <Card
-                key="University of Seville"
-                pic="./images/cardPics/uslogo.png"
-                name="University of Seville"
-                role="Computer Science Degree"
-                dates="2017 - 2021"
-                description="Worked on various fields, including web development,
-                    analysis and design of algorithms, embedded systems, AI and
-                    more"
-                isEduCard={true}
-              />
+              {cards.workEdu.map((card) =>
+                card.isEduCard ? createCard(card) : null
+              )}
             </div>
           </div>
         </section>
@@ -104,66 +97,9 @@ export default function App() {
                     />
 
                     <div className="row gy-4 justify-content-around">
-                      <TechCard
-                        key="React"
-                        name="React"
-                        pic="./images/cardPics/techLogos/react.jpg"
-                      />
-                      <TechCard
-                        key="Node.js"
-                        name="Node.js"
-                        pic="./images/cardPics/techLogos/node.jpg"
-                      />
-                      <TechCard
-                        key="Bootstrap"
-                        name="Bootstrap"
-                        pic="./images/cardPics/techLogos/bootstrap.jpg"
-                      />
-                      <TechCard
-                        key="jQuery"
-                        name="jQuery"
-                        pic="./images/cardPics/techLogos/jQuery.jpg"
-                      />
-                      <TechCard
-                        key="MongoDB"
-                        name="MongoDB"
-                        pic="./images/cardPics/techLogos/MongoDB.jpg"
-                      />
-                      <TechCard
-                        key="Git"
-                        name="Git"
-                        pic="./images/cardPics/techLogos/git.jpg"
-                      />
-                      <TechCard
-                        key="Docker"
-                        name="Docker"
-                        pic="./images/cardPics/techLogos/docker.jpg"
-                      />
-                      <TechCard
-                        key=".net"
-                        name=".Net (C#)"
-                        pic="./images/cardPics/techLogos/net.jpg"
-                      />
-                      <TechCard
-                        key="Python"
-                        name="Python"
-                        pic="./images/cardPics/techLogos/python.jpg"
-                      />
-                      <TechCard
-                        key="Java"
-                        name="Java"
-                        pic="./images/cardPics/techLogos/java.jpg"
-                      />
-                      <TechCard
-                        key="C++"
-                        name="C / C++"
-                        pic="./images/cardPics/techLogos/c++.jpg"
-                      />
-                      <TechCard
-                        key="EmbdSys"
-                        name="Embedded Systems"
-                        pic="./images/cardPics/techLogos/embedded.jpg"
-                      />
+                      {cards.techCards.map((techCard) =>
+                        createTechCard(techCard)
+                      )}
                     </div>
                   </div>
                 </div>
@@ -181,29 +117,23 @@ export default function App() {
                     />
                     <h4 className="levelTitle levelTitle">Native</h4>
                     <div className="row">
-                      <LangCard
-                        key="Spanish"
-                        name="Spanish"
-                        pic="./images/cardPics/spain.png"
-                      />
+                      {cards.langCards.map((langCard) =>
+                        langCard.level == 1 ? createLangCard(langCard) : null
+                      )}
                     </div>
 
                     <h4 className="levelTitle leftLangBlock">Advanced</h4>
                     <div className="row justify-content-end">
-                      <LangCard
-                        key="English"
-                        name="English"
-                        pic="./images/cardPics/uk.jpg"
-                      />
+                      {cards.langCards.map((langCard) =>
+                        langCard.level == 2 ? createLangCard(langCard) : null
+                      )}
                     </div>
 
                     <h4 className="levelTitle">Intermediate</h4>
                     <div className="row">
-                      <LangCard
-                        key="Japanese"
-                        name="Japanese"
-                        pic="./images/cardPics/japan.jpg"
-                      />
+                      {cards.langCards.map((langCard) =>
+                        langCard.level == 3 ? createLangCard(langCard) : null
+                      )}
                     </div>
                   </div>
                 </div>

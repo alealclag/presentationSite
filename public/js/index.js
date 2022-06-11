@@ -26,7 +26,8 @@ function rotate(degree) {
 }
 
 //If the profile pic is clicked, the displayed tip and the music will change
-profilePic.click(function () {
+profilePic.on("click", function () {
+  alert("Alerta de prueba");
   spinProfilePic = !spinProfilePic;
   if (spinProfilePic) {
     $("#playTip").fadeOut(); //Hide hover Tip
