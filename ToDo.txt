@@ -4,7 +4,7 @@ Back:
     - Close connection for DB    
 
 Front:
-    - Implement JS animations (requires hooks)
+    - Implement JS animations with declarative
     - Keep card description's field with same size 
     - Add "Read more" for card texts if it is too long
     - Check form fields
