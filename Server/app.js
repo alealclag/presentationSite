@@ -37,10 +37,10 @@ const contactModel = mongoose.model("contact", {
 });
 
 var transporter = nodemailer.createTransport({
-  service: "hotmail",
+  service: "gmail",
   auth: {
-    user: "alalla@hotmail.es",
-    pass: "perdonaKiyo2021",
+    user: "email@gmail.com",
+    pass: "********",
   },
 });
 
@@ -70,8 +70,8 @@ app.post("/", async function (req, res) {
   });
 
   var mailOptions = {
-    from: "alalla@hotmail.es",
-    to: "ale.alcantara.laguna@gmail.com",
+    from: "email@gmail.com",
+    to: "email@gmail.com",
     subject: name + " está interesado en contactarte",
     text:
       "Nombre: " + name + "%0D%0AEmail: " + email + "%0D%0AMensaje: " + message,
