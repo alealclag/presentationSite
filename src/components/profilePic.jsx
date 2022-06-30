@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 
 export default function profilePic(properties) {
   const [[playbackStatus, tipStatus], setPlaybackTipStatus] = useState([
@@ -6,21 +6,21 @@ export default function profilePic(properties) {
     1,
   ]); //0: None, 1: Play Tip, 2:Pause Tip
 
-  // useEffect(() => {
-  //   if (playbackStatus % 2 == 0) {
-  //     profilePicMusic.play();
-  //   } else {
-  //     profilePicMusic.pause();
-  //   }
-  // });
-
-  let profilePicMusic = new Audio("audio/profilePic_music.mp3");
+  const profilePicMusic = useMemo(
+    () => new Audio("./audio/profilePic_music.mp3"),
+    ["./audio/profilePic_music.mp3"]
+  );
   profilePicMusic.loop = true;
+
+  useEffect(() => {
+    playbackStatus ? profilePicMusic.play() : profilePicMusic.pause();
+  }, [playbackStatus]);
 
   function rotatePlay() {
     switch (tipStatus) {
       case 0:
         setPlaybackTipStatus([!playbackStatus, 0]);
+
         break;
 
       case 1:
