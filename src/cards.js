@@ -2,7 +2,7 @@ export const workEdu = [
   {
     key: "Minsait",
     pic: "./images/cardPics/minsaitlogo.png",
-    name: "Minsaiy",
+    name: "Minsait",
     role: "SAP PP Analyst",
     dates: "oct. 2021 - Current",
     description:
