@@ -4,47 +4,46 @@ import mongoose from "mongoose";
 mongoose.connect("mongodb://localhost:27017/presentationDB");
 
 const profileInfo = mongoose.model("profileInfo", {
+  pic: String,
   name: String,
   role: String,
   bio: String,
-  profilePic: String,
 });
 
 const workCard = mongoose.model("WorkCard", {
-  role: String,
-  name: String,
+  pic: String,
   dateFrom: Date,
   dateTo: Date,
+  name: String,
+  role: String,
   desc: String,
-  img: String,
 });
 
 const eduCard = mongoose.model("EduCard", {
-  study: String,
-  name: String,
+  pic: String,
   dateFrom: Date,
   dateTo: Date,
+  name: String,
+  role: String,
   desc: String,
-  img: String,
 });
 
 const techCard = mongoose.model("TechCard", {
   name: String,
-  level: String,
-  img: String,
+  pic: String,
 });
 
 const langCard = mongoose.model("LangCard", {
   name: String,
-  level: String,
-  img: String,
+  pic: String,
+  level: Number,
 });
 
 const myProfile = new profileInfo({
+  pic: "./images/prestentationPic.jpg",
   name: "Alejandro Alcántara Laguna",
-  role: "Developer & Computer Engineer",
+  role: "Web developer & Computer Engineer",
   bio: "Still a rookie, so I'm looking for my best path",
-  profilePic: "images/prestentationPic.jpg",
 });
 
 myProfile.save(function (e) {
@@ -58,28 +57,34 @@ myProfile.save(function (e) {
 workCard.insertMany(
   [
     {
-      role: "SAP PP Analyst",
+      pic: "./images/cardPics/minsaitlogo.png",
       name: "Minsait",
+      role: "SAP PP Analyst",
+      dates: "oct. 2021 - Current",
+      description:
+        "Here at Minsait I started working with SAP and diverging from coding. Despite not getting coding experience from this, I did grow in the teamworking field",
       dateFrom: new Date(Date.UTC(2022, 9)),
       dateTo: null,
-      desc: "In Minsait I started and grew as a SAP Analyst, specifically in the Production Planning Module",
-      img: "images/cardPics/minsaitlogo.png",
     },
     {
-      role: ".NET Developer",
+      pic: "./images/cardPics/coberlogo.png",
       name: "Cober",
+      role: ".NET Developer",
+      dates: "aug. 2021 - oct. 2021",
+      description:
+        "The work done consisted in upgrading the client's application using .NET (with MVVM and asynchrony), as well as solving bugs and analyzing the client's necessities",
       dateFrom: new Date(Date.UTC(2021, 7)),
       dateTo: new Date(Date.UTC(2021, 9)),
-      desc: "The work done consisted in upgrading the client's application using .NET (with MVVM and asynchrony), as well as solving bugs and analyzing the client's necessities",
-      img: "images/cardPics/coberlogo.png",
     },
     {
-      role: "Intern .NET Developer",
+      pic: "./images/cardPics/nttdatalogo.png",
       name: "NTT Data",
+      role: "Intern .NET Developer",
+      dates: "oct. 2020 - mar. 2021",
+      description:
+        "The tasks developed during my internship on the company were fixing bugs, migrating functionalities and performing functional tests. The main technology used was .NET",
       dateFrom: new Date(Date.UTC(2020, 9)),
       dateTo: new Date(Date.UTC(2021, 2)),
-      desc: "The tasks developed during my internship on the company were fixing bugs, migrating functionalities and performing functional tests. The main technology used was .NET",
-      img: "images/cardPics/nttdatalogo.png",
     },
   ],
   function (e) {
@@ -94,20 +99,24 @@ workCard.insertMany(
 eduCard.insertMany(
   [
     {
-      study: "Full-Stack Web Development Course",
+      pic: "./images/cardPics/webdevlogo.png",
       name: "Udemy",
+      role: "Full-Stack Web Development Course",
+      dates: "dec. 2021 - jun. 2022",
+      description:
+        "55h full-stack web development course, including technologies like React, Node, Bootstrap, MongoDB & Express.js",
       dateFrom: new Date(Date.UTC(2021, 11)),
       dateTo: new Date(Date.UTC(2022, 2)),
-      desc: "55h full-stack web development course, including technologies like Node, React, Bootstrap, MongoDB & Express.js",
-      img: "images/cardPics/webdevlogo.png",
     },
     {
-      study: "Computer Science Degree",
+      pic: "./images/cardPics/uslogo.png",
       name: "University of Seville",
+      role: "Computer Science Degree",
+      dates: "2017 - 2021",
+      description:
+        "Worked on various fields, including web development, analysis and design of algorithms, embedded systems, AI and more",
       dateFrom: new Date(Date.UTC(2017)),
       dateTo: new Date(Date.UTC(2021)),
-      desc: "Worked on various fields, including web development, analysis and design of algorithms, embedded systems, AI and more",
-      img: "images/cardPics/uslogo.png",
     },
   ],
   function (e) {
@@ -122,52 +131,52 @@ eduCard.insertMany(
 techCard.insertMany(
   [
     {
-      name: "Node.js",
-      img: "images/cardPics/techLogos/node.jpg",
+      name: "React",
+      pic: "./images/cardPics/techLogos/react.jpg",
     },
     {
-      name: "React",
-      img: "images/cardPics/techLogos/react.jpg",
+      name: "Node.js",
+      pic: "./images/cardPics/techLogos/node.jpg",
     },
     {
       name: "Bootstrap",
-      img: "images/cardPics/techLogos/bootstrap.jpg",
+      pic: "./images/cardPics/techLogos/bootstrap.jpg",
     },
     {
       name: "jQuery",
-      img: "images/cardPics/techLogos/jQuery.jpg",
+      pic: "./images/cardPics/techLogos/jQuery.jpg",
     },
     {
       name: "MongoDB",
-      img: "images/cardPics/techLogos/mongoDB.jpg",
+      pic: "./images/cardPics/techLogos/MongoDB.jpg",
     },
     {
       name: "Git",
-      img: "images/cardPics/techLogos/git.jpg",
+      pic: "./images/cardPics/techLogos/git.jpg",
     },
     {
       name: "Docker",
-      img: "images/cardPics/techLogos/docker.jpg",
+      pic: "./images/cardPics/techLogos/docker.jpg",
     },
     {
       name: ".Net (C#)",
-      img: "images/cardPics/techLogos/net.jpg",
+      pic: "./images/cardPics/techLogos/net.jpg",
     },
     {
       name: "Python",
-      img: "images/cardPics/techLogos/python.jpg",
+      pic: "./images/cardPics/techLogos/python.jpg",
     },
     {
       name: "Java",
-      img: "images/cardPics/techLogos/java.jpg",
+      pic: "./images/cardPics/techLogos/java.jpg",
     },
     {
       name: "C / C++",
-      img: "images/cardPics/techLogos/c++.jpg",
+      pic: "./images/cardPics/techLogos/c++.jpg",
     },
     {
       name: "Embedded Systems",
-      img: "images/cardPics/techLogos/embedded.jpg",
+      pic: "./images/cardPics/techLogos/embedded.jpg",
     },
   ],
   function (e) {
@@ -182,18 +191,18 @@ langCard.insertMany(
   [
     {
       name: "Spanish",
-      level: "Native",
-      img: "images/cardPics/spain.png",
+      pic: "./images/cardPics/spain.png",
+      level: 1,
     },
     {
       name: "English",
-      level: "Advanced",
-      img: "images/cardPics/uk.jpg",
+      pic: "./images/cardPics/uk.jpg",
+      level: 2,
     },
     {
       name: "Japanese",
-      level: "Intermediate",
-      img: "images/cardPics/japan.jpg",
+      pic: "./images/cardPics/japan.jpg",
+      level: 3,
     },
   ],
   function (e) {

@@ -4,9 +4,10 @@ import path from "path";
 import { fileURLToPath } from "url";
 import bodyParser from "body-parser";
 import https from "https";
-import * as cards from "./cards.js";
+import * as cards from "./db/cards.js";
 import mongoose from "mongoose";
 import nodemailer from "nodemailer";
+import cors from "cors";
 
 /* jshint ignore:start */
 const __filename = fileURLToPath(import.meta.url);
@@ -20,15 +21,8 @@ mongoose.connect("mongodb://localhost:27017/presentationDB");
 
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({ extended: true }));
-app.set("view engine", "ejs");
-
-let data = {
-  profile: cards.profileInfo,
-  workCards: cards.workCards,
-  eduCards: cards.eduCards,
-  techCards: cards.techCards,
-  langCards: cards.langCards,
-};
+app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+app.set("view engine", "jsx");
 
 const contactModel = mongoose.model("contact", {
   name: String,
@@ -46,8 +40,24 @@ var transporter = nodemailer.createTransport({
 
 const maxTextSize = 160;
 
-app.get("/", (req, res) => {
-  res.render("index", data);
+app.get("/profileInfo", (req, res) => {
+  res.json(cards.profileInfo);
+});
+
+app.get("/workCards", (req, res) => {
+  res.json(cards.workCards);
+});
+
+app.get("/eduCards", (req, res) => {
+  res.json(cards.eduCards);
+});
+
+app.get("/techCards", (req, res) => {
+  res.json(cards.techCards);
+});
+
+app.get("/langCards", (req, res) => {
+  res.json(cards.langCards);
 });
 
 app.post("/", async function (req, res) {

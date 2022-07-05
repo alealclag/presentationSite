@@ -5,12 +5,7 @@ export default function presentationSection(properties) {
   return (
     <section className="" id="presentationSection">
       <div className="container">
-        <ProfilePic
-          key="profilePic"
-          pic={properties.pic}
-          playHint={properties.playHint}
-          pauseHint={properties.pauseHint}
-        />
+        <ProfilePic key="profilePic" pic={properties.pic} />
 
         <div id="">
           <h1>{properties.name}</h1>

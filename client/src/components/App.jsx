@@ -7,30 +7,43 @@ import PresentationSection from "./presentationSection";
 import Header from "./header";
 import Footer from "./footer";
 import * as cards from "../cards";
+import axios from "axios";
 
-function createCard(card) {
+let work = [];
+
+const api = axios.create({ baseURL: "http://localhost:8080" });
+
+api
+  .get("/workCards")
+  .then((res) => {
+    work = res;
+    // res.data.map((card) => console.log(card));
+  })
+  .catch((e) => console.error(e));
+
+function createCard(card, eduCard) {
   return (
     <Card
-      key={card.key}
+      key={card.name}
       pic={card.pic}
       name={card.name}
       role={card.role}
       dates={card.dates}
       description={card.description}
-      isEduCard={card.isEduCard}
+      isEduCard={eduCard}
     />
   );
 }
 
 function createTechCard(techCard) {
   return (
-    <TechCard key={techCard.key} name={techCard.name} pic={techCard.pic} />
+    <TechCard key={techCard.name} name={techCard.name} pic={techCard.pic} />
   );
 }
 
 function createLangCard(langCard) {
   return (
-    <LangCard key={langCard.key} name={langCard.name} pic={langCard.pic} />
+    <LangCard key={langCard.name} name={langCard.name} pic={langCard.pic} />
   );
 }
 
@@ -40,17 +53,8 @@ export default function App() {
       <Header key="Header" />
 
       <PresentationSection
-        key="presentationSection"
+        key="Alejandro Alcántara Laguna"
         pic="./images/prestentationPic.jpg"
-        playHint={
-          window.matchMedia("(max-width: 768px)").matches ||
-          "ontouchstart" in window ||
-          navigator.maxTouchPoints > 0 ||
-          navigator.msMaxTouchPoints > 0
-            ? "Tap on me for a comfy experience!"
-            : "Click on me for a comfy experience!"
-        }
-        pauseHint="And again if you prefer silence"
         name="Alejandro Alcántara Laguna"
         role="Web developer & Computer Engineer"
         bio="Still a rookie, so I'm looking for my best path"
@@ -64,9 +68,7 @@ export default function App() {
           <img src="./images/bgPics/work.png" className="bgPic" />
 
           <div className="row justify-content-around sectionRow">
-            {cards.workEdu.map((card) =>
-              card.isEduCard ? null : createCard(card)
-            )}
+            {work.map((card) => createCard(card, false))}
           </div>
         </div>
       </section>
@@ -79,7 +81,7 @@ export default function App() {
 
           <div className="row justify-content-around sectionRow">
             {cards.workEdu.map((card) =>
-              card.isEduCard ? createCard(card) : null
+              card.isEduCard ? createCard(card, true) : null
             )}
           </div>
         </div>
