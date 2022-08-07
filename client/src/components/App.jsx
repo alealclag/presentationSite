@@ -6,20 +6,10 @@ import ContactForm from "./contactForm";
 import PresentationSection from "./presentationSection";
 import Header from "./header";
 import Footer from "./footer";
-import * as cards from "../cards";
 import axios from "axios";
-
-let work = [];
+import { useState, useEffect } from "react";
 
 const api = axios.create({ baseURL: "http://localhost:8080" });
-
-api
-  .get("/workCards")
-  .then((res) => {
-    work = res;
-    // res.data.map((card) => console.log(card));
-  })
-  .catch((e) => console.error(e));
 
 function createCard(card, eduCard) {
   return (
@@ -28,7 +18,8 @@ function createCard(card, eduCard) {
       pic={card.pic}
       name={card.name}
       role={card.role}
-      dates={card.dates}
+      dateFrom={card.dateFrom}
+      dateTo={card.dateTo}
       description={card.description}
       isEduCard={eduCard}
     />
@@ -48,16 +39,34 @@ function createLangCard(langCard) {
 }
 
 export default function App() {
+  const [profileInfo, setProfileInfo] = useState([]);
+  const [work, setWork] = useState([]);
+  const [edu, setEdu] = useState([]);
+  const [tech, setTech] = useState([]);
+  const [lang, setLang] = useState([]);
+
+  useEffect(() => {
+    api
+      .get("/data")
+      .then((res) => {
+        setProfileInfo(res.data.profileInfo[0]);
+        setWork(res.data.workCards);
+        setEdu(res.data.eduCards);
+        setTech(res.data.techCards);
+        setLang(res.data.langCards);
+      })
+      .catch((e) => console.error(e));
+  });
   return (
     <React.StrictMode>
       <Header key="Header" />
 
       <PresentationSection
-        key="Alejandro Alcántara Laguna"
-        pic="./images/prestentationPic.jpg"
-        name="Alejandro Alcántara Laguna"
-        role="Web developer & Computer Engineer"
-        bio="Still a rookie, so I'm looking for my best path"
+        key={profileInfo.name}
+        pic={profileInfo.pic}
+        name={profileInfo.name}
+        role={profileInfo.role}
+        bio={profileInfo.bio}
       />
 
       <div className="gradientUp" id="workGradient">
@@ -80,9 +89,7 @@ export default function App() {
           <img src="./images/bgPics/education.png" className="bgPic eduBgPic" />
 
           <div className="row justify-content-around sectionRow">
-            {cards.workEdu.map((card) =>
-              card.isEduCard ? createCard(card, true) : null
-            )}
+            {edu.map((card) => createCard(card, true))}
           </div>
         </div>
       </section>
@@ -102,9 +109,7 @@ export default function App() {
                   />
 
                   <div className="row gy-4 justify-content-around">
-                    {cards.techCards.map((techCard) =>
-                      createTechCard(techCard)
-                    )}
+                    {tech.map((techCard) => createTechCard(techCard))}
                   </div>
                 </div>
               </div>
@@ -122,21 +127,21 @@ export default function App() {
                   />
                   <h4 className="levelTitle levelTitle">Native</h4>
                   <div className="row">
-                    {cards.langCards.map((langCard) =>
+                    {lang.map((langCard) =>
                       langCard.level == 1 ? createLangCard(langCard) : null
                     )}
                   </div>
 
                   <h4 className="levelTitle leftLangBlock">Advanced</h4>
                   <div className="row justify-content-end">
-                    {cards.langCards.map((langCard) =>
+                    {lang.map((langCard) =>
                       langCard.level == 2 ? createLangCard(langCard) : null
                     )}
                   </div>
 
                   <h4 className="levelTitle">Intermediate</h4>
                   <div className="row">
-                    {cards.langCards.map((langCard) =>
+                    {lang.map((langCard) =>
                       langCard.level == 3 ? createLangCard(langCard) : null
                     )}
                   </div>

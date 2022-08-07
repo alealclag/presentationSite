@@ -42,7 +42,7 @@ export default function Card(properties) {
 
           <div className="row">
             <div className="col-auto ms-0 cardInfo cardDates">
-              {properties.dates}
+              {properties.dateFrom} - {properties.dateTo}
             </div>
           </div>
         </div>

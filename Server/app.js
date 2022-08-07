@@ -40,24 +40,32 @@ var transporter = nodemailer.createTransport({
 
 const maxTextSize = 160;
 
-app.get("/profileInfo", (req, res) => {
-  res.json(cards.profileInfo);
-});
+function formatCardDates(UnformattedCards) {
+  return UnformattedCards.map((card) => {
+    return {
+      ...card,
+      dateFrom: card.dateFrom?.toLocaleDateString("es-ES", {
+        month: "short",
+        year: "numeric",
+      }),
+      dateTo: card.dateTo
+        ? card.dateTo.toLocaleDateString("es-ES", {
+            month: "short",
+            year: "numeric",
+          })
+        : "Present",
+    };
+  });
+}
 
-app.get("/workCards", (req, res) => {
-  res.json(cards.workCards);
-});
-
-app.get("/eduCards", (req, res) => {
-  res.json(cards.eduCards);
-});
-
-app.get("/techCards", (req, res) => {
-  res.json(cards.techCards);
-});
-
-app.get("/langCards", (req, res) => {
-  res.json(cards.langCards);
+app.get("/data", (req, res) => {
+  res.json({
+    profileInfo: cards.profileInfo,
+    workCards: formatCardDates(cards.workCards),
+    eduCards: formatCardDates(cards.eduCards),
+    techCards: cards.techCards,
+    langCards: cards.langCards,
+  });
 });
 
 app.post("/", async function (req, res) {
