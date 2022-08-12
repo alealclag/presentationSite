@@ -4,7 +4,7 @@ import SubmitButton from "./submitButton";
 export default function contactForm() {
   return (
     <form
-      action="/"
+      action="/contact"
       method="POST"
       id="contactForm"
       className="col-lg-6 shadow-lg"

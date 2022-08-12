@@ -1,6 +1,8 @@
 //jshint esversion:6
 import mongoose from "mongoose";
-mongoose.connect("mongodb://localhost:27017/presentationDB");
+import * as secrets from "../secrets.js";
+
+mongoose.connect(secrets.dbAddress);
 
 const profileInfoModel = mongoose.model(
   "profileInfo",

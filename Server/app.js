@@ -6,8 +6,9 @@ import bodyParser from "body-parser";
 import https from "https";
 import * as cards from "./db/cards.js";
 import mongoose from "mongoose";
-import nodemailer from "nodemailer";
 import cors from "cors";
+import nodemailer from "nodemailer";
+import * as secrets from "./secrets.js";
 
 /* jshint ignore:start */
 const __filename = fileURLToPath(import.meta.url);
@@ -17,7 +18,7 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const port = 8080;
 
-mongoose.connect("mongodb://localhost:27017/presentationDB");
+mongoose.connect(secrets.dbAddress);
 
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -28,14 +29,6 @@ const contactModel = mongoose.model("contact", {
   name: String,
   email: String,
   message: String,
-});
-
-var transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: "email@gmail.com",
-    pass: "********",
-  },
 });
 
 const maxTextSize = 160;
@@ -58,6 +51,16 @@ function formatCardDates(UnformattedCards) {
   });
 }
 
+const transporter = nodemailer.createTransport({
+  host: "smtp.zoho.eu",
+  port: 465,
+  secure: true,
+  auth: {
+    user: secrets.user,
+    pass: secrets.pass,
+  },
+});
+
 app.get("/data", (req, res) => {
   res.json({
     profileInfo: cards.profileInfo,
@@ -68,44 +71,52 @@ app.get("/data", (req, res) => {
   });
 });
 
-app.post("/", async function (req, res) {
+app.post("/contact", function (req, res) {
   let name = req.body.name;
   let email = req.body.email;
   let message = req.body.message;
 
-  let contact = new contactModel({
-    name: name,
-    email: email,
-    message: message,
-  });
+  // let contact = new contactModel({
+  //   name: name,
+  //   email: email,
+  //   message: message,
+  // });
 
-  contact.save(function (e) {
-    if (e) {
-      console.log(e);
-    } else {
-      console.log("Contact " + name + " added to the DB");
-    }
-  });
+  // contact.save(function (e) {
+  //   if (e) {
+  //     console.log(e);
+  //   } else {
+  //     console.log("Contact " + name + " added to the DB");
+  //   }
+  // });
 
   var mailOptions = {
-    from: "email@gmail.com",
-    to: "email@gmail.com",
-    subject: name + " está interesado en contactarte",
-    text:
-      "Nombre: " + name + "%0D%0AEmail: " + email + "%0D%0AMensaje: " + message,
+    from: secrets.user,
+    to: secrets.myMail,
+
+    subject: name + " is interested in hiring you",
+    text: "Name: " + name + "\nEmail: " + email + "\nMessage: " + message,
   };
 
   transporter.sendMail(mailOptions, function (e, info) {
     if (e) {
       console.log(e);
+      res.json({
+        message: e,
+      });
     } else {
       console.log("Email sent: " + info.response);
+
+      res.json({
+        message: "Email sent: " + info.response,
+      });
     }
+    //transporter.close();
   });
 
-  await new Promise((r) => setTimeout(r, 700));
+  //await new Promise((r) => setTimeout(r, 700));
 
-  res.redirect("/");
+  //res.redirect("/");
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}!`));

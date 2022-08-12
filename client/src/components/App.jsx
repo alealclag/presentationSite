@@ -20,7 +20,7 @@ function createCard(card, eduCard) {
       role={card.role}
       dateFrom={card.dateFrom}
       dateTo={card.dateTo}
-      description={card.description}
+      description={card.desc}
       isEduCard={eduCard}
     />
   );
@@ -56,6 +56,15 @@ export default function App() {
         setLang(res.data.langCards);
       })
       .catch((e) => console.error(e));
+
+    // api
+    //   .post("/contact", {
+    //     name: "",
+    //     email: "",
+    //     message: "",
+    //   })
+    //   .then((res) => console.log(res))
+    //   .catch((e) => console.error(e));
   });
   return (
     <React.StrictMode>
