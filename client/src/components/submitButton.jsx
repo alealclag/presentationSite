@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-export default function SubmitButton() {
+export default function SubmitButton(properties) {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   useEffect(() => {
@@ -17,7 +17,7 @@ export default function SubmitButton() {
         100,
         "linear"
       ); //Make button round
-      $("#contactForm").trigger("submit");
+      properties.onSubmit();
     }
   });
 

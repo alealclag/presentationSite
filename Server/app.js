@@ -3,7 +3,6 @@ import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
 import bodyParser from "body-parser";
-import https from "https";
 import * as cards from "./db/cards.js";
 import mongoose from "mongoose";
 import cors from "cors";
@@ -22,6 +21,7 @@ mongoose.connect(secrets.dbAddress);
 
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(cors({ origin: "http://localhost:3000", credentials: true }));
 app.set("view engine", "jsx");
 
@@ -89,7 +89,6 @@ app.post("/contact", function (req, res) {
   //     console.log("Contact " + name + " added to the DB");
   //   }
   // });
-
   var mailOptions = {
     from: secrets.user,
     to: secrets.myMail,
@@ -101,22 +100,10 @@ app.post("/contact", function (req, res) {
   transporter.sendMail(mailOptions, function (e, info) {
     if (e) {
       console.log(e);
-      res.json({
-        message: e,
-      });
     } else {
       console.log("Email sent: " + info.response);
-
-      res.json({
-        message: "Email sent: " + info.response,
-      });
     }
-    //transporter.close();
   });
-
-  //await new Promise((r) => setTimeout(r, 700));
-
-  //res.redirect("/");
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}!`));

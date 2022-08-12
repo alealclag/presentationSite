@@ -56,16 +56,8 @@ export default function App() {
         setLang(res.data.langCards);
       })
       .catch((e) => console.error(e));
+  }, []);
 
-    // api
-    //   .post("/contact", {
-    //     name: "",
-    //     email: "",
-    //     message: "",
-    //   })
-    //   .then((res) => console.log(res))
-    //   .catch((e) => console.error(e));
-  });
   return (
     <React.StrictMode>
       <Header key="Header" />
@@ -169,7 +161,7 @@ export default function App() {
           <img src="./images/bgPics/mail.png" className="bgPic mailPic" />
 
           <div className="row justify-content-center">
-            <ContactForm key="contactForm" />
+            <ContactForm key="contactForm" api={api} />
           </div>
         </div>
       </section>
