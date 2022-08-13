@@ -76,19 +76,20 @@ app.post("/contact", function (req, res) {
   let email = req.body.email;
   let message = req.body.message;
 
-  // let contact = new contactModel({
-  //   name: name,
-  //   email: email,
-  //   message: message,
-  // });
+  let contact = new contactModel({
+    name: name,
+    email: email,
+    message: message,
+  });
 
-  // contact.save(function (e) {
-  //   if (e) {
-  //     console.log(e);
-  //   } else {
-  //     console.log("Contact " + name + " added to the DB");
-  //   }
-  // });
+  contact.save(function (e) {
+    if (e) {
+      console.log(e);
+    } else {
+      console.log("Contact " + name + " added to the DB");
+    }
+  });
+
   var mailOptions = {
     from: secrets.user,
     to: secrets.myMail,
