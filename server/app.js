@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 //jshint esversion:8
 import express from "express";
 import path from "path";
