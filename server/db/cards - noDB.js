@@ -1,63 +1,13 @@
 //jshint esversion:6
-import mongoose from "mongoose";
-import * as secrets from "../secrets.js";
 
-mongoose.connect(secrets.dbAddress);
-
-const profileInfo = mongoose.model("profileInfo", {
-  pic: String,
-  name: String,
-  role: String,
-  bio: String,
-});
-
-const workCard = mongoose.model("WorkCard", {
-  pic: String,
-  dateFrom: Date,
-  dateTo: Date,
-  name: String,
-  role: String,
-  desc: String,
-});
-
-const eduCard = mongoose.model("EduCard", {
-  pic: String,
-  dateFrom: Date,
-  dateTo: Date,
-  name: String,
-  role: String,
-  desc: String,
-});
-
-const techCard = mongoose.model("TechCard", {
-  name: String,
-  pic: String,
-});
-
-const langCard = mongoose.model("LangCard", {
-  name: String,
-  pic: String,
-  level: Number,
-});
-
-const myProfile = new profileInfo({
+export var profileInfo = [{
   pic: "./images/prestentationPic.jpg",
   name: "Alejandro Alcántara Laguna",
   role: "Web developer & Computer Engineer",
   bio: "Still a rookie, so I'm looking for my best path",
-});
+}];
 
-myProfile.save(function (e) {
-  if (e) {
-    console.log(e);
-  } else {
-    console.log("profileInfo inserted");
-  }
-});
-
-workCard.insertMany(
-  [
-    {
+export var workCards = [{
       pic: "./images/cardPics/minsaitlogo.png",
       name: "Minsait",
       role: "SAP PP Analyst",
@@ -80,20 +30,9 @@ workCard.insertMany(
       desc: "The tasks developed during my internship on the company were fixing bugs, migrating functionalities and performing functional tests. The main technology used was .NET",
       dateFrom: new Date(Date.UTC(2020, 9)),
       dateTo: new Date(Date.UTC(2021, 2)),
-    },
-  ],
-  function (e) {
-    if (e) {
-      console.log(e);
-    } else {
-      console.log("workCards inserted");
-    }
-  }
-);
+    },];
 
-eduCard.insertMany(
-  [
-    {
+export var eduCards = [{
       pic: "./images/cardPics/webdevlogo.png",
       name: "Udemy",
       role: "Full-Stack Web Development Course",
@@ -108,20 +47,9 @@ eduCard.insertMany(
       desc: "Worked on various fields, including web development, analysis and design of algorithms, embedded systems, AI and more",
       dateFrom: new Date(Date.UTC(2017)),
       dateTo: new Date(Date.UTC(2021)),
-    },
-  ],
-  function (e) {
-    if (e) {
-      console.log(e);
-    } else {
-      console.log("eduCards inserted");
-    }
-  }
-);
+    },];
 
-techCard.insertMany(
-  [
-    {
+export var techCards = [{
       name: "React",
       pic: "./images/cardPics/techLogos/react.jpg",
     },
@@ -168,19 +96,9 @@ techCard.insertMany(
     {
       name: "Embedded Systems",
       pic: "./images/cardPics/techLogos/embedded.jpg",
-    },
-  ],
-  function (e) {
-    if (e) {
-      console.log(e);
-    } else {
-      console.log("techCards inserted");
-    }
-  }
-);
-langCard.insertMany(
-  [
-    {
+    },];
+
+export var langCards = [{
       name: "Spanish",
       pic: "./images/cardPics/spain.png",
       level: 1,
@@ -194,15 +112,5 @@ langCard.insertMany(
       name: "Japanese",
       pic: "./images/cardPics/japan.jpg",
       level: 3,
-    },
-  ],
-  function (e) {
-    if (e) {
-      console.log(e);
-    } else {
-      console.log("langCards inserted");
-    }
-  }
-);
+    },];
 
-// testDoc.save();

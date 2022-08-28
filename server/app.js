@@ -4,8 +4,8 @@ import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
 import bodyParser from "body-parser";
-import * as cards from "./db/cards.js";
-import mongoose from "mongoose";
+import * as cards from "./db/cards - noDB.js";
+// import mongoose from "mongoose";
 import cors from "cors";
 import nodemailer from "nodemailer";
 import * as secrets from "./secrets.js";
@@ -18,7 +18,7 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const port = 8080;
 
-mongoose.connect(secrets.dbAddress);
+// mongoose.connect(secrets.dbAddress);
 
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -26,13 +26,13 @@ app.use(express.json());
 app.use(cors({ origin: "http://localhost:3000", credentials: true }));
 app.set("view engine", "jsx");
 
-const contactModel = mongoose.model("contact", {
-  name: String,
-  email: String,
-  message: String,
-});
+// const contactModel = mongoose.model("contact", {
+//   name: String,
+//   email: String,
+//   message: String,
+// });
 
-const maxTextSize = 160;
+// const maxTextSize = 160;
 
 function formatCardDates(UnformattedCards) {
   return UnformattedCards.map((card) => {
@@ -77,19 +77,19 @@ app.post("/contact", function (req, res) {
   let email = req.body.email;
   let message = req.body.message;
 
-  let contact = new contactModel({
-    name: name,
-    email: email,
-    message: message,
-  });
+  // let contact = new contactModel({
+  //   name: name,
+  //   email: email,
+  //   message: message,
+  // });
 
-  contact.save(function (e) {
-    if (e) {
-      console.log(e);
-    } else {
-      console.log("Contact " + name + " added to the DB");
-    }
-  });
+  // contact.save(function (e) {
+  //   if (e) {
+  //     console.log(e);
+  //   } else {
+  //     console.log("Contact " + name + " added to the DB");
+  //   }
+  // });
 
   var mailOptions = {
     from: secrets.user,
