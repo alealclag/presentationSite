@@ -1,23 +1,12 @@
-version: '3.8'
+version: "3.8"
 
 services:
   presentationSite-front:
-    image: alcinco/
+    image: alcinco/react-raspi
     ports:
-      -3000:3000
-    volumes:
-      -./client:/front
+      - 3000:3000
 
   presentationSite-back:
-    image: alcinco/
+    image: alcinco/node-raspi
     ports:
-      -8080:8080
-    volumes:
-      -./Server:/back
-
-  presentationSite-db:
-    image: mongo:6.0.1-focal
-    ports:
-      -27017:27017
-    volumes:
-      -./Server/db/db:/data/db
+      - 8080:8080
