@@ -16,14 +16,6 @@ export var workCards = [{
       dateTo: null,
     },
     {
-      pic: "./images/cardPics/coberlogo.png",
-      name: "Cober",
-      role: ".NET Developer",
-      desc: "The work done consisted in upgrading the client's application using .NET (with MVVM and asynchrony), as well as solving bugs and analyzing the client's necessities",
-      dateFrom: new Date(Date.UTC(2021, 7)),
-      dateTo: new Date(Date.UTC(2021, 9)),
-    },
-    {
       pic: "./images/cardPics/nttdatalogo.png",
       name: "NTT Data",
       role: "Intern .NET Developer",

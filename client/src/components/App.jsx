@@ -9,7 +9,7 @@ import Footer from "./footer";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
-const api = axios.create({ baseURL: "http://localhost:8080" });
+const api = axios.create({ baseURL: "http://alealclag.ddns.net:8080" });
 
 function createCard(card, eduCard) {
   return (

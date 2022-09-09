@@ -1,12 +1,15 @@
-version: "3.8"
+version: "3.6"
 
 services:
   presentationSite-front:
-    image: alcinco/react-raspi
+    image: alcinco/presentation-site-react-raspi
     ports:
       - 3000:3000
+    restart: always
 
   presentationSite-back:
-    image: alcinco/node-raspi
+    image: alcinco/presentation-site-node-raspi
     ports:
       - 8080:8080
+    restart: always
+    

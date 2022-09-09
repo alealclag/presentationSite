@@ -23,7 +23,17 @@ const port = 8080;
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(cors({ origin: "http://localhost:3000", credentials: true }));
+
+// Add Access Control Allow Origin headers
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  next();
+});
+
 app.set("view engine", "jsx");
 
 // const contactModel = mongoose.model("contact", {
