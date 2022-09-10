@@ -59,7 +59,7 @@ export var techCards = [{
     },
     {
       name: "MongoDB",
-      pic: "./images/cardPics/techLogos/MongoDB.jpg",
+      pic: "./images/cardPics/techLogos/mongoDB.jpg",
     },
     {
       name: "Git",

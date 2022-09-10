@@ -5,6 +5,7 @@ export default function contactForm(properties) {
   const [contactName, setContactName] = useState("");
   const [contactEmail, setContactEmail] = useState("");
   const [contactMessage, setContactMessage] = useState("");
+  const [validEmail, setValidEmail] = useState(false);
 
   function updateContactName(e) {
     setContactName(e.target.value);
@@ -12,6 +13,9 @@ export default function contactForm(properties) {
 
   function updateContactEmail(e) {
     setContactEmail(e.target.value);
+
+    setValidEmail(/a/.test(contactEmail));
+
   }
 
   function updateContactMessage(e) {
@@ -45,7 +49,7 @@ export default function contactForm(properties) {
             type="text"
             name="email"
             id="contactMail"
-            placeholder="Email"
+            placeholder="Email"          
             onChange={updateContactEmail}
           />
         </div>
@@ -67,7 +71,7 @@ export default function contactForm(properties) {
 
       <div className="row justify-content-center">
         <div className="col-lg-6">
-          <SubmitButton onSubmit={postContactForm} />
+          <SubmitButton disabled={!validEmail} onSubmit={postContactForm} />
         </div>
       </div>
     </form>
