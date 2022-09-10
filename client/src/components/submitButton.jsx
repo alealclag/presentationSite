@@ -25,7 +25,16 @@ export default function SubmitButton(properties) {
     <button
       className="btn btn-lg sendMessageBtn fullWidthFormField"
       type="submit"
-      onClick={() => setIsSubmitted(true)}
+      onClick={() => {
+        // if (properties.emptyName) {
+        // }
+        // if (properties.validEmail) {
+        // }
+        // if (properties.emptyMessage) {
+        // }
+
+        setIsSubmitted(true);
+      }}
       disabled={isSubmitted || properties.disabled}
     >
       <i className={"fas fa-check" + (isSubmitted ? "" : "invisibility")}></i>

@@ -24,6 +24,10 @@ textarea {
   width: 100%;
 }
 
+.invalidValue {
+  background-color: lightpink !important;
+}
+
 .sendMessageBtn {
   background-color: var(--second-color);
   color: black;
