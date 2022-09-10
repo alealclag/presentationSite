@@ -1,0 +1,49 @@
+#KnowledgeSection {
+  background-color: var(--second-color);
+}
+
+.knowledgeBlock {
+  margin: 50px;
+  z-index: 1;
+  transition: all 200ms ease-in-out;
+}
+
+.knowledgeSubBlock {
+  border-radius: 20px;
+  border: 10px;
+  border-style: solid;
+  border-color: var(--main-color);
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 93%;
+}
+
+.knowSubBlockTitle {
+  text-align: center;
+  background-color: var(--main-color);
+  border-radius: 20px;
+  padding: 10px;
+  color: var(--third-color);
+}
+
+/* XS screen */
+@media screen and (max-width: 576px) {
+  .knowledgeSubBlock .container {
+    padding: 0 0 20px;
+  }
+}
+
+/* Small screen */
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .knowledgeSubBlock .container {
+    padding: 0;
+  }
+}
+
+/* XL Screen */
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .knowledgeBlock {
+    margin: 50px 0;
+  }
+}

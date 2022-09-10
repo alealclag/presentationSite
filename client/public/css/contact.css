@@ -1,0 +1,107 @@
+#contactSection {
+  text-align: center;
+}
+
+#contactForm {
+  background-color: var(--main-color);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px;
+}
+
+.fullWidthFormField {
+  width: 100%;
+  margin: 10px auto;
+}
+
+input:not(.btn),
+textarea {
+  background-color: var(--third-color);
+  border: 0;
+  border-radius: 10px;
+  padding: 7px;
+  resize: none;
+  width: 100%;
+}
+
+.sendMessageBtn {
+  background-color: var(--second-color);
+  color: black;
+  font-size: 1.5em;
+  height: 60px;
+  margin: 0 auto;
+  transition: all 200ms ease-in-out;
+}
+
+.sendMessageBtn:hover {
+  background-color: black;
+  color: var(--second-color);
+
+  transition: all 200ms ease-in-out;
+}
+
+.sentSuccess {
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+}
+
+.sentSuccess:disabled {
+  background-color: var(--second-color);
+  opacity: 100%;
+}
+
+.invisibility {
+  display: none !important;
+}
+
+.mailPic {
+  margin-left: 0px;
+  z-index: -1;
+}
+
+/* XS screen */
+@media screen and (max-width: 576px) {
+  .mailPic {
+    display: none;
+  }
+
+  #contactSection .row {
+    padding: 10px;
+  }
+
+  form .container {
+    padding: 0;
+  }
+
+  input:not(.btn),
+  textarea {
+    margin: 5px auto;
+  }
+}
+
+/* Small screen */
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  input:not(.btn),
+  textarea {
+    margin: 5px auto;
+  }
+}
+
+/* Medium Screen */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  input:not(.btn),
+  textarea {
+    margin: 5px auto;
+  }
+}
+
+/* Large Screen */
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .mailPic {
+    margin-left: -70px;
+    z-index: -1;
+    width: 40%;
+  }
+}

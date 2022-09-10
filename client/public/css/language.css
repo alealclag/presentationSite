@@ -1,0 +1,62 @@
+.langBlock {
+  border-radius: 20px;
+
+  transition: all 200ms ease-in-out;
+}
+
+.flagPic {
+  margin: 10px;
+  border-radius: 100%;
+  border: 5px solid var(--second-color);
+}
+
+.langName {
+  margin: 0px 10px 10px;
+  padding: 5px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}
+
+.levelTitle {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.leftLangBlock {
+  text-align: right;
+}
+
+.langBlock:hover {
+  box-shadow: 0 0 1rem var(--bg-color) !important;
+  transition: all 200ms ease-in-out;
+}
+
+#spanishBlock {
+  background-color: #cb0d12;
+}
+#englishBlock {
+  background-color: #002069;
+}
+#japaneseBlock {
+  background-color: white;
+}
+
+#spanishBlock .langName {
+  background-color: #ffbe00;
+}
+#englishBlock .langName {
+  background-color: #c80c22;
+}
+#japaneseBlock .langName {
+  background-color: #bb002b;
+  color: white;
+}
+
+/* XS screen */
+@media screen and (max-width: 576px) {
+  #japaneseBlock .langName {
+    font-size: 1em;
+  }
+}

@@ -1,0 +1,11 @@
+#workExpSection {
+  background-color: var(--second-color);
+}
+
+#workExpSection .bgPic {
+  transform: rotate(35deg);
+}
+
+#nttDataRole {
+  font-size: 1.3em;
+}

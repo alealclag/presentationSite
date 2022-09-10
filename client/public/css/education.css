@@ -1,0 +1,18 @@
+.elementBlockEdu:hover {
+  box-shadow: 0 0 3rem black !important;
+}
+
+.eduBgPic {
+  z-index: -1;
+}
+
+/* XS screen */
+@media screen and (max-width: 576px) {
+  .webDevCourse {
+    font-size: 0.8em;
+  }
+
+  .uniName {
+    font-size: 0.9em;
+  }
+}

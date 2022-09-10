@@ -1,0 +1,74 @@
+.techBgPic {
+  width: 50%;
+  z-index: -1;
+}
+
+.techBlock {
+  background-color: var(--main-color);
+  padding: 5px;
+
+  border-radius: 10px;
+  transition: all 200ms ease-in-out;
+}
+
+.techBlock:hover {
+  box-shadow: 0 0 1rem var(--bg-color) !important;
+  transition: all 200ms ease-in-out;
+}
+
+.techName {
+  background-color: var(--third-color);
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}
+
+.techPic {
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+#embSys-card {
+  font-size: 0.7em;
+  padding: 2px;
+}
+
+/* XS screen */
+@media screen and (max-width: 576px) {
+  .techBlock {
+    margin: 20px 10px;
+  }
+
+  #embSys-card {
+    font-size: 0.8em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+/* Small screen */
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .techBlock {
+    margin: 20px 10px;
+  }
+}
+
+/* Medium Screen */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  #embSys-card {
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+}
+
+/* Large Screen */
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  #embSys-card {
+    font-size: 0.8em;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}

@@ -106,7 +106,7 @@ export default function App() {
                 <div className="container">
                   <img
                     src="./images/bgPics/tech.png"
-                    className="bgPic knowBgPic"
+                    className="bgPic techBgPic"
                   />
 
                   <div className="row gy-4 justify-content-around">

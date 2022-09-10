@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&family=Ubuntu:wght@300;400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
+
+:root {
+  --main-color: #084a83;
+  --second-color: #539ddb;
+  --third-color: #c6e5f3;
+  --bg-color: #ffffe7;
+
+  /* Original Green */
+
+  /* --main-color: #52734d;
+  --second-color: #91c788;
+  --third-color: #ddffbc;
+  --bg-color: #feffde; */
+
+  /* Alt Blue (Strong Torquoise) */
+
+  /* --main-color: #aaaaaa;
+  --second-color: #a4ebf3;
+  --third-color: #ccf2f4;
+  --bg-color: #f4f9f9;  */
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: "Ubuntu", sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "Roboto", sans-serif;
+}

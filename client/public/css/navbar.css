@@ -1,0 +1,21 @@
+header {
+  background-color: var(--main-color);
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  border-bottom: 5px;
+  border-color: gray;
+  border-bottom-style: solid;
+}
+
+.nav-link {
+  color: var(--bg-color);
+  margin: auto 20px;
+
+  transition: all 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--bg-color);
+  opacity: 60%;
+}
