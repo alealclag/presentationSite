@@ -2,6 +2,11 @@
   background-color: var(--second-color);
 }
 
+.knowBgPic {
+  width: 50%;
+  z-index: -1;
+}
+
 .knowledgeBlock {
   margin: 50px;
   z-index: 1;

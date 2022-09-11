@@ -1,7 +1,3 @@
-.techBgPic {
-  width: 50%;
-  z-index: -1;
-}
 
 .techBlock {
   background-color: var(--main-color);

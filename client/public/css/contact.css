@@ -61,7 +61,7 @@ textarea {
 }
 
 .mailPic {
-  margin-left: 0px;
+  margin-left: 0px !important;
   z-index: -1;
 }
 
@@ -104,7 +104,7 @@ textarea {
 /* Large Screen */
 @media screen and (min-width: 992px) and (max-width: 1200px) {
   .mailPic {
-    margin-left: -70px;
+    margin-left: -70px !important;
     z-index: -1;
     width: 40%;
   }

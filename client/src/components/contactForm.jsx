@@ -48,7 +48,7 @@ export default function contactForm(properties) {
             name="name"
             id="contactName"
             placeholder="Name"
-            className="invalidValue"
+            className={emptyName ? "invalidValue" : ""}
             onChange={updateContactName}
             onClick={checkValidity}
           />
@@ -59,6 +59,7 @@ export default function contactForm(properties) {
             name="email"
             id="contactMail"
             placeholder="Email"
+            className={validEmail ? "" : "invalidValue"}
             onChange={updateContactEmail}
           />
         </div>
@@ -69,7 +70,9 @@ export default function contactForm(properties) {
           <textarea
             name="message"
             id="contactMessage"
-            className="fullWidthFormField"
+            className={
+              "fullWidthFormField " + (emptyMessage ? "invalidValue" : "")
+            }
             cols="30"
             rows="10"
             placeholder="Message..."
