@@ -1,14 +1,21 @@
 #!/usr/bin/env node
 //jshint esversion:8
+
+// This variable specifies if we are using the MongoDB implementation or not
+const useDB = false;
+
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
 import bodyParser from "body-parser";
-import * as cards from "./db/cards - noDB.js";
-// import mongoose from "mongoose";
-import cors from "cors";
 import nodemailer from "nodemailer";
 import * as secrets from "./secrets.js";
+if (useDB) {
+  const mongoose = import("mongoose");
+  const cards = import("./db/cards.js");
+} else {
+  const cards = import("./db/cards - noDB.js");
+}
 
 /* jshint ignore:start */
 const __filename = fileURLToPath(import.meta.url);
@@ -17,8 +24,6 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 const port = 8080;
-
-// mongoose.connect(secrets.dbAddress);
 
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -36,13 +41,14 @@ app.use((req, res, next) => {
 
 app.set("view engine", "jsx");
 
-// const contactModel = mongoose.model("contact", {
-//   name: String,
-//   email: String,
-//   message: String,
-// });
-
-// const maxTextSize = 160;
+if (useDB) {
+  mongoose.connect(secrets.dbAddress);
+  const contactModel = mongoose.model("contact", {
+    name: String,
+    email: String,
+    message: String,
+  });
+}
 
 function formatCardDates(UnformattedCards) {
   return UnformattedCards.map((card) => {
@@ -87,19 +93,20 @@ app.post("/contact", function (req, res) {
   let email = req.body.email;
   let message = req.body.message;
 
-  // let contact = new contactModel({
-  //   name: name,
-  //   email: email,
-  //   message: message,
-  // });
-
-  // contact.save(function (e) {
-  //   if (e) {
-  //     console.log(e);
-  //   } else {
-  //     console.log("Contact " + name + " added to the DB");
-  //   }
-  // });
+  if (useDB) {
+    let contact = new contactModel({
+      name: name,
+      email: email,
+      message: message,
+    });
+    contact.save(function (e) {
+      if (e) {
+        console.log(e);
+      } else {
+        console.log("Contact " + name + " added to the DB");
+      }
+    });
+  }
 
   var mailOptions = {
     from: secrets.user,
