@@ -7,20 +7,6 @@
   --second-color: #539ddb;
   --third-color: #c6e5f3;
   --bg-color: #ffffe7;
-
-  /* Original Green */
-
-  /* --main-color: #52734d;
-  --second-color: #91c788;
-  --third-color: #ddffbc;
-  --bg-color: #feffde; */
-
-  /* Alt Blue (Strong Torquoise) */
-
-  /* --main-color: #aaaaaa;
-  --second-color: #a4ebf3;
-  --third-color: #ccf2f4;
-  --bg-color: #f4f9f9;  */
 }
 
 body {
@@ -31,4 +17,11 @@ body {
 h1,
 h2 {
   font-family: "Roboto", sans-serif;
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+h3 {
+  user-select: text;
+  -webkit-user-select: text;
 }

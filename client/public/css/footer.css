@@ -2,6 +2,8 @@ footer {
   background-color: var(--second-color);
   padding: 50px 50px;
   text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .footerIcon {
@@ -13,6 +15,11 @@ footer {
 
 .footerIcon:hover {
   opacity: 100%;
+}
+
+p {
+  user-select: text;
+  -webkit-user-select: text;
 }
 
 .footerBtn {

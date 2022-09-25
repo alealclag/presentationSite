@@ -1,6 +1,8 @@
 section {
   padding-top: 40px;
   padding-bottom: 40px;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .container {
@@ -30,6 +32,8 @@ h2 {
   padding: 10px 20px;
   border-radius: 15px;
   align-self: flex-end;
+  user-select: text;
+  -webkit-user-select: text;
 }
 
 .sectionRow {
@@ -60,20 +64,28 @@ h2 {
   padding: 10px 15px;
   margin: 10px auto 0;
   border-radius: 10px;
+  user-select: text;
+  -webkit-user-select: text;
 }
 
 .cardName {
   background-color: var(--third-color);
   font-weight: bold;
   font-size: 1.3em;
+  user-select: text;
+  -webkit-user-select: text;
 }
 
 .cardRole {
   font-size: 1.4em;
+  user-select: text;
+  -webkit-user-select: text;
 }
 
 .cardDesc {
   text-align: justify;
+  user-select: text;
+  -webkit-user-select: text;
 }
 
 .gradientDown {

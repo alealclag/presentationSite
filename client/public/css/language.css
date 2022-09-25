@@ -17,11 +17,15 @@
   text-align: center;
   font-size: large;
   font-weight: bold;
+  user-select: text;
+  -webkit-user-select: text;
 }
 
 .levelTitle {
   margin-bottom: 15px;
   font-weight: bold;
+  user-select: text;
+  -webkit-user-select: text;
 }
 
 .leftLangBlock {
