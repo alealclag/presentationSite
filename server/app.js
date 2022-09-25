@@ -1,21 +1,18 @@
 #!/usr/bin/env node
 //jshint esversion:8
 
-// This variable specifies if we are using the MongoDB implementation or not
-const useDB = false;
-
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
 import bodyParser from "body-parser";
 import nodemailer from "nodemailer";
 import * as secrets from "./secrets.js";
-if (useDB) {
-  const mongoose = import("mongoose");
-  const cards = import("./db/cards.js");
-} else {
-  const cards = import("./db/cards - noDB.js");
-}
+import * as cards from "./db/cards_noDB.js";
+// import mongoose from "mongoose";
+// import * as cards from "./db/cards.js";
+
+// This variable specifies if we are using the MongoDB implementation or not
+const useDB = false;
 
 /* jshint ignore:start */
 const __filename = fileURLToPath(import.meta.url);
