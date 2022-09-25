@@ -5,19 +5,19 @@ export default function contactForm(properties) {
   const [contactName, setContactName] = useState("");
   const [contactEmail, setContactEmail] = useState("");
   const [contactMessage, setContactMessage] = useState("");
-  const [validEmail, setValidEmail] = useState(false);
-  const [emptyName, setEmptyName] = useState(true);
-  const [emptyMessage, setEmptyMessage] = useState(true);
+  const [validEmail, setValidEmail] = useState(true);
+  const [emptyName, setEmptyName] = useState(false);
+  const [emptyMessage, setEmptyMessage] = useState(false);
 
   function updateContactName(e) {
     setContactName(e.target.value);
-    setEmptyName(e.target.value === "");
+    // setEmptyName(e.target.value === "");
   }
 
   function updateContactEmail(e) {
     setContactEmail(e.target.value);
 
-    setValidEmail(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(e.target.value));
+    // setValidEmail(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(e.target.value));
   }
 
   function updateContactMessage(e) {
@@ -26,7 +26,15 @@ export default function contactForm(properties) {
   }
 
   function checkValidity(e) {
-    void 0;
+    if (e.target.name == "name") {
+      setEmptyName(e.target.value === "");
+    }
+    if (e.target.name == "email") {
+      setValidEmail(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(e.target.value));
+    }
+    if (e.target.name == "message") {
+      setEmptyMessage(e.target.value === "");
+    }
   }
 
   var postContactForm = () => {
@@ -50,7 +58,7 @@ export default function contactForm(properties) {
             placeholder="Name"
             className={emptyName ? "invalidValue" : ""}
             onChange={updateContactName}
-            onClick={checkValidity}
+            onBlur={checkValidity}
           />
         </div>
         <div className="col-lg-6">
@@ -61,6 +69,7 @@ export default function contactForm(properties) {
             placeholder="Email"
             className={validEmail ? "" : "invalidValue"}
             onChange={updateContactEmail}
+            onBlur={checkValidity}
           />
         </div>
       </div>
@@ -77,6 +86,7 @@ export default function contactForm(properties) {
             rows="10"
             placeholder="Message..."
             onChange={updateContactMessage}
+            onBlur={checkValidity}
           ></textarea>
         </div>
       </div>
@@ -84,7 +94,7 @@ export default function contactForm(properties) {
       <div className="row justify-content-center">
         <div className="col-lg-6">
           <SubmitButton
-            disabled={emptyName || emptyMessage || !validEmail}
+            // disabled={emptyName || emptyMessage || !validEmail}
             // emptyName={emptyName}
             // validEmail={validEmail}
             // emptyMessage={emptyMessage}
