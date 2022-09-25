@@ -5,19 +5,19 @@ export default function contactForm(properties) {
   const [contactName, setContactName] = useState("");
   const [contactEmail, setContactEmail] = useState("");
   const [contactMessage, setContactMessage] = useState("");
-  const [validEmail, setValidEmail] = useState(true);
-  const [emptyName, setEmptyName] = useState(false);
-  const [emptyMessage, setEmptyMessage] = useState(false);
+  const [invalidEmail, setInvalidEmail] = useState(true);
+  const [emptyName, setEmptyName] = useState(true);
+  const [emptyMessage, setEmptyMessage] = useState(true);
+  const [formUntouched, setFormUntouched] = useState(true);
 
   function updateContactName(e) {
     setContactName(e.target.value);
-    // setEmptyName(e.target.value === "");
+    setEmptyName(e.target.value === "");
   }
 
   function updateContactEmail(e) {
     setContactEmail(e.target.value);
-
-    // setValidEmail(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(e.target.value));
+    setInvalidEmail(!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(e.target.value));
   }
 
   function updateContactMessage(e) {
@@ -30,11 +30,15 @@ export default function contactForm(properties) {
       setEmptyName(e.target.value === "");
     }
     if (e.target.name == "email") {
-      setValidEmail(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(e.target.value));
+      setInvalidEmail(!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(e.target.value));
     }
     if (e.target.name == "message") {
       setEmptyMessage(e.target.value === "");
     }
+  }
+
+  function showErrors() {
+    setFormUntouched(false);
   }
 
   var postContactForm = () => {
@@ -56,9 +60,8 @@ export default function contactForm(properties) {
             name="name"
             id="contactName"
             placeholder="Name"
-            className={emptyName ? "invalidValue" : ""}
+            className={emptyName && !formUntouched ? "invalidValue" : ""}
             onChange={updateContactName}
-            onBlur={checkValidity}
           />
         </div>
         <div className="col-lg-6">
@@ -67,9 +70,8 @@ export default function contactForm(properties) {
             name="email"
             id="contactMail"
             placeholder="Email"
-            className={validEmail ? "" : "invalidValue"}
+            className={invalidEmail && !formUntouched ? "invalidValue" : ""}
             onChange={updateContactEmail}
-            onBlur={checkValidity}
           />
         </div>
       </div>
@@ -80,24 +82,21 @@ export default function contactForm(properties) {
             name="message"
             id="contactMessage"
             className={
-              "fullWidthFormField " + (emptyMessage ? "invalidValue" : "")
+              "fullWidthFormField " +
+              (emptyMessage && !formUntouched ? "invalidValue" : "")
             }
             cols="30"
             rows="10"
             placeholder="Message..."
             onChange={updateContactMessage}
-            onBlur={checkValidity}
           ></textarea>
         </div>
       </div>
 
       <div className="row justify-content-center">
-        <div className="col-lg-6">
+        <div className="col-lg-6" onClick={showErrors}>
           <SubmitButton
-            // disabled={emptyName || emptyMessage || !validEmail}
-            // emptyName={emptyName}
-            // validEmail={validEmail}
-            // emptyMessage={emptyMessage}
+            disabled={emptyName || emptyMessage || invalidEmail}
             onSubmit={postContactForm}
           />
         </div>

@@ -26,13 +26,6 @@ export default function SubmitButton(properties) {
       className="btn btn-lg sendMessageBtn fullWidthFormField"
       type="submit"
       onClick={() => {
-        // if (properties.emptyName) {
-        // }
-        // if (properties.validEmail) {
-        // }
-        // if (properties.emptyMessage) {
-        // }
-
         setIsSubmitted(true);
       }}
       disabled={isSubmitted || properties.disabled}
