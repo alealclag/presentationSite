@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="" rel="noopener">
- <img width=200px height=200px src="./client/public/images/prestentationPic.jpg" alt="Project logo" style="border-radius: 50%"></a>
+  <a href="alealclag.ddns.net">
+ <img width=200px height=200px src="https://images.weserv.nl/?url=avatars.githubusercontent.com/u/43809119?s=400&u=6e2186471b9262d4b87c86a8c80205e90e31b558&v=4?v=4?v=4&h=300&w=300&fit=cover&mask=circle&maxage=7d" alt="Project logo" style="border-radius: 50%"></a>
 </p>
 
 <h3 align="center">Presentation Site</h3>
@@ -13,12 +13,12 @@
 
 ## 📝 Table of Contents
 
-- [The front](#front)
-- [The back](#back)
+- [The Front](#front)
+- [The Back](#back)
 - [The Database](#database)
 - [Management & Deployment](#management_deployment)
 
-## ⚛ The front <a name = "front"></a>
+## ⚛ The Front <a name = "front"></a>
 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
@@ -27,7 +27,7 @@ Let's talk first about the front-end of the website. It was built using ReactJS 
 
 To ReactJS we added Bootstrap to style things up without having to depend on plain old CSS. You might not realize it at first glance, but this website is also responsive! So don't fear opening it on your desktop, tablet or phone 😜
 
-## 🖥 The back <a name = "back"></a>
+## 🖥 The Back <a name = "back"></a>
 
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
