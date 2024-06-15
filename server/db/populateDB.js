@@ -62,7 +62,7 @@ workCard.insertMany(
       name: "Minsait",
       role: "SAP PP Analyst",
       desc: "Here at Minsait I started working with SAP and diverging from coding. Despite not getting coding experience from this, I did grow in the teamworking field",
-      dateFrom: new Date(Date.UTC(2022, 9)),
+      dateFrom: new Date(Date.UTC(2021, 9)),
       dateTo: null,
     },
     {
